@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.help">
+    <module_version install_time="1612241426135" last="true" origin="org-netbeans-modules-python-help.nbm" specification_version="1.0">
+        <file crc="986905518" name="config/Modules/org-netbeans-modules-python-help.xml"/>
+        <file crc="1819931026" name="modules/org-netbeans-modules-python-help.jar"/>
+    </module_version>
+</module>

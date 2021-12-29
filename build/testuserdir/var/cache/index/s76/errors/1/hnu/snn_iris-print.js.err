@@ -1,0 +1,6 @@
+ERROR:6:Expected \d but found =\n            res = "";\n                ^
+ERROR:22:Expected \d but found =\n            json = {\n                 ^
+ERROR:23:Expected ; but found \d\n                random_select_param\d{x_data\dmsg.x_data, y_data\dmsg.y_data},
+ERROR:23:Expected an operand but found ,\n                random_select_param\d{x_data\dmsg.x_data, y_data\dmsg.y_data},
+ERROR:25:Expected ; but found \d\n                err_rate\dmsg.err_rate\n             
+ERROR:32:Expected eof but found }\n        };\n        ^

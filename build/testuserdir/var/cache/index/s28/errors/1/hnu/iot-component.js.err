@@ -1,0 +1,1 @@
+ERROR:8:Missing close quote\n            const sudo = require('sudo-js);\n            

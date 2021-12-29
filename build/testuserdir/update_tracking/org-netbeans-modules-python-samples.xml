@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.samples">
+    <module_version install_time="1612241426199" last="true" origin="org-netbeans-modules-python-samples.nbm" specification_version="1.1">
+        <file crc="998706247" name="config/Modules/org-netbeans-modules-python-samples.xml"/>
+        <file crc="3977827795" name="modules/org-netbeans-modules-python-samples.jar"/>
+    </module_version>
+</module>

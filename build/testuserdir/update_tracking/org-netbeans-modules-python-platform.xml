@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.platform">
+    <module_version install_time="1612241426349" last="true" origin="org-netbeans-modules-python-platform.nbm" specification_version="1.1">
+        <file crc="467409023" name="config/Modules/org-netbeans-modules-python-platform.xml"/>
+        <file crc="2558218943" name="modules/org-netbeans-modules-python-platform.jar"/>
+    </module_version>
+</module>

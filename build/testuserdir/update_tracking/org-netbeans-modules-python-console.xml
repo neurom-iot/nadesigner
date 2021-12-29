@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.console">
+    <module_version install_time="1612241426412" last="true" origin="org-netbeans-modules-python-console.nbm" specification_version="1.1">
+        <file crc="1040720462" name="config/Modules/org-netbeans-modules-python-console.xml"/>
+        <file crc="359310095" name="console.py"/>
+        <file crc="908157721" name="modules/org-netbeans-modules-python-console.jar"/>
+    </module_version>
+</module>

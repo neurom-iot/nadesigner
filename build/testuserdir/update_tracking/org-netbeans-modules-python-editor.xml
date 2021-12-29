@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.editor">
+    <module_version install_time="1612241425452" last="true" origin="org-netbeans-modules-python-editor.nbm" specification_version="1.0.1">
+        <file crc="2512109908" name="config/Modules/org-netbeans-modules-python-editor.xml"/>
+        <file crc="2801168967" name="modules/ext/jython-2.5.1.jar"/>
+        <file crc="44574822" name="modules/ext/org-netbeans-modules-editor-settings-storage.jar"/>
+        <file crc="3951080337" name="modules/org-netbeans-modules-python-editor.jar"/>
+    </module_version>
+</module>

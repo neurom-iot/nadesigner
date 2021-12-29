@@ -1,0 +1,6 @@
+ERROR:2:Expected ( but found -\n    function SNN-iris_Implement(n) {\n           
+ERROR:6:Expected an operand but found const\n            const spawn = require("child_process").spawn;
+ERROR:7:Expected an operand but found const\n            const pythonProcess = spawn('python', ["na-components/SNN-iris/src/hnu/SNN-iris-imp.py", msg.payload.toString()]);
+ERROR:13:Expected \d but found (\n            if (data.includes("sim\d")) {\n      
+ERROR:18:Expected an operand but found else\n            else {\n            ^
+ERROR:22:Expected eof but found }\n            }\n            ^

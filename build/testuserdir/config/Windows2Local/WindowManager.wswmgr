@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<windowmanager version="2.1">
+    <main-window>
+  <joined-properties
+   x="-8"
+   y="-8"
+   width="1936"
+   height="1056"
+   relative-x="0.0"
+   relative-y="0.0"
+   relative-width="0.0"
+   relative-height="0.0"
+   centered-horizontally="false"
+   centered-vertically="false"
+   maximize-if-width-below="0"
+   maximize-if-height-below="0"
+   frame-state="6"
+/>
+  <separated-properties
+   x="192"
+   y="104"
+   width="1536"
+   height="83"
+   relative-x="0.0"
+   relative-y="0.0"
+   relative-width="0.0"
+   relative-height="0.0"
+   centered-horizontally="false"
+   centered-vertically="false"
+   frame-state="0"
+/>
+  </main-window>
+    <editor-area state="joined" frame-state="0">
+  <constraints>
+  <path orientation="horizontal" number="60" weight="0.6947472745292369" />
+  <path orientation="vertical" number="40" weight="0.803448275862069" />
+  <path orientation="horizontal" number="40" weight="0.7" />
+  <path orientation="vertical" number="40" weight="0.5" />
+  </constraints>
+  <bounds x="633" y="249" width="806" height="457" />
+    </editor-area>
+    <screen width="1600" height="900"/>
+    <active-mode name="explorer"/>
+    <toolbar configuration="Standard" preferred-icon-size="24"/>
+    <tc-list>
+  <tc-id id="projectTabLogical_tc"/>
+  <tc-id id="MultiView-Py#007CPyDC8BB49xt#002Ehistory#007C_9"/>
+  <tc-id id="projectTab_tc"/>
+  <tc-id id="navigatorTC"/>
+  <tc-id id="output"/>
+  <tc-id id="services"/>
+    </tc-list>
+</windowmanager>

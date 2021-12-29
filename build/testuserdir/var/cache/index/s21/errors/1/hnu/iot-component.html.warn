@@ -1,0 +1,5 @@
+ERROR_NO_BADGE:19:Expected an operand but found %\n        inputs\d%COMPONENTINPUT%,\n        
+ERROR_NO_BADGE:20:Expected an operand but found %\n        outputs\d%COMPONENTOUTPUT%,\n      
+ERROR_NO_BADGE:22:Expected ; but found \d\n        label\d function() {\n             ^
+ERROR_NO_BADGE:23:Invalid return statement\n            return this.name||"IoTPiCamera";\n   
+ERROR_NO_BADGE:24:Expected eof but found }\n        },\n        ^

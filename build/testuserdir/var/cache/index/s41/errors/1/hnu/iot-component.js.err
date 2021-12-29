@@ -1,0 +1,6 @@
+ERROR:2:Expected ( but found -\n    function LED-panda(config) {\n                ^
+ERROR:6:Expected an operand but found const\n        const data = msg.payload;\n       
+ERROR:8:Expected an operand but found const\n            const spawn = require("child_process").spawn;
+ERROR:9:Expected an operand but found const\n            const pythonProcess = spawn('python',["na-components/LED-panda/src/hnu/iot-component.py",data]);
+ERROR:15:Expected \d but found msg\n                var msg = {};\n                    
+ERROR:24:Expected eof but found }\n    }\n    ^

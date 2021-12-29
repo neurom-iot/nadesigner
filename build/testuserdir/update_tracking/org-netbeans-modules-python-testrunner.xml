@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.testrunner">
+    <module_version install_time="1612241426231" last="true" origin="org-netbeans-modules-python-testrunner.nbm" specification_version="1.0">
+        <file crc="2505534398" name="config/Modules/org-netbeans-modules-python-testrunner.xml"/>
+        <file crc="1135049883" name="modules/org-netbeans-modules-python-testrunner.jar"/>
+    </module_version>
+</module>

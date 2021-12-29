@@ -1,0 +1,5 @@
+ERROR:2:Expected ( but found -\n    function SNN-test1(config) {\n                ^
+ERROR:7:Expected an operand but found const\n            const spawn = require("child_process").spawn;
+ERROR:8:Expected an operand but found const\n            const pythonProcess = spawn('python3',["nodes/SNN-test1/src/hnu/snn-component.py"]);
+ERROR:22:Expected \d but found msg\n                var msg = {};\n                    
+ERROR:31:Expected eof but found }\n    }\n    ^

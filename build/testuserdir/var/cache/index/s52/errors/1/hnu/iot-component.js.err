@@ -1,0 +1,7 @@
+ERROR:6:Expected an operand but found const\n        const data = msg.payload;\n       
+ERROR:8:Expected an operand but found const\n            const sudo = require('sudo-js');
+ERROR:10:Expected an operand but found error\n            sudo.exec(["python3",`${__dirname}/iot-component.py`,data],function(err,pid,data){
+ERROR:10:Expected an operand but found /\n            sudo.exec(["python3",`${__dirname}/iot-component.py`,data],function(err,pid,data){
+ERROR:12:Expected ; but found )\n            });\n             ^
+ERROR:15:Expected \d but found msg\n                var msg = {};\n                    
+ERROR:24:Expected eof but found }\n    };\n    ^

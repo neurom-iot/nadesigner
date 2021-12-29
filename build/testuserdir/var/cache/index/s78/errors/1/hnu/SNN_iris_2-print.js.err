@@ -1,0 +1,4 @@
+ERROR:6:Expected \d but found =\n            res = "";\n                ^
+ERROR:22:Expected \d but found (\n            if (typeof(msg.sim_result) === "undefined") {
+ERROR:44:Expected an operand but found else\n            else {\n            ^
+ERROR:46:Expected eof but found }\n            }\n            ^

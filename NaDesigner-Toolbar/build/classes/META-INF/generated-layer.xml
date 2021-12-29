@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="NaDesigner">
+            <file name="org-embedded-hnu-toolbar-ComponentInstallAction.instance">
+                <!--org.embedded.hnu.toolbar.ComponentInstallAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_ComponentInstallAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.ComponentInstallAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-ComponentToolbarAction.instance">
+                <!--org.embedded.hnu.toolbar.ComponentToolbarAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_ComponentToolbarAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.ComponentToolbarAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr name="iconBase" stringvalue="org/embedded/hnu/toolbar/icons/icon_Comp24.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-ImExComponentToolbarAction.instance">
+                <!--org.embedded.hnu.toolbar.ImExComponentToolbarAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_ImExComponentToolbarAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.ImExComponentToolbarAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr name="iconBase" stringvalue="org/embedded/hnu/toolbar/icons/icon_comp_IO24.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-InstallToNAIDEAction.instance">
+                <!--org.embedded.hnu.toolbar.InstallToNAIDEAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_InstallToNAIDEAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.InstallToNAIDEAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetIoTToolbarAction.instance">
+                <!--org.embedded.hnu.toolbar.SetIoTToolbarAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_SetIoTToolbarAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.SetIoTToolbarAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr name="iconBase" stringvalue="org/embedded/hnu/toolbar/icons/icon_IoT24t.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetNetworkToolbarAction.instance">
+                <!--org.embedded.hnu.toolbar.SetNetworkToolbarAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_SetNetworkToolbarAction" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.netbeans.api.project.Project"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.embedded.hnu.toolbar.SetNetworkToolbarAction"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr name="iconBase" stringvalue="org/embedded/hnu/toolbar/icons/icon_Net24.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetHardwareToolbarAction.instance">
+                <!--org.embedded.hnu.toolbar.SetHardwareToolbarAction-->
+                <attr
+                    bundlevalue="org.embedded.hnu.toolbar.Bundle#CTL_SetHardwareToolbarAction" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.embedded.hnu.toolbar.SetHardwareToolbarAction"/>
+                <attr name="iconBase" stringvalue="org/embedded/hnu/toolbar/icons/icon_Hw24.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Install">
+            <file name="org-embedded-hnu-toolbar-ComponentInstallAction.shadow">
+                <!--org.embedded.hnu.toolbar.ComponentInstallAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-ComponentInstallAction.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-InstallToNAIDEAction.shadow">
+                <!--org.embedded.hnu.toolbar.InstallToNAIDEAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-InstallToNAIDEAction.instance"/>
+                <attr intvalue="200" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Toolbars">
+        <folder name="NaDesigner">
+            <file name="org-embedded-hnu-toolbar-ComponentToolbarAction.shadow">
+                <!--org.embedded.hnu.toolbar.ComponentToolbarAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-ComponentToolbarAction.instance"/>
+                <attr intvalue="300" name="position"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-ImExComponentToolbarAction.shadow">
+                <!--org.embedded.hnu.toolbar.ImExComponentToolbarAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-ImExComponentToolbarAction.instance"/>
+                <attr intvalue="400" name="position"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetIoTToolbarAction.shadow">
+                <!--org.embedded.hnu.toolbar.SetIoTToolbarAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-SetIoTToolbarAction.instance"/>
+                <attr intvalue="150" name="position"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetNetworkToolbarAction.shadow">
+                <!--org.embedded.hnu.toolbar.SetNetworkToolbarAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-SetNetworkToolbarAction.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-embedded-hnu-toolbar-SetHardwareToolbarAction.shadow">
+                <!--org.embedded.hnu.toolbar.SetHardwareToolbarAction-->
+                <attr name="originalFile" stringvalue="Actions/NaDesigner/org-embedded-hnu-toolbar-SetHardwareToolbarAction.instance"/>
+                <attr intvalue="200" name="position"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.python.project">
+    <module_version install_time="1612241426264" last="true" origin="org-netbeans-modules-python-project.nbm" specification_version="0.3">
+        <file crc="1558510401" name="config/Modules/org-netbeans-modules-python-project.xml"/>
+        <file crc="2887452420" name="modules/ext/org.netbeans.modules.gsf.jar"/>
+        <file crc="2996894230" name="modules/org-netbeans-modules-python-project.jar"/>
+    </module_version>
+</module>
