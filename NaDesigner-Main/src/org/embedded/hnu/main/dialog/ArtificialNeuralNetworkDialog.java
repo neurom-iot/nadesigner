@@ -17,6 +17,9 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     public static final int H_DATA_SET_TRAINING = 0;
     public static final int H_DATA_SET_TEST = 1;      
     
+    public static final int H_SPIKE_NORM_DEFAULT = 0;
+    public static final int H_SPIKE_NORM_VGG16 = 1;
+    
     private JFileChooser fileChooser = new JFileChooser();
     private HANNIOConfig hAIOConf = new HANNIOConfig();
     private HANNGenerator hANNGen = new HANNGenerator();
@@ -49,7 +52,7 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         super(parent, modal);
         hDirectory = hDir;
         initComponents();
-        modelDirTextField.setText(hDirectory);
+        modelDirTextField.setText(hDirectory+File.separatorChar+"DataSets");
         System.out.println("ArtificialNeuralNetworkDialog destFileDir : "+destDir);
         System.out.println("------- SetNetworkToolbarAction -------");
         LOADDATA = false;        
@@ -71,6 +74,9 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         datasetTestRadioButton = new javax.swing.JRadioButton();
         cnnPanel = new javax.swing.JPanel();
         cnnCheckBox = new javax.swing.JCheckBox();
+        cnnPanel1 = new javax.swing.JPanel();
+        conversionPanel = new javax.swing.JPanel();
+        conversionCheckBox = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         modelNameLabel = new javax.swing.JLabel();
         modelNameTextField = new javax.swing.JTextField();
@@ -79,7 +85,9 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         modelDirBrowseButton = new javax.swing.JButton();
         modelTypeLabel = new javax.swing.JLabel();
         modelTypeComboBox = new javax.swing.JComboBox();
-        jPanel4 = new javax.swing.JPanel();
+        conversionModelLabel = new javax.swing.JLabel();
+        conversionModelComboBox = new javax.swing.JComboBox();
+        modelParameterPanel = new javax.swing.JPanel();
         inputsLabel = new javax.swing.JLabel();
         inputsTextField = new javax.swing.JTextField();
         outputsLabel = new javax.swing.JLabel();
@@ -109,11 +117,26 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         varificationLogTextArea1 = new javax.swing.JTextArea();
         nextButton = new javax.swing.JButton();
         closeButton = new javax.swing.JButton();
+        conversionParametersPanel = new javax.swing.JPanel();
+        epochsLabel2 = new javax.swing.JLabel();
+        epochsTextField2 = new javax.swing.JTextField();
+        batchSizeLabel = new javax.swing.JLabel();
+        batchSizeTextField = new javax.swing.JTextField();
+        learningRateLabel2 = new javax.swing.JLabel();
+        learningRateTextField2 = new javax.swing.JTextField();
+        momentumLabel = new javax.swing.JLabel();
+        momentumTextField = new javax.swing.JTextField();
+        weightDecayLabel = new javax.swing.JLabel();
+        weightDecayTextField = new javax.swing.JTextField();
+        pathLabel = new javax.swing.JLabel();
+        pathTextField = new javax.swing.JTextField();
+        conversionEvalParameterPanel = new javax.swing.JPanel();
+        batchSizeLabel2 = new javax.swing.JLabel();
+        batchSizeTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.title_1")); // NOI18N
-        setPreferredSize(new java.awt.Dimension(589, 704));
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(595, 730));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.jPanel1.border.title_1"))); // NOI18N
         jPanel1.setMinimumSize(new java.awt.Dimension(600, 750));
@@ -143,17 +166,50 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         cnnPanel.setLayout(cnnPanelLayout);
         cnnPanelLayout.setHorizontalGroup(
             cnnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cnnPanelLayout.createSequentialGroup()
+            .addGroup(cnnPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cnnCheckBox)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cnnPanelLayout.setVerticalGroup(
             cnnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cnnPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cnnCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout cnnPanel1Layout = new javax.swing.GroupLayout(cnnPanel1);
+        cnnPanel1.setLayout(cnnPanel1Layout);
+        cnnPanel1Layout.setHorizontalGroup(
+            cnnPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 159, Short.MAX_VALUE)
+        );
+        cnnPanel1Layout.setVerticalGroup(
+            cnnPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionCheckBox, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.conversionCheckBox.text")); // NOI18N
+        conversionCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conversionCheckBoxActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout conversionPanelLayout = new javax.swing.GroupLayout(conversionPanel);
+        conversionPanel.setLayout(conversionPanelLayout);
+        conversionPanelLayout.setHorizontalGroup(
+            conversionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cnnCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(conversionCheckBox)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        conversionPanelLayout.setVerticalGroup(
+            conversionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, conversionPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(conversionCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -163,20 +219,26 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(datasetOptionLabel)
-                .addGap(46, 46, 46)
+                .addGap(32, 32, 32)
                 .addComponent(datasetTrainingRadioButton)
-                .addGap(48, 48, 48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(datasetTestRadioButton)
-                .addGap(132, 132, 132)
+                .addGap(106, 106, 106)
                 .addComponent(cnnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(conversionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cnnPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cnnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(conversionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cnnPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cnnPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(datasetOptionLabel)
                         .addComponent(datasetTrainingRadioButton)
@@ -212,25 +274,47 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
 
         modelTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Customize", "Linear Regression", "Rogistic Regression", "Multi Layer Classification" }));
         modelTypeComboBox.setSelectedIndex(1);
+        modelTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelTypeComboBoxActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionModelLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.conversionModelLabel.text")); // NOI18N
+
+        conversionModelComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Spike Norm", "VGG16" }));
+        conversionModelComboBox.setMinimumSize(new java.awt.Dimension(169, 21));
+        conversionModelComboBox.setPreferredSize(new java.awt.Dimension(169, 21));
+        conversionModelComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conversionModelComboBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(modelTypeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modelNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modelDirLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(modelNameTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(modelDirTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(modelTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(modelDirBrowseButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(conversionModelLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(conversionModelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(modelTypeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(modelNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(modelDirLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(modelDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modelTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(modelNameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(modelDirBrowseButton)))
+                .addGap(8, 8, 8))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {modelDirLabel, modelNameLabel});
@@ -244,6 +328,10 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                     .addComponent(modelTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(conversionModelLabel)
+                    .addComponent(conversionModelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(modelNameLabel)
                     .addComponent(modelNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -254,7 +342,7 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                 .addGap(10, 10, 10))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.jPanel4.border.title_1"))); // NOI18N
+        modelParameterPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.modelParameterPanel.border.title_1"))); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(inputsLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.inputsLabel.text")); // NOI18N
 
@@ -289,77 +377,77 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
 
         initializerComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Random", "Xavier" }));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout modelParameterPanelLayout = new javax.swing.GroupLayout(modelParameterPanel);
+        modelParameterPanel.setLayout(modelParameterPanelLayout);
+        modelParameterPanelLayout.setHorizontalGroup(
+            modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modelParameterPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(inputsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(inputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(optimizerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(optimizerComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(epochsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(epochsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(activationFunctionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(activationFunctionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(45, 45, 45)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(outputsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(outputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(learningRateLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(learningRateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(costFunctionLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(costFunctionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modelParameterPanelLayout.createSequentialGroup()
                         .addComponent(initializerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(initializerComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {activationFunctionLabel, costFunctionLabel, epochsLabel, initializerLabel, inputsLabel, learningRateLabel, optimizerLabel, outputsLabel});
+        modelParameterPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {activationFunctionLabel, costFunctionLabel, epochsLabel, initializerLabel, inputsLabel, learningRateLabel, optimizerLabel, outputsLabel});
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {activationFunctionComboBox, costFunctionComboBox, epochsTextField, initializerComboBox, inputsTextField, learningRateTextField, optimizerComboBox, outputsTextField});
+        modelParameterPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {activationFunctionComboBox, costFunctionComboBox, epochsTextField, initializerComboBox, inputsTextField, learningRateTextField, optimizerComboBox, outputsTextField});
 
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        modelParameterPanelLayout.setVerticalGroup(
+            modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modelParameterPanelLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputsLabel)
                     .addComponent(inputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(outputsLabel)
                     .addComponent(outputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(epochsLabel)
                     .addComponent(epochsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(learningRateLabel)
                     .addComponent(learningRateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(activationFunctionLabel)
                     .addComponent(activationFunctionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(costFunctionLabel)
                     .addComponent(costFunctionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modelParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(optimizerLabel)
                     .addComponent(optimizerComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(initializerLabel)
@@ -367,9 +455,9 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                 .addGap(10, 10, 10))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {activationFunctionLabel, costFunctionLabel, epochsLabel, initializerLabel, inputsLabel, learningRateLabel, optimizerLabel, outputsLabel});
+        modelParameterPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {activationFunctionLabel, costFunctionLabel, epochsLabel, initializerLabel, inputsLabel, learningRateLabel, optimizerLabel, outputsLabel});
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {activationFunctionComboBox, costFunctionComboBox, epochsTextField, initializerComboBox, inputsTextField, learningRateTextField, optimizerComboBox, outputsTextField});
+        modelParameterPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {activationFunctionComboBox, costFunctionComboBox, epochsTextField, initializerComboBox, inputsTextField, learningRateTextField, optimizerComboBox, outputsTextField});
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.jPanel3.border.title"))); // NOI18N
 
@@ -425,7 +513,7 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(IncludeFirstLineCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -437,12 +525,12 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(modelFileLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(modelFileTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(modelFileTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(delimiterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(fileDirBrowseButton))))
-                .addContainerGap())
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {delimiterComboBox, fileDirBrowseButton});
@@ -484,15 +572,15 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -511,6 +599,113 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
             }
         });
 
+        conversionParametersPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.conversionParametersPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(epochsLabel2, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.epochsLabel2.text")); // NOI18N
+
+        epochsTextField2.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.epochsTextField2.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.batchSizeLabel.text")); // NOI18N
+
+        batchSizeTextField.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.batchSizeTextField.text")); // NOI18N
+        batchSizeTextField.setPreferredSize(new java.awt.Dimension(120, 21));
+
+        org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel2, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.learningRateLabel2.text")); // NOI18N
+
+        learningRateTextField2.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.learningRateTextField2.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(momentumLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.momentumLabel.text")); // NOI18N
+
+        momentumTextField.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.momentumTextField.text")); // NOI18N
+        momentumTextField.setPreferredSize(new java.awt.Dimension(120, 21));
+
+        org.openide.awt.Mnemonics.setLocalizedText(weightDecayLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.weightDecayLabel.text")); // NOI18N
+
+        weightDecayTextField.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.weightDecayTextField.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.pathLabel.text")); // NOI18N
+
+        pathTextField.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.pathTextField.text")); // NOI18N
+        pathTextField.setToolTipText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.pathTextField.toolTipText")); // NOI18N
+
+        javax.swing.GroupLayout conversionParametersPanelLayout = new javax.swing.GroupLayout(conversionParametersPanel);
+        conversionParametersPanel.setLayout(conversionParametersPanelLayout);
+        conversionParametersPanelLayout.setHorizontalGroup(
+            conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionParametersPanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(epochsLabel2)
+                    .addComponent(learningRateLabel2)
+                    .addComponent(weightDecayLabel))
+                .addGap(28, 28, 28)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(epochsTextField2)
+                    .addComponent(learningRateTextField2)
+                    .addComponent(weightDecayTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(batchSizeLabel)
+                    .addComponent(momentumLabel)
+                    .addComponent(pathLabel))
+                .addGap(46, 46, 46)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(batchSizeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(momentumTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pathTextField))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        conversionParametersPanelLayout.setVerticalGroup(
+            conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionParametersPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(epochsLabel2)
+                    .addComponent(epochsTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(batchSizeLabel)
+                    .addComponent(batchSizeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(learningRateLabel2)
+                    .addComponent(learningRateTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(momentumLabel)
+                    .addComponent(momentumTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(conversionParametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(weightDecayLabel)
+                    .addComponent(weightDecayTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pathLabel)
+                    .addComponent(pathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        conversionEvalParameterPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.conversionEvalParameterPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel2, org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.batchSizeLabel2.text")); // NOI18N
+
+        batchSizeTextField2.setText(org.openide.util.NbBundle.getMessage(ArtificialNeuralNetworkDialog.class, "ArtificialNeuralNetworkDialog.batchSizeTextField2.text")); // NOI18N
+
+        javax.swing.GroupLayout conversionEvalParameterPanelLayout = new javax.swing.GroupLayout(conversionEvalParameterPanel);
+        conversionEvalParameterPanel.setLayout(conversionEvalParameterPanelLayout);
+        conversionEvalParameterPanelLayout.setHorizontalGroup(
+            conversionEvalParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionEvalParameterPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(batchSizeLabel2)
+                .addGap(43, 43, 43)
+                .addComponent(batchSizeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        conversionEvalParameterPanelLayout.setVerticalGroup(
+            conversionEvalParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionEvalParameterPanelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(conversionEvalParameterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(batchSizeLabel2)
+                    .addComponent(batchSizeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -524,13 +719,16 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                         .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 562, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(conversionEvalParameterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(conversionParametersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(modelParameterPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
 
@@ -546,9 +744,13 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(modelParameterPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(conversionParametersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(conversionEvalParameterPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(closeButton)
@@ -574,17 +776,60 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         srcFile = new File("");
         destDir = new File(hDirectory + File.separatorChar + "src" + File.separatorChar + "DataSets"); /*--- Jaehee Kim 2020.10.08 수정 ---*/
         
-        cnnPanel.setVisible(false);
+        //cnnPanel.setVisible(false);
+        conversionParametersPanel.setVisible(false);
+        conversionModelLabel.setVisible(false);
+        conversionModelComboBox.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
 
     }
     private void datasetTrainingRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datasetTrainingRadioButtonActionPerformed
         datasetTrainingRadioButton.setActionCommand("Training");
         hDataSetOpt = H_DATA_SET_TRAINING;
+        if(conversionCheckBox.isSelected()){
+            if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT){
+                UiConvSpikeNormTrain();
+            }
+            else
+                UiConvSpikeNormVGG16Train();
+        }
+        else{
+            if(modelTypeComboBox.getSelectedIndex()==1)
+                UiLinearRegression();
+            else if(modelTypeComboBox.getSelectedIndex()==2)
+                UiLogisticRegression();
+            else
+                UiMultiLayerClassification();
+        }
     }//GEN-LAST:event_datasetTrainingRadioButtonActionPerformed
 
     private void datasetTestRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datasetTestRadioButtonActionPerformed
         datasetTestRadioButton.setActionCommand("Test");
         hDataSetOpt = H_DATA_SET_TEST;
+        if(modelTypeComboBox.getSelectedIndex()==0)
+            UiConvSpikeNormEval();
+        else if(modelTypeComboBox.getSelectedIndex()==1)
+            UiLinearRegression();
+        else if(modelTypeComboBox.getSelectedIndex()==2)
+            UiLogisticRegression();
+        else
+            UiMultiLayerClassification();
+            
+        //if(conversionCheckBox.isSelected()){
+            // if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT){
+                // UiConvSpikeNormEval();
+            // }
+            // else
+                // UiConvSpikeNormVGG16Eval();
+        // }
+        // else{
+            // if(modelTypeComboBox.getSelectedIndex()==1)
+                // UiLinearRegression();
+            // else if(modelTypeComboBox.getSelectedIndex()==2)
+                // UiLogisticRegression();
+            // else
+                // UiMultiLayerClassification();
+        // }
     }//GEN-LAST:event_datasetTestRadioButtonActionPerformed
 
     private void modelDirBrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelDirBrowseButtonActionPerformed
@@ -647,6 +892,68 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_closeButtonActionPerformed
+
+    private void conversionCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionCheckBoxActionPerformed
+        
+        if(conversionCheckBox.isSelected()){ //conversion 모델일경우
+            modelTypeComboBox.setSelectedIndex(0);
+            UiConvSpikeNormTrain();
+            if(hDataSetOpt == H_DATA_SET_TEST){
+                if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT )
+                    UiConvSpikeNormEval();
+                else
+                    UiConvSpikeNormVGG16Eval();
+            }
+            else{
+                if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT )
+                    UiConvSpikeNormTrain();
+                else
+                    UiConvSpikeNormVGG16Train();
+            }
+        }
+        else{
+            modelTypeComboBox.setSelectedIndex(1);
+            UiLinearRegression();
+        }
+    }//GEN-LAST:event_conversionCheckBoxActionPerformed
+
+    private void modelTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelTypeComboBoxActionPerformed
+        // TODO add your handling code here:
+        if(modelTypeComboBox.getSelectedIndex()==0){
+            conversionCheckBox.setSelected(true);
+            if(hDataSetOpt == H_DATA_SET_TEST)
+                UiConvSpikeNormEval();
+            else
+                UiConvSpikeNormTrain();
+        }
+        else if(modelTypeComboBox.getSelectedIndex()==1){
+            UiLinearRegression();
+            conversionCheckBox.setSelected(false);
+        }
+        else if(modelTypeComboBox.getSelectedIndex()==2){
+            UiLogisticRegression();
+            conversionCheckBox.setSelected(false);
+        }
+        else{
+            UiMultiLayerClassification();
+            conversionCheckBox.setSelected(false);
+        }
+    }//GEN-LAST:event_modelTypeComboBoxActionPerformed
+
+    private void conversionModelComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionModelComboBoxActionPerformed
+        if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT){
+            if(hDataSetOpt == H_DATA_SET_TEST)
+                UiConvSpikeNormEval();
+            else
+                UiConvSpikeNormTrain();
+        }
+        else{
+            if(hDataSetOpt == H_DATA_SET_TEST)
+                UiConvSpikeNormVGG16Eval();
+            else
+                UiConvSpikeNormVGG16Train();
+        }
+    }//GEN-LAST:event_conversionModelComboBoxActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -757,9 +1064,20 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JCheckBox IncludeFirstLineCheckBox;
     private javax.swing.JComboBox activationFunctionComboBox;
     private javax.swing.JLabel activationFunctionLabel;
+    private javax.swing.JLabel batchSizeLabel;
+    private javax.swing.JLabel batchSizeLabel2;
+    private javax.swing.JTextField batchSizeTextField;
+    private javax.swing.JTextField batchSizeTextField2;
     private javax.swing.JButton closeButton;
     private javax.swing.JCheckBox cnnCheckBox;
     private javax.swing.JPanel cnnPanel;
+    private javax.swing.JPanel cnnPanel1;
+    private javax.swing.JCheckBox conversionCheckBox;
+    private javax.swing.JPanel conversionEvalParameterPanel;
+    private javax.swing.JComboBox conversionModelComboBox;
+    private javax.swing.JLabel conversionModelLabel;
+    private javax.swing.JPanel conversionPanel;
+    private javax.swing.JPanel conversionParametersPanel;
     private javax.swing.JComboBox costFunctionComboBox;
     private javax.swing.JLabel costFunctionLabel;
     private javax.swing.ButtonGroup datasetOptionButtonGroup;
@@ -768,7 +1086,9 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JRadioButton datasetTrainingRadioButton;
     private javax.swing.JComboBox delimiterComboBox;
     private javax.swing.JLabel epochsLabel;
+    private javax.swing.JLabel epochsLabel2;
     private javax.swing.JTextField epochsTextField;
+    private javax.swing.JTextField epochsTextField2;
     private javax.swing.JButton fileDirBrowseButton;
     private javax.swing.JComboBox initializerComboBox;
     private javax.swing.JLabel initializerLabel;
@@ -777,11 +1097,12 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel learningRateLabel;
+    private javax.swing.JLabel learningRateLabel2;
     private javax.swing.JTextField learningRateTextField;
+    private javax.swing.JTextField learningRateTextField2;
     private javax.swing.JCheckBox loadDataFromFileCheckBox;
     private javax.swing.JButton modelDirBrowseButton;
     private javax.swing.JLabel modelDirLabel;
@@ -790,14 +1111,21 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JTextField modelFileTextField;
     private javax.swing.JLabel modelNameLabel;
     private javax.swing.JTextField modelNameTextField;
+    private javax.swing.JPanel modelParameterPanel;
     private javax.swing.JComboBox modelTypeComboBox;
     private javax.swing.JLabel modelTypeLabel;
+    private javax.swing.JLabel momentumLabel;
+    private javax.swing.JTextField momentumTextField;
     private javax.swing.JButton nextButton;
     private javax.swing.JComboBox optimizerComboBox;
     private javax.swing.JLabel optimizerLabel;
     private javax.swing.JLabel outputsLabel;
     private javax.swing.JTextField outputsTextField;
+    private javax.swing.JLabel pathLabel;
+    private javax.swing.JTextField pathTextField;
     private javax.swing.JTextArea varificationLogTextArea1;
+    private javax.swing.JLabel weightDecayLabel;
+    private javax.swing.JTextField weightDecayTextField;
     // End of variables declaration//GEN-END:variables
 
     private void loadData(String loadDir) {
@@ -883,6 +1211,133 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         
     }
 
+    private void UiLinearRegression(){
+        
+        modelParameterPanel.setVisible(true);
+        //modelTypeComboBox.setSelectedIndex(1);
+        conversionModelLabel.setVisible(false);
+        conversionModelComboBox.setVisible(false);
+        conversionParametersPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
+        
+        modelNameTextField.setText("model_ex");
+        inputsTextField.setText("1");
+        outputsTextField.setText("1");
+        epochsTextField.setText("200");
+        learningRateTextField.setText("0.1");
+        activationFunctionComboBox.setSelectedIndex(1);
+        costFunctionComboBox.setSelectedIndex(0);
+        optimizerComboBox.setSelectedIndex(0);
+        initializerComboBox.setSelectedIndex(0);
+    }
+    private void UiLogisticRegression(){
+        
+        modelParameterPanel.setVisible(true);
+        //modelTypeComboBox.setSelectedIndex(2);
+        conversionModelLabel.setVisible(false);
+        conversionModelComboBox.setVisible(false);
+        conversionParametersPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
+        
+        modelNameTextField.setText("model_ex");
+        inputsTextField.setText("2");
+        outputsTextField.setText("1");
+        epochsTextField.setText("200");
+        learningRateTextField.setText("0.1");
+        activationFunctionComboBox.setSelectedIndex(1);
+        costFunctionComboBox.setSelectedIndex(0);
+        optimizerComboBox.setSelectedIndex(0);
+        initializerComboBox.setSelectedIndex(0);
+    }
+    
+    
+    private void UiMultiLayerClassification(){
+        
+        modelParameterPanel.setVisible(true);
+        //modelTypeComboBox.setSelectedIndex(3);
+        conversionModelLabel.setVisible(false);
+        conversionModelComboBox.setVisible(false);
+        conversionParametersPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
+        
+        modelNameTextField.setText("model_ex");
+        inputsTextField.setText("28,28");
+        outputsTextField.setText("1");
+        epochsTextField.setText("200");
+        learningRateTextField.setText("0.1");
+        activationFunctionComboBox.setSelectedIndex(1);
+        costFunctionComboBox.setSelectedIndex(0);
+        optimizerComboBox.setSelectedIndex(0);
+        initializerComboBox.setSelectedIndex(0);
+    }
+    
+    private void UiConvSpikeNormTrain(){
+        conversionParametersPanel.setVisible(true);
+        conversionModelLabel.setVisible(true);
+        conversionModelComboBox.setVisible(true);
+        modelParameterPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
+        
+        //modelTypeComboBox.setSelectedIndex(0);
+        pathLabel.setVisible(false);
+        pathTextField.setVisible(false);
+        
+        modelNameTextField.setText("ann.pt");
+        epochsTextField2.setText("300");
+        batchSizeTextField.setText("64");
+        learningRateTextField2.setText("0.01");
+        momentumTextField.setText("0.9");
+        weightDecayTextField.setText("5e-4");
+        
+       
+    }
+    private void UiConvSpikeNormEval(){
+        conversionParametersPanel.setVisible(false);
+        conversionModelLabel.setVisible(true);
+        conversionModelComboBox.setVisible(true);
+        modelParameterPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(true);
+        
+        modelNameTextField.setText("ann.pt");
+        //modelTypeComboBox.setSelectedIndex(0);
+        pathLabel.setVisible(false);
+        pathTextField.setVisible(false);
+        
+    }
+    private void UiConvSpikeNormVGG16Train(){
+        conversionParametersPanel.setVisible(true);
+        conversionModelLabel.setVisible(true);
+        conversionModelComboBox.setVisible(true);
+        modelParameterPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(false);
+        
+        modelNameTextField.setText("vgg16.pt");
+        //modelTypeComboBox.setSelectedIndex(0);
+        pathLabel.setVisible(false);
+        pathTextField.setVisible(false);
+        
+        epochsTextField2.setText("300");
+        batchSizeTextField.setText("64");
+        learningRateTextField2.setText("0.01");
+        momentumTextField.setText("0.9");
+        weightDecayTextField.setText("5e-4");
+        
+        
+    }
+    private void UiConvSpikeNormVGG16Eval(){
+        conversionParametersPanel.setVisible(false);
+        conversionModelLabel.setVisible(true);
+        conversionModelComboBox.setVisible(true);
+        modelParameterPanel.setVisible(false);
+        conversionEvalParameterPanel.setVisible(true);
+        
+        modelNameTextField.setText("vgg16.pt");
+        //modelTypeComboBox.setSelectedIndex(0);
+        pathLabel.setVisible(false);
+        pathTextField.setVisible(false);
+        
+    }
+    
 
 }
 

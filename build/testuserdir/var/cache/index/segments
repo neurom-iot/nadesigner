@@ -1,10 +1,11 @@
-#Mon Sep 27 14:49:11 KST 2021
+#Wed Feb 16 20:44:51 KST 2022
 s23=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/temp1/src/
 s22=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/NAnengoFPGA/src/
 s21=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/IoTPiCamera/src/
 s20=file\:/D\:/NaDesigner/NaDesigner_2021/build/testuserdir/
 s9=file\:/C\:/Users/JJH/Documents/NaDesigner/Projects/SNNComponent/src/
 s8=file\:/C\:/Users/JJH/Documents/NaDesigner/Projects/SNNComponent123/src/
+s80=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/ann_test/src/
 s7=file\:/C\:/Users/JJH/Documents/NaDesigner/Projects/SNNComponent3/src/
 s6=file\:/C\:/Users/User/Documents/NaDesigner/Projects/SNNComponentdsd/src/
 s5=file\:/C\:/Users/User/AppData/Roaming/Python/Python37/site-packages/
@@ -17,8 +18,8 @@ s18=file\:/C\:/Users/SeoyeonKim/AppData/Roaming/Python/Python37/site-packages/
 s17=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/SNNComponent_0601_test_temp/src/
 s16=file\:/C\:/Users/jjh/PycharmProjects/neromophic/venv/
 s15=file\:/C\:/Users/jjh/Desktop/NaDesigner_v.0.6.8_02-03_jh_Final/build/testuserdir/
-s79=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/de1_soc/src/
 s14=file\:/C\:/Users/jjh/AppData/Local/Programs/Python/Python37/
+s79=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/de1_soc/src/
 s13=jar\:file\:/C\:/Program%20Files%20(x86)/NetBeans%208.0.2/ide/jsstubs/domstubs.zip\!/
 s78=file\:/C\:/Users/SeoyeonKim/Documents/NaDesigner/Projects/SNN_iris_2/src/
 s12=jar\:file\:/C\:/Program%20Files%20(x86)/NetBeans%208.0.2/ide/jsstubs/corestubs.zip\!/

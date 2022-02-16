@@ -5,8 +5,8 @@
   <joined-properties
    x="-8"
    y="-8"
-   width="1936"
-   height="1056"
+   width="1616"
+   height="876"
    relative-x="0.0"
    relative-y="0.0"
    relative-width="0.0"
@@ -41,9 +41,10 @@
   <bounds x="633" y="249" width="806" height="457" />
     </editor-area>
     <screen width="1600" height="900"/>
-    <active-mode name="explorer"/>
+    <active-mode name="editor"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
     <tc-list>
+  <tc-id id="MultiView-Py#007CPyDC8BB48xt#002Ehistory#007C_8"/>
   <tc-id id="projectTabLogical_tc"/>
   <tc-id id="MultiView-Py#007CPyDC8BB49xt#002Ehistory#007C_9"/>
   <tc-id id="projectTab_tc"/>
