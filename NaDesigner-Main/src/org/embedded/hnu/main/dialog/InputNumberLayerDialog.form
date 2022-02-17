@@ -112,7 +112,7 @@
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="}&#xa;else{&#xa;inputNumberLayerTextField.setText(&quot;0&quot;);&#xa;inputNumberLayerTextField.setEnabled(false);&#xa;}"/>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="if(selectedCNN &amp;&amp; H_DL_Model == MNIST){"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="if(selectedCNN || H_DL_Model == MNIST){"/>
           </AuxValues>
         </Component>
       </SubComponents>

@@ -2,6 +2,7 @@ package org.embedded.hnu.generator.ai;
 
 import org.embedded.hnu.generator.HAIGenerator;
 import org.embedded.hnu.ioconfig.ai.HANNIOConfig;
+import org.embedded.hnu.ioconfig.ai.HANNLayerConfig;
 
 public class HANNGenerator extends HAIGenerator{
     
@@ -16,11 +17,13 @@ public class HANNGenerator extends HAIGenerator{
     
     public int hModelType;
     public HANNIOConfig hACfg = new HANNIOConfig();
+    private HANNLayerConfig[] hALCfg;
     
     public String modelName="";
     public String modelDir="";
     public String componentName="";
     public String componentDir="";
+    int numLayer = 0;
     
     int inputXNum=0, outputYNum = 0; 
     
@@ -50,6 +53,11 @@ public class HANNGenerator extends HAIGenerator{
 
         hACfg = hANNIOConfig;
         dataSetOpt = hACfg.getData_opt();
+    }
+    
+    public void setNumLayer(int numLayer){
+        hALCfg = new HANNLayerConfig[numLayer];
+        this.numLayer = numLayer;
     }
     
     public void defineModel(int modeltype){

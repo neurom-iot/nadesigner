@@ -788,10 +788,13 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         hDataSetOpt = H_DATA_SET_TRAINING;
         if(conversionCheckBox.isSelected()){
             if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT){
+                cnnCheckBox.setSelected(true);
                 UiConvSpikeNormTrain();
             }
-            else
+            else{
+                cnnCheckBox.setSelected(false);
                 UiConvSpikeNormVGG16Train();
+            }
         }
         else{
             if(modelTypeComboBox.getSelectedIndex()==1)
@@ -805,6 +808,7 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
 
     private void datasetTestRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datasetTestRadioButtonActionPerformed
         datasetTestRadioButton.setActionCommand("Test");
+        cnnCheckBox.setSelected(false);
         hDataSetOpt = H_DATA_SET_TEST;
         if(modelTypeComboBox.getSelectedIndex()==0)
             UiConvSpikeNormEval();
@@ -921,8 +925,11 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
         // TODO add your handling code here:
         if(modelTypeComboBox.getSelectedIndex()==0){
             conversionCheckBox.setSelected(true);
-            if(hDataSetOpt == H_DATA_SET_TEST)
+            cnnCheckBox.setSelected(true);
+            if(hDataSetOpt == H_DATA_SET_TEST){
+                cnnCheckBox.setSelected(false);
                 UiConvSpikeNormEval();
+            }
             else
                 UiConvSpikeNormTrain();
         }
@@ -942,16 +949,23 @@ public class ArtificialNeuralNetworkDialog extends javax.swing.JDialog {
 
     private void conversionModelComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionModelComboBoxActionPerformed
         if(conversionModelComboBox.getSelectedIndex()==H_SPIKE_NORM_DEFAULT){
-            if(hDataSetOpt == H_DATA_SET_TEST)
+            
+            if(hDataSetOpt == H_DATA_SET_TEST){
                 UiConvSpikeNormEval();
-            else
+                cnnCheckBox.setSelected(true);
+            }
+            else{
                 UiConvSpikeNormTrain();
+                cnnCheckBox.setSelected(false);
+            }
         }
         else{
             if(hDataSetOpt == H_DATA_SET_TEST)
                 UiConvSpikeNormVGG16Eval();
-            else
+            else{
                 UiConvSpikeNormVGG16Train();
+            }
+            cnnCheckBox.setSelected(false);
         }
     }//GEN-LAST:event_conversionModelComboBoxActionPerformed
 

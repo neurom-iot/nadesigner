@@ -4,10 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import javax.xml.ws.Action;
+import org.embedded.hnu.generator.ai.HANNGenerator;
 import org.embedded.hnu.generator.ai.HSNNGenerator;
 import org.embedded.hnu.generator.file.HFunctionGenerator;
 import org.embedded.hnu.generator.file.HManifestGenerator;
 import org.embedded.hnu.generator.file.HUIGenerator;
+import org.embedded.hnu.ioconfig.ai.HANNIOConfig;
+import org.embedded.hnu.ioconfig.ai.HANNLayerConfig;
 import org.embedded.hnu.ioconfig.ai.HSNNIOConfig;
 import org.embedded.hnu.ioconfig.ai.HSNNLayerConfig;
 import static org.embedded.hnu.main.dialog.SpikingNeuralNetworkDialog.LOADDATA;
@@ -18,6 +21,7 @@ import static org.embedded.hnu.main.dialog.SpikingNeuralNetworkDialog.delim;
 public class AddLayerConfigDialog extends javax.swing.JDialog {
     
     public static final int H_SNN = 1;
+    public static final int H_ANN = 2;
     
     public static final int HNUM_DL = 3; //nengoDL 소스코드생성시
     
@@ -34,6 +38,7 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
     private int H_DL_Model = -1; //linear, logistic, mnist
     private int hDataSetOpt; //training or infer
     
+    private int h_state = 0; //ANN? or SNN?
     
     private String hDirectory;
     
@@ -41,6 +46,11 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
     private HSNNGenerator hSGen= new HSNNGenerator();
     private HSNNIOConfig hSIOConf = new HSNNIOConfig();
     private HSNNLayerConfig hSLCfg;
+    
+    private HANNGenerator hAGen = new HANNGenerator();
+    private HANNIOConfig hAIOConf = new HANNIOConfig();
+    private HANNLayerConfig hALCfg;
+    
     private boolean saveLayer[];
     private boolean flag;
     
@@ -54,6 +64,7 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         myInitComponents();    
     }
     
+    //SNN을 통해 들어왔을때
     public AddLayerConfigDialog(java.awt.Frame parent, boolean modal, int numLayer, HSNNGenerator hSGen, HSNNIOConfig hSIOConf, String dir, int model, int dataOpt) {
         super(parent, modal);
         maxNumLayer = numLayer;
@@ -62,9 +73,25 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         H_DL_Model = model;
         hDataSetOpt = dataOpt;
         hDirectory = dir;
+        h_state = H_SNN;
         
         initComponents();
         myInitComponents();  
+    }
+    
+    //ANN을 통해 들어왔을때
+    public AddLayerConfigDialog(java.awt.Frame parent, boolean modal, int numLayer, HANNGenerator hAGen, HANNIOConfig hAIOConf, String dir, int model, int dataOpt) {
+        super(parent, modal);
+        maxNumLayer = numLayer;
+        this.hAGen = hAGen;
+        this.hAIOConf = hAIOConf;
+        H_DL_Model = model;
+        hDataSetOpt = dataOpt;
+        hDirectory = dir;
+        h_state = H_ANN;
+        
+        initComponents();
+        myANNinitComponents();  
     }
 
     @SuppressWarnings("unchecked")
@@ -72,6 +99,7 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
     private void initComponents() {
 
         layerOptionGroup = new javax.swing.ButtonGroup();
+        LayerOptionANNbuttonGroup = new javax.swing.ButtonGroup();
         //layerField[] = new javax.swing.JTextField[insertNumLayer];
         //layerLabel[] = new javax.swing.JLabel[insertNumLayer];
         //javax.swing.JLabel "layerLabel"+insertNumber = new javax.swing.JLabel();
@@ -92,11 +120,41 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         poolingRadioButton = new javax.swing.JRadioButton();
         saveButton = new javax.swing.JButton();
         generateButton = new javax.swing.JButton();
+        //layerField[] = new javax.swing.JTextField[insertNumLayer];
+        //layerLabel[] = new javax.swing.JLabel[insertNumLayer];
+        //javax.swing.JLabel "layerLabel"+insertNumber = new javax.swing.JLabel();
+        ANNPanel = new javax.swing.JPanel();
+        layerLabel1 = new javax.swing.JLabel();
+        layerComboBox1 = new javax.swing.JComboBox();
+        inChannelLabel1 = new javax.swing.JLabel();
+        filterTextField1 = new javax.swing.JTextField();
+        kernelSizeLabel1 = new javax.swing.JLabel();
+        kernelSizeTextField1 = new javax.swing.JTextField();
+        paddingLabel1 = new javax.swing.JLabel();
+        strideLabel1 = new javax.swing.JLabel();
+        strideTextField1 = new javax.swing.JTextField();
+        logLabel1 = new java.awt.Label();
+        optionLabel1 = new javax.swing.JLabel();
+        convRadioButton1 = new javax.swing.JRadioButton();
+        fullyRadioButton1 = new javax.swing.JRadioButton();
+        outChannelLabel1 = new javax.swing.JLabel();
+        filterTextField2 = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        flattenCheckBox1 = new javax.swing.JCheckBox();
+        dropoutCheckBox1 = new javax.swing.JCheckBox();
+        paddingTextField1 = new javax.swing.JTextField();
+        biasLabel1 = new javax.swing.JLabel();
+        biasComboBox1 = new javax.swing.JComboBox();
+        jPanel3 = new javax.swing.JPanel();
+        reluCheckBox1 = new javax.swing.JCheckBox();
+        addPoolCheckBox1 = new javax.swing.JCheckBox();
+        poolSizeTextField1 = new javax.swing.JTextField();
+        poolSizeLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.title")); // NOI18N
         setIconImage(null);
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(373, 510));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.jPanel1.border.title"))); // NOI18N
 
@@ -148,7 +206,6 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         org.openide.awt.Mnemonics.setLocalizedText(optionLabel, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.optionLabel.text")); // NOI18N
 
         layerOptionGroup.add(convRadioButton);
-        convRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(convRadioButton, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.convRadioButton.text")); // NOI18N
 
         layerOptionGroup.add(poolingRadioButton);
@@ -243,6 +300,217 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
             }
         });
 
+        ANNPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.ANNPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(layerLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.layerLabel1.text")); // NOI18N
+
+        String[] layerArrANN= new String[maxNumLayer];
+        for(int i=0; i<maxNumLayer; i++){
+            layerArrANN[i] = "Layer "+(i+1);
+        }
+        javax.swing.DefaultComboBoxModel layerDataANN = new javax.swing.DefaultComboBoxModel(layerArrANN);
+        layerComboBox1.setModel(layerDataANN);
+        //for(int i=1; i<10; i++){
+            //    if(!layerArr[i].equals(""))
+            //        layerComboBox.add(layerArr[i]);
+            //}
+        layerComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                layerComboBox1ActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(inChannelLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.inChannelLabel1.text")); // NOI18N
+
+        filterTextField1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.filterTextField1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(kernelSizeLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.kernelSizeLabel1.text")); // NOI18N
+
+        kernelSizeTextField1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.kernelSizeTextField1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(paddingLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.paddingLabel1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(strideLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.strideLabel1.text")); // NOI18N
+
+        strideTextField1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.strideTextField1.text")); // NOI18N
+
+        logLabel1.setFont(new java.awt.Font("굴림", 0, 12)); // NOI18N
+        logLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        logLabel1.setMinimumSize(new java.awt.Dimension(229, 19));
+        logLabel1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.logLabel1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(optionLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.optionLabel1.text")); // NOI18N
+
+        LayerOptionANNbuttonGroup.add(convRadioButton1);
+        convRadioButton1.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(convRadioButton1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.convRadioButton1.text")); // NOI18N
+
+        LayerOptionANNbuttonGroup.add(fullyRadioButton1);
+        org.openide.awt.Mnemonics.setLocalizedText(fullyRadioButton1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.fullyRadioButton1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(outChannelLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.outChannelLabel1.text")); // NOI18N
+
+        filterTextField2.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.filterTextField2.text")); // NOI18N
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.jPanel2.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(flattenCheckBox1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.flattenCheckBox1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(dropoutCheckBox1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.dropoutCheckBox1.text")); // NOI18N
+        dropoutCheckBox1.setActionCommand(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.dropoutCheckBox1.actionCommand")); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(flattenCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(dropoutCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(flattenCheckBox1)
+                    .addComponent(dropoutCheckBox1))
+                .addContainerGap())
+        );
+
+        paddingTextField1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.paddingTextField1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(biasLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.biasLabel1.text")); // NOI18N
+
+        biasComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "FALSE", "TRUE" }));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.jPanel3.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(reluCheckBox1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.reluCheckBox1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(addPoolCheckBox1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.addPoolCheckBox1.text")); // NOI18N
+
+        poolSizeTextField1.setText(org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.poolSizeTextField1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(poolSizeLabel1, org.openide.util.NbBundle.getMessage(AddLayerConfigDialog.class, "AddLayerConfigDialog.poolSizeLabel1.text")); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(reluCheckBox1)
+                .addGap(31, 31, 31)
+                .addComponent(addPoolCheckBox1)
+                .addGap(18, 18, 18)
+                .addComponent(poolSizeLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(poolSizeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(reluCheckBox1)
+                    .addComponent(addPoolCheckBox1)
+                    .addComponent(poolSizeLabel1)
+                    .addComponent(poolSizeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6))
+        );
+
+        javax.swing.GroupLayout ANNPanelLayout = new javax.swing.GroupLayout(ANNPanel);
+        ANNPanel.setLayout(ANNPanelLayout);
+        ANNPanelLayout.setHorizontalGroup(
+            ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ANNPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ANNPanelLayout.createSequentialGroup()
+                        .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(layerLabel1)
+                            .addComponent(inChannelLabel1)
+                            .addComponent(kernelSizeLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(paddingLabel1)
+                            .addComponent(strideLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(22, 22, 22)
+                        .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(layerComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(filterTextField1)
+                            .addComponent(kernelSizeTextField1)
+                            .addComponent(strideTextField1)
+                            .addComponent(paddingTextField1)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(ANNPanelLayout.createSequentialGroup()
+                        .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(ANNPanelLayout.createSequentialGroup()
+                                .addComponent(optionLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(convRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fullyRadioButton1))
+                            .addGroup(ANNPanelLayout.createSequentialGroup()
+                                .addComponent(outChannelLabel1)
+                                .addGap(21, 21, 21)
+                                .addComponent(filterTextField2)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(ANNPanelLayout.createSequentialGroup()
+                        .addComponent(biasLabel1)
+                        .addGap(66, 66, 66)
+                        .addComponent(biasComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        ANNPanelLayout.setVerticalGroup(
+            ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ANNPanelLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(layerComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(layerLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(optionLabel1)
+                    .addComponent(convRadioButton1)
+                    .addComponent(fullyRadioButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(inChannelLabel1)
+                    .addComponent(filterTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(outChannelLabel1)
+                    .addComponent(filterTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kernelSizeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kernelSizeLabel1))
+                .addGap(10, 10, 10)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(strideTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strideLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(paddingLabel1)
+                    .addComponent(paddingTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ANNPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(biasComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(biasLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(logLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -254,8 +522,13 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
                 .addComponent(generateButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ANNPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -266,7 +539,9 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ANNPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(generateButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -282,6 +557,14 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         logLabel.setText("");
         saveLayer = new boolean[maxNumLayer];
         layerComboBox.setSelectedIndex(0);
+        ANNPanel.setVisible(false);
+    }
+    
+    private void myANNinitComponents(){
+        logLabel1.setText("");
+        saveLayer = new boolean[maxNumLayer];
+        layerComboBox1.setSelectedIndex(0);
+        jPanel1.setVisible(false);
     }
     
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -368,6 +651,10 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
             strideTextField.setText("2");
         }
     }//GEN-LAST:event_layerComboBoxActionPerformed
+
+    private void layerComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_layerComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_layerComboBox1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -482,23 +769,51 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
     
             
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ANNPanel;
+    private javax.swing.ButtonGroup LayerOptionANNbuttonGroup;
+    private javax.swing.JCheckBox addPoolCheckBox1;
+    private javax.swing.JComboBox biasComboBox1;
+    private javax.swing.JLabel biasLabel1;
     private javax.swing.JRadioButton convRadioButton;
+    private javax.swing.JRadioButton convRadioButton1;
+    private javax.swing.JCheckBox dropoutCheckBox1;
     private javax.swing.JLabel filterLabel;
     private javax.swing.JTextField filterTextField;
+    private javax.swing.JTextField filterTextField1;
+    private javax.swing.JTextField filterTextField2;
+    private javax.swing.JCheckBox flattenCheckBox1;
+    private javax.swing.JRadioButton fullyRadioButton1;
     private javax.swing.JButton generateButton;
+    private javax.swing.JLabel inChannelLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel kernelSizeLabel;
+    private javax.swing.JLabel kernelSizeLabel1;
     private javax.swing.JTextField kernelSizeTextField;
+    private javax.swing.JTextField kernelSizeTextField1;
     private javax.swing.JComboBox layerComboBox;
+    private javax.swing.JComboBox layerComboBox1;
     private javax.swing.JLabel layerLabel;
+    private javax.swing.JLabel layerLabel1;
     private javax.swing.ButtonGroup layerOptionGroup;
     private java.awt.Label logLabel;
+    private java.awt.Label logLabel1;
     private javax.swing.JLabel optionLabel;
+    private javax.swing.JLabel optionLabel1;
+    private javax.swing.JLabel outChannelLabel1;
     private javax.swing.JComboBox paddingComboBox;
     private javax.swing.JLabel paddingLabel;
+    private javax.swing.JLabel paddingLabel1;
+    private javax.swing.JTextField paddingTextField1;
+    private javax.swing.JLabel poolSizeLabel1;
+    private javax.swing.JTextField poolSizeTextField1;
     private javax.swing.JRadioButton poolingRadioButton;
+    private javax.swing.JCheckBox reluCheckBox1;
     private javax.swing.JButton saveButton;
     private javax.swing.JLabel strideLabel;
+    private javax.swing.JLabel strideLabel1;
     private javax.swing.JTextField strideTextField;
+    private javax.swing.JTextField strideTextField1;
     // End of variables declaration//GEN-END:variables
 }

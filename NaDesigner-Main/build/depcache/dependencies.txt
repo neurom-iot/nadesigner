@@ -1087,6 +1087,13 @@ java.lang.Object
 org.embedded.hnu.main.dialog.CoralGPIOPINDialog1
 org.embedded.hnu.main.dialog.CoralGPIOPINDialog1$4
 java.awt.event.ActionListener
+||:org.embedded.hnu.main.dialog.AddLayerConfigDialog$5
+java.lang.Object
+org.embedded.hnu.main.dialog.AddLayerConfigDialog
+javax.swing.JFrame
+org.embedded.hnu.main.dialog.AddLayerConfigDialog$5
+java.lang.Runnable
+org.embedded.hnu.main.dialog.AddLayerConfigDialog$5$1
 ||:org.embedded.hnu.main.dialog.CoralGPIOPINDialog1$3
 java.lang.Object
 org.embedded.hnu.main.dialog.CoralGPIOPINDialog1
@@ -1094,11 +1101,9 @@ javax.swing.event.ChangeListener
 org.embedded.hnu.main.dialog.CoralGPIOPINDialog1$3
 ||:org.embedded.hnu.main.dialog.AddLayerConfigDialog$4
 java.lang.Object
-org.embedded.hnu.main.dialog.AddLayerConfigDialog$4$1
 org.embedded.hnu.main.dialog.AddLayerConfigDialog
-javax.swing.JFrame
-java.lang.Runnable
 org.embedded.hnu.main.dialog.AddLayerConfigDialog$4
+java.awt.event.ActionListener
 ||:org.embedded.hnu.main.dialog.CoralGPIOPINDialog1$2
 java.lang.Object
 org.embedded.hnu.main.dialog.CoralGPIOPINDialog1$2
@@ -4090,6 +4095,7 @@ javax.swing.JDialog
 org.openide.util.NbBundle
 java.io.FileInputStream
 java.awt.EventQueue
+javax.swing.JCheckBox
 javax.swing.BorderFactory
 javax.swing.UnsupportedLookAndFeelException
 org.embedded.hnu.main.dialog.AddLayerConfigDialog
@@ -4109,10 +4115,12 @@ org.embedded.hnu.generator.file.HUIGenerator
 org.openide.awt.Mnemonics
 javax.swing.GroupLayout
 java.lang.Object
+org.embedded.hnu.ioconfig.ai.HANNIOConfig
 [Ljava.lang.String;
 java.awt.Dimension
 javax.swing.GroupLayout$Alignment
 javax.swing.JTextField
+org.embedded.hnu.main.dialog.AddLayerConfigDialog$5
 org.embedded.hnu.main.dialog.AddLayerConfigDialog$4
 java.lang.Short
 org.embedded.hnu.main.dialog.AddLayerConfigDialog$3
@@ -4130,6 +4138,7 @@ org.embedded.hnu.generator.file.HManifestGenerator
 [Ljavax.swing.UIManager$LookAndFeelInfo;
 java.io.PrintStream
 java.lang.InstantiationException
+org.embedded.hnu.generator.ai.HANNGenerator
 java.awt.event.ActionEvent
 javax.swing.ButtonGroup
 javax.swing.JLabel
@@ -4770,6 +4779,11 @@ java.lang.Object
 org.embedded.hnu.main.dialog.InputNumberLayerDialog
 org.embedded.hnu.main.dialog.InputNumberLayerDialog$1
 java.awt.event.ActionListener
+||:org.embedded.hnu.main.dialog.AddLayerConfigDialog$5$1
+java.awt.event.WindowAdapter
+java.lang.System
+org.embedded.hnu.main.dialog.AddLayerConfigDialog$5
+org.embedded.hnu.main.dialog.AddLayerConfigDialog$5$1
 ||:org.embedded.hnu.main.dialog.TinkerGPIOPINDialog$59
 java.lang.Object
 org.embedded.hnu.main.dialog.TinkerGPIOPINDialog$59

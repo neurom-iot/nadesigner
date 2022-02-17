@@ -110,7 +110,7 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
 
         org.openide.awt.Mnemonics.setLocalizedText(inputNumberLayerLabel, org.openide.util.NbBundle.getMessage(InputNumberLayerDialog.class, "InputNumberLayerDialog.inputNumberLayerLabel.text")); // NOI18N
 
-        if(selectedCNN && H_DL_Model == MNIST){
+        if(selectedCNN || H_DL_Model == MNIST){
             inputNumberLayerTextField.setText(org.openide.util.NbBundle.getMessage(InputNumberLayerDialog.class, "InputNumberLayerDialog.inputNumberLayerTextField.text")); // NOI18N
         }
         else{
@@ -197,7 +197,7 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
         inputNum = Integer.parseInt(inputNumberLayerTextField.getText());
         this.hSGen.setNumLayer(inputNum);
         if(inputNum!=0 && selectedCNN){
-            showAddLayerConfigDialog(inputNum);
+            showAddLayerConfigDialog(inputNum, state);
         }else if(inputNum == 0){
             if(LOADDATA == true){ 
                 copyFile();
@@ -287,11 +287,19 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
         this.dispose();
     }
     
-    private void showAddLayerConfigDialog(int inputNum){
-        AddLayerConfigDialog dialog = new AddLayerConfigDialog(null, true, inputNum, hSGen, hSIOConf,hDirectory, H_DL_Model, hDataSetOpt);
-        dialog.setLocationRelativeTo(null);
-        cancel();
-        dialog.setVisible(true);
+    private void showAddLayerConfigDialog(int inputNum, int state){
+        if(state == H_SNN){
+            AddLayerConfigDialog dialog = new AddLayerConfigDialog(null, true, inputNum, hSGen, hSIOConf,hDirectory, H_DL_Model, hDataSetOpt);
+            dialog.setLocationRelativeTo(null);
+            cancel();
+            dialog.setVisible(true);
+        }
+        else{
+            AddLayerConfigDialog dialog = new AddLayerConfigDialog(null, true, inputNum, hAGen, hAIOConf,hDirectory, H_DL_Model, hDataSetOpt);
+            dialog.setLocationRelativeTo(null);
+            cancel();
+            dialog.setVisible(true);
+        }
     }
     
     public void copyFile(){
