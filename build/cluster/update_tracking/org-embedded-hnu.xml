@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="org.embedded.hnu">
-    <module_version install_time="1645101387786" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1652950601339" last="true" origin="installer" specification_version="1.0">
         <file crc="4102158051" name="config/Modules/org-embedded-hnu.xml"/>
-        <file crc="4208041435" name="modules/org-embedded-hnu.jar"/>
+        <file crc="3037182752" name="modules/org-embedded-hnu.jar"/>
     </module_version>
 </module>

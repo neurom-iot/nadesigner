@@ -8,7 +8,7 @@
     </Property>
     <Property name="modal" type="boolean" value="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[495, 480]"/>
+      <Dimension value="[500, 520]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -35,11 +35,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                       <Component id="generateButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Component id="cancelButton" min="-2" pref="102" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="logPanel1" min="-2" pref="471" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -70,6 +71,18 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="stbpAlgorithmPanel" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="storeDataPanel" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="spikeNormAlgorithmPanel" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="conversionStoreDataPanel" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -95,9 +108,15 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="stbpAlgorithmPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="spikeNormAlgorithmPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="softLIFNeuronModelPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="logPanel1" pref="68" max="32767" attributes="0"/>
+              <Component id="storeDataPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="conversionStoreDataPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="logPanel1" pref="156" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="generateButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -301,7 +320,7 @@
                   <Component id="currentAlgorithmLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Component id="printAlgorithmLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -455,7 +474,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="112" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -533,25 +552,25 @@
                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="numOfEpochsLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfEpochsLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="numOfEpochsTextField" pref="66" max="32767" attributes="0"/>
+                      <Component id="numOfEpochsTextField1" pref="66" max="32767" attributes="0"/>
                       <Component id="batchSizeTextField1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+                          <Component id="momentumLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="momentumTextField1" min="-2" pref="66" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <Component id="learningRateLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="learningRateTextField1" min="-2" pref="66" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="momentumLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="momentumTextField" min="-2" pref="66" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -563,17 +582,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="numOfEpochsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfEpochsTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="momentumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="momentumTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfEpochsLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfEpochsTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="batchSizeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="learningRateLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="learningRateTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="momentumLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="momentumTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -588,10 +607,10 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="momentumLabel">
+        <Component class="javax.swing.JLabel" name="momentumLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.momentumLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.momentumLabel1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -609,10 +628,10 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="momentumTextField">
+        <Component class="javax.swing.JTextField" name="momentumTextField1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.momentumTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.momentumTextField1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -623,17 +642,17 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="numOfEpochsLabel">
+        <Component class="javax.swing.JLabel" name="numOfEpochsLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsLabel1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfEpochsTextField">
+        <Component class="javax.swing.JTextField" name="numOfEpochsTextField1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsTextField1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -658,31 +677,31 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="numOfClassesLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numOfClassesLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="numOfEpochsLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="numOfStepsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfStepsLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="notFiringLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="notFiringLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="numOfStepsTextField" alignment="1" pref="66" max="32767" attributes="0"/>
+                      <Component id="numOfStepsTextField2" alignment="1" pref="66" max="32767" attributes="0"/>
                       <Component id="numOfEpochsTextField2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="numOfClassesTextField3" alignment="0" max="32767" attributes="0"/>
-                      <Component id="notFiringTextField" max="32767" attributes="0"/>
+                      <Component id="numOfClassesTextField2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="notFiringTextField2" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="dtTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="maxFiringTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="maxFiringTimeLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="batchSizeTextField2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="dtTimeTextField" alignment="0" max="32767" attributes="0"/>
-                      <Component id="maxFiringTimeTextField" alignment="0" pref="66" max="32767" attributes="0"/>
+                      <Component id="timeIntervalTextField2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="maxFiringTimeTextField2" alignment="0" pref="66" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -693,8 +712,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="numOfClassesLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfClassesTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -702,24 +721,24 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="numOfEpochsLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="numOfEpochsTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dtTimeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dtTimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="maxFiringTimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="maxFiringTimeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="maxFiringTimeLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="maxFiringTimeTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="numOfStepsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="numOfStepsTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfStepsLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numOfStepsTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="notFiringLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="notFiringTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="notFiringLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="notFiringTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -727,10 +746,10 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="numOfClassesLabel3">
+        <Component class="javax.swing.JLabel" name="numOfClassesLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -748,31 +767,31 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="dtTimeLabel">
+        <Component class="javax.swing.JLabel" name="timeIntervalLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.dtTimeLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="numOfStepsLabel">
+        <Component class="javax.swing.JLabel" name="numOfStepsLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="maxFiringTimeLabel">
+        <Component class="javax.swing.JLabel" name="maxFiringTimeLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.maxFiringTimeLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.maxFiringTimeLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfClassesTextField3">
+        <Component class="javax.swing.JTextField" name="numOfClassesTextField2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -790,41 +809,41 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dtTimeTextField">
+        <Component class="javax.swing.JTextField" name="timeIntervalTextField2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.dtTimeTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dtTimeTextFieldActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfStepsTextField">
+        <Component class="javax.swing.JTextField" name="numOfStepsTextField2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="maxFiringTimeTextField">
+        <Component class="javax.swing.JTextField" name="maxFiringTimeTextField2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.maxFiringTimeTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.maxFiringTimeTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="notFiringLabel">
+        <Component class="javax.swing.JLabel" name="notFiringLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.notFiringLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.notFiringLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="notFiringTextField">
+        <Component class="javax.swing.JTextField" name="notFiringTextField2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.notFiringTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.notFiringTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -847,34 +866,34 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="numOfClassesLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="tauRefLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="gainLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRefLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="gainLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tauRefTextField" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
-                          <Component id="gainTextField" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="tauRefTextField7" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="gainTextField7" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="numOfClassesTextField1" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField7" min="-2" pref="65" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="amplitudeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="tauRCLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="sigmaLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="amplitudeLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRCLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="sigmaLabel7" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="amplitudeTextField" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="amplitudeTextField7" min="-2" pref="65" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="sigmaTextField" max="32767" attributes="0"/>
-                              <Component id="tauRCTextField" min="-2" pref="66" max="-2" attributes="0"/>
+                              <Component id="sigmaTextField7" max="32767" attributes="0"/>
+                              <Component id="tauRCTextField7" min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -887,24 +906,24 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="numOfClassesLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfClassesTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="amplitudeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="amplitudeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="amplitudeLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="amplitudeTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="tauRefLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tauRefTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tauRCLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tauRCTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRefLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRefTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRCLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tauRCTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="gainLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="gainTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="sigmaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="sigmaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="gainLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="gainTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sigmaLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sigmaTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -912,87 +931,87 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="numOfClassesLabel1">
+        <Component class="javax.swing.JLabel" name="numOfClassesLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfClassesTextField1">
+        <Component class="javax.swing.JTextField" name="numOfClassesTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="amplitudeLabel">
+        <Component class="javax.swing.JLabel" name="amplitudeLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.amplitudeLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.amplitudeLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="amplitudeTextField">
+        <Component class="javax.swing.JTextField" name="amplitudeTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.amplitudeTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.amplitudeTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tauRefLabel">
+        <Component class="javax.swing.JLabel" name="tauRefLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRefLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRefLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tauRefTextField">
+        <Component class="javax.swing.JTextField" name="tauRefTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRefTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRefTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tauRCLabel">
+        <Component class="javax.swing.JLabel" name="tauRCLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRCLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRCLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tauRCTextField">
+        <Component class="javax.swing.JTextField" name="tauRCTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRCTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.tauRCTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="sigmaTextField">
+        <Component class="javax.swing.JTextField" name="sigmaTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.sigmaTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.sigmaTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="sigmaLabel">
+        <Component class="javax.swing.JLabel" name="sigmaLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.sigmaLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.sigmaLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="gainTextField">
+        <Component class="javax.swing.JTextField" name="gainTextField7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.gainTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.gainTextField7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="gainLabel">
+        <Component class="javax.swing.JLabel" name="gainLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.gainLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.gainLabel7.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1012,28 +1031,37 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="batchSizeLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfEpochsLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="neuronsLabel3" min="-2" max="-2" attributes="0"/>
+                              <Component id="batchSizeLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="batchSizeTextField3" min="-2" pref="66" max="-2" attributes="0"/>
+                              <Component id="neuronsTextField3" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="numOfClassesLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="9" max="32767" attributes="0"/>
+                          <Component id="numOfClassesTextField3" min="-2" pref="66" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="batchSizeTextField3" alignment="1" pref="66" max="32767" attributes="0"/>
-                      <Component id="numOfEpochsTextField3" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="timeIntervalLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="timeIntervalLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="timeIntervalTextField" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="timeIntervalTextField3" min="-2" pref="66" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="stepsTimeLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="stepsTimeLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="stepsTimeTextField2" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="stepsTimeTextField3" min="-2" pref="66" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -1047,61 +1075,66 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="batchSizeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="stepsTimeLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="stepsTimeTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepsTimeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepsTimeTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="numOfEpochsLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfEpochsTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="neuronsLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="neuronsTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="numOfClassesLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="numOfEpochsLabel3">
+        <Component class="javax.swing.JLabel" name="numOfClassesLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="stepsTimeLabel2">
+        <Component class="javax.swing.JLabel" name="stepsTimeLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="timeIntervalLabel">
+        <Component class="javax.swing.JLabel" name="timeIntervalLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfEpochsTextField3">
+        <Component class="javax.swing.JTextField" name="numOfClassesTextField3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfEpochsTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="stepsTimeTextField2">
+        <Component class="javax.swing.JTextField" name="stepsTimeTextField3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="timeIntervalTextField">
+        <Component class="javax.swing.JTextField" name="timeIntervalTextField3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1116,6 +1149,20 @@
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.batchSizeTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="neuronsLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.neuronsLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="neuronsTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.neuronsTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1143,35 +1190,35 @@
                               <Component id="numOfClassesLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="numOfEpochsLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="hiddenNeuronLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="hiddenNeuronLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="epsilonLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="epsilonLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="hiddenNeuronTextField" alignment="1" pref="66" max="32767" attributes="0"/>
+                      <Component id="hiddenNeuronTextField4" alignment="1" pref="66" max="32767" attributes="0"/>
                       <Component id="numOfEpochsTextField4" alignment="0" max="32767" attributes="0"/>
                       <Component id="numOfClassesTextField4" alignment="0" max="32767" attributes="0"/>
-                      <Component id="epsilonTextField" alignment="1" max="32767" attributes="0"/>
+                      <Component id="epsilonTextField4" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="learningRateLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="learningRateLabel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="learningRateTextField2" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="learningRateTextField4" min="-2" pref="66" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="batchSizeLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="timeIntervalLabel2" min="-2" max="-2" attributes="0"/>
-                              <Component id="betaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="timeIntervalLabel4" min="-2" max="-2" attributes="0"/>
+                              <Component id="betaLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="batchSizeTextField4" alignment="0" max="32767" attributes="0"/>
-                              <Component id="timeIntervalTextField2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="betaTextField" alignment="0" pref="66" max="32767" attributes="0"/>
+                              <Component id="timeIntervalTextField4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="betaTextField4" alignment="0" pref="66" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -1193,25 +1240,25 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="numOfEpochsLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="numOfEpochsTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="betaTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="betaTextField4" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="hiddenNeuronLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="hiddenNeuronTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="betaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hiddenNeuronLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hiddenNeuronTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="betaLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="learningRateTextField2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateTextField4" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="epsilonLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="epsilonTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="learningRateLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="epsilonLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="epsilonTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="learningRateLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -1241,24 +1288,24 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="timeIntervalLabel2">
+        <Component class="javax.swing.JLabel" name="timeIntervalLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="hiddenNeuronLabel">
+        <Component class="javax.swing.JLabel" name="hiddenNeuronLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.hiddenNeuronLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.hiddenNeuronLabel4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="betaLabel">
+        <Component class="javax.swing.JLabel" name="betaLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.betaLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.betaLabel4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1283,55 +1330,55 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="timeIntervalTextField2">
+        <Component class="javax.swing.JTextField" name="timeIntervalTextField4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="hiddenNeuronTextField">
+        <Component class="javax.swing.JTextField" name="hiddenNeuronTextField4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.hiddenNeuronTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.hiddenNeuronTextField4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="betaTextField">
+        <Component class="javax.swing.JTextField" name="betaTextField4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.betaTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.betaTextField4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="epsilonLabel">
+        <Component class="javax.swing.JLabel" name="epsilonLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.epsilonLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.epsilonLabel4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="epsilonTextField">
+        <Component class="javax.swing.JTextField" name="epsilonTextField4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.epsilonTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.epsilonTextField4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="learningRateLabel2">
+        <Component class="javax.swing.JLabel" name="learningRateLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateLabel4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="learningRateTextField2">
+        <Component class="javax.swing.JTextField" name="learningRateTextField4">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateTextField4.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1354,27 +1401,27 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="numOfWorkersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfClassesLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepsTimeLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="numOfEpochsLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="numOfWorkersTextField" alignment="1" pref="66" max="32767" attributes="0"/>
+                      <Component id="stepsTimeTextField5" alignment="1" pref="66" max="32767" attributes="0"/>
                       <Component id="numOfEpochsTextField5" alignment="0" max="32767" attributes="0"/>
-                      <Component id="numOfClassesTextField2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="numOfClassesTextField5" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="timeIntervalLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="learningRateLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="batchSizeTextField5" alignment="0" max="32767" attributes="0"/>
-                      <Component id="timeIntervalTextField3" alignment="0" pref="66" max="32767" attributes="0"/>
-                      <Component id="learningRateTextField3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="timeIntervalTextField5" alignment="0" max="32767" attributes="0"/>
+                      <Component id="learningRateTextField5" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="batchSizeTextField5" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -1385,8 +1432,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="numOfClassesLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numOfClassesTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="batchSizeLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -1394,19 +1441,15 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="numOfEpochsLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="numOfEpochsTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="timeIntervalLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="learningRateTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="learningRateLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="learningRateTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="numOfWorkersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="numOfWorkersTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="stepsTimeLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stepsTimeTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -1414,10 +1457,10 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="numOfClassesLabel2">
+        <Component class="javax.swing.JLabel" name="numOfClassesLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1438,31 +1481,31 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="timeIntervalLabel3">
+        <Component class="javax.swing.JLabel" name="timeIntervalLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalLabel5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="numOfWorkersLabel">
+        <Component class="javax.swing.JLabel" name="stepsTimeLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfWorkersLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeLabel5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="learningRateLabel3">
+        <Component class="javax.swing.JLabel" name="learningRateLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateLabel5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfClassesTextField2">
+        <Component class="javax.swing.JTextField" name="numOfClassesTextField5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -1480,29 +1523,330 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="timeIntervalTextField3">
+        <Component class="javax.swing.JTextField" name="timeIntervalTextField5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField5ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="numOfWorkersTextField">
+        <Component class="javax.swing.JTextField" name="stepsTimeTextField5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfWorkersTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.stepsTimeTextField5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="learningRateTextField3">
+        <Component class="javax.swing.JTextField" name="learningRateTextField5">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.learningRateTextField5.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="storeDataPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Pretrained Data Storage">
+              <ResourceString PropertyName="titleX" bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.storeDataPanel.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dataDirLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="dataDirTextField1" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dataDirBrowseButton1" min="-2" pref="83" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="dataDirLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataDirTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataDirBrowseButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="dataDirLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.dataDirLabel1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dataDirTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.dataDirTextField1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="dataDirBrowseButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.dataDirBrowseButton1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataDirBrowseButton1ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="spikeNormAlgorithmPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Algorithm Parameter">
+              <ResourceString PropertyName="titleX" bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.spikeNormAlgorithmPanel.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="numOfClassesLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfStepsLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="numOfStepsTextField6" alignment="0" pref="66" max="32767" attributes="0"/>
+                      <Component id="numOfClassesTextField6" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="scalingFactorLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="batchSizeLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="batchSizeTextField6" alignment="0" max="32767" attributes="0"/>
+                      <Component id="timeIntervalTextField6" alignment="0" pref="66" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="numOfClassesLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfClassesTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="batchSizeTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="batchSizeLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="numOfStepsLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numOfStepsTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="timeIntervalTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="scalingFactorLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="numOfClassesLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesLabel6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="batchSizeLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.batchSizeLabel6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="numOfStepsLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsLabel6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsLabel6.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="scalingFactorLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.scalingFactorLabel6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numOfClassesTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfClassesTextField6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="batchSizeTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.batchSizeTextField6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numOfStepsTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.numOfStepsTextField6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="timeIntervalTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.timeIntervalTextField6.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeIntervalTextField6ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="conversionStoreDataPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Pretrained Data Storage">
+              <ResourceString PropertyName="titleX" bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionStoreDataPanel.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="conversionDataLoadDirLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="conversionDataLoadDirTextField" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="conversionDataLoadDirBrowseButton" min="-2" pref="83" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="conversionDataSaveDirLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Component id="conversionDataSaveDirTextField" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="conversionDataSaveDirBrowseButton" min="-2" pref="83" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="conversionDataLoadDirLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="conversionDataLoadDirTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="conversionDataLoadDirBrowseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="conversionDataSaveDirLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Component id="conversionDataSaveDirTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="conversionDataSaveDirBrowseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="conversionDataLoadDirLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataLoadDirLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="conversionDataLoadDirTextField">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataLoadDirTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="conversionDataLoadDirBrowseButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataLoadDirBrowseButton.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conversionDataLoadDirBrowseButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="conversionDataSaveDirLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataSaveDirLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="conversionDataSaveDirTextField">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataSaveDirTextField.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="conversionDataSaveDirBrowseButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="N3MLAlgorithmDialog.conversionDataSaveDirBrowseButton.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conversionDataSaveDirBrowseButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="org.embedded.hnu.toolbar">
-    <module_version install_time="1645101388456" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1652950601756" last="true" origin="installer" specification_version="1.0">
         <file crc="707450266" name="config/Modules/org-embedded-hnu-toolbar.xml"/>
-        <file crc="4067063272" name="modules/org-embedded-hnu-toolbar.jar"/>
+        <file crc="1915472001" name="modules/org-embedded-hnu-toolbar.jar"/>
     </module_version>
 </module>

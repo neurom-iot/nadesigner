@@ -5,12 +5,12 @@
   <kind type="view" />
   <state type="joined"  />
   <constraints>
-    <path orientation="horizontal" number="60" weight="0.6947472745292369"/>
-    <path orientation="vertical" number="80" weight="0.1896551724137931"/>
+    <path orientation="horizontal" number="60" weight="0.7728785357737105"/>
+    <path orientation="vertical" number="80" weight="0.3177737881508079"/>
     <path orientation="horizontal" number="30" weight="0.8"/>
   </constraints>
   <bounds x="192" y="707" width="768" height="208" />
   <frame state="0"/>
-    <active-tc  id="output"  prev-id="nbPython debug session" />
+    <active-tc  id="output"  prev-id="output" />
     <empty-behavior permanent="true"/>
 </mode>

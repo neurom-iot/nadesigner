@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Thursday, February 17, 2022 9:36:29 PM KST
+>Log Session: Thursday, May 19, 2022 5:56:42 PM KST
 >System Info: 
   Product Version         = NaDesigner (#8230772f5f18)
   Operating System        = Windows 10 version 10.0 running on amd64
@@ -434,10 +434,10 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.netbeans.core.network [1.6.1 201411181905]
 	org.netbeans.core.nativeaccess/1 [1.27.1 201411181905]
 	org.netbeans.core.io.ui/1 [1.26.1 201411181905]
-	org.embedded.hnu.ioconfig [1.0 220217]
-	org.embedded.hnu.generator [1.0 220217]
-	org.embedded.hnu [1.0 220217]
-	org.embedded.hnu.toolbar [1.0 220217]
+	org.embedded.hnu.ioconfig [1.0 220219]
+	org.embedded.hnu.generator [1.0 220219]
+	org.embedded.hnu [1.0 220221]
+	org.embedded.hnu.toolbar [1.0 220221]
 	org.eclipse.mylyn.commons.xmlrpc [3.10.0 3.10.0.20130704-2116]
 	org.eclipse.mylyn.commons.repositories.core [1.2.0 1.2.0.20130704-2116]
 	org.eclipse.mylyn.commons.core [3.10.0 3.10.0.20130926-1710]
@@ -463,10 +463,8 @@ INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network prox
 WARNING [org.openide.filesystems.Ordering]: Not all children in Toolbars/ marked with the position attribute: [NaDesigner], but some are: [File, UndoRedo, Build, Memory, Standard.xml, Debugging.xml]
 INFO [org.netbeans.ui.metrics.laf]: USG_LOOK_AND_FEEL
 INFO [org.netbeans.ui.metrics.projects]: USG_PROJECT_OPEN
-INFO [org.netbeans.ui.metrics.projects]: USG_PROJECT_OPEN
 INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 0 ms.
-WARNING [org.openide.filesystems.Ordering]: Not all children in / marked with the position attribute: [org-netbeans-modules-python-editor-PythonBracesMatcherFactory.instance], but some are: [org-netbeans-modules-editor-bracesmatching-LegacyEssMatcher.instance, org-netbeans-modules-editor-bracesmatching-DefaultMatcher.instance]
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 399 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 169 ms
 Diagnostic information
 Input arguments:
 	-Dnetbeans.logger.console=true
@@ -484,19 +482,19 @@ Input arguments:
 Compiler: HotSpot 64-Bit Tiered Compilers
 Heap memory usage: initial 1024.0MB maximum 14549.5MB
 Non heap memory usage: initial 2.4MB maximum -1b
-Garbage collector: PS Scavenge (Collections=6 Total time spent=0s)
-Garbage collector: PS MarkSweep (Collections=3 Total time spent=0s)
-Classes: loaded=8980 total loaded=8980 unloaded 0
+Garbage collector: PS Scavenge (Collections=5 Total time spent=0s)
+Garbage collector: PS MarkSweep (Collections=2 Total time spent=0s)
+Classes: loaded=7627 total loaded=7627 unloaded 0
 INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 68,647,186,432
 INFO [null]: Total physical memory 68,647,186,432
 INFO [org.netbeans.modules.autoupdate.updateprovider.DownloadListener]: Connection content length was 0 bytes (read 0bytes), expected file size can`t be that size - likely server with file at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/certified/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd is temporary down
 INFO [org.netbeans.modules.autoupdate.updateprovider.DownloadListener]: Connection content length was 0 bytes (read 0bytes), expected file size can`t be that size - likely server with file at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/distribution/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd is temporary down
 INFO [org.netbeans.modules.autoupdate.ui.actions.AutoupdateCheckScheduler]
-java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/distribution/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
+java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/certified/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.doCopy(DownloadListener.java:155)
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.streamOpened(DownloadListener.java:78)
 	at org.netbeans.modules.autoupdate.updateprovider.NetworkAccess$Task$1.run(NetworkAccess.java:111)
-Caused: java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/distribution/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
+Caused: java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/certified/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.notifyException(DownloadListener.java:103)
 	at org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogCache.copy(AutoupdateCatalogCache.java:246)
 	at org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogCache.writeCatalogToCache(AutoupdateCatalogCache.java:99)
@@ -507,11 +505,11 @@ Caused: java.io.IOException: Zero sized file reported at http://updates.netbeans
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1423)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2033)
 INFO [org.netbeans.modules.autoupdate.ui.actions.AutoupdateCheckScheduler]
-java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/certified/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
+java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/distribution/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.doCopy(DownloadListener.java:155)
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.streamOpened(DownloadListener.java:78)
 	at org.netbeans.modules.autoupdate.updateprovider.NetworkAccess$Task$1.run(NetworkAccess.java:111)
-Caused: java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/certified/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
+Caused: java.io.IOException: Zero sized file reported at http://updates.netbeans.org/netbeans/updates/8.0.2/uc/final/distribution/catalog.xml.gz?unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE0a85bf650-6536-4453-b42a-10411f69b70f_82054bfa-a113-463a-a4b2-b667ba3f30bd
 	at org.netbeans.modules.autoupdate.updateprovider.DownloadListener.notifyException(DownloadListener.java:103)
 	at org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogCache.copy(AutoupdateCatalogCache.java:246)
 	at org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogCache.writeCatalogToCache(AutoupdateCatalogCache.java:99)
@@ -556,22 +554,42 @@ Caused: java.io.IOException: Connection reset
 [catch] at org.netbeans.modules.autoupdate.ui.actions.AutoupdateCheckScheduler$4.run(AutoupdateCheckScheduler.java:155)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1423)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2033)
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 3 binary roots took: 8,640 ms
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: C:\Users\SeoyeonKim\Documents\NaDesigner\Projects\de1_soc\src took: 126 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: C:\Users\SeoyeonKim\Documents\NaDesigner\Projects\ann_test\src took: 29 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 2 source roots took: 155 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 4 ms]
-INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 9,367 ms.
-INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 265,520 ms.
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 3 binary roots took: 8,956 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: C:\Users\SeoyeonKim\Documents\NaDesigner\Projects\N3ML2022\src took: 104 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 3 ms]
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 1 source roots took: 104 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 3 ms]
+INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 9,378 ms.
+WARNING [org.openide.filesystems.Ordering]: Found same position 500 for both Loaders/text/x-python/Actions/org-openide-actions-CopyAction-separatorAfter.instance and Loaders/text/x-python/Actions/org-openide-actions-CopyAction.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position 200 for both Loaders/text/x-python/Actions/org-openide-actions-FileSystemAction.shadow and Loaders/text/x-python/Actions/org-openide-actions-OpenAction-separatorAfter.instance
+WARNING [org.openide.filesystems.Ordering]: Found same position 800 for both Loaders/text/x-python/Actions/org-openide-actions-RenameAction-separatorAfter.instance and Loaders/text/x-python/Actions/org-openide-actions-RenameAction.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position 1,000 for both Loaders/text/x-python/Actions/org-openide-actions-SaveAsTemplateAction-separatorAfter.instance and Loaders/text/x-python/Actions/org-openide-actions-SaveAsTemplateAction.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position 1,200 for both Loaders/text/x-python/Actions/org-openide-actions-FileSystemAction-separatorAfter.instance and Loaders/text/x-python/Actions/org-openide-actions-ToolsAction.shadow
+INFO [org.netbeans.spi.lexer.MutableTextInput]: !!WARNING!! Missing READ-LOCK when accessing TokenHierarchy: input-source:org.netbeans.modules.csl.core.GsfDocument@3040f293, mimeType='text/x-python', kitClass=null, length=0, version=0, file=org.netbeans.modules.python.editor.file.PyDataObject@6135c19a[C:\Users\SeoyeonKim\Documents\NaDesigner\Projects\N3ML2022\src\hnu\snn-component.py@fcc4c57e:309cc742]
+java.lang.Exception
+	at org.netbeans.lib.lexer.TokenHierarchyOperation.ensureReadLocked(TokenHierarchyOperation.java:406)
+	at org.netbeans.lib.lexer.TokenHierarchyOperation.tokenSequence(TokenHierarchyOperation.java:431)
+	at org.netbeans.api.lexer.TokenHierarchy.tokenSequence(TokenHierarchy.java:201)
+	at org.netbeans.modules.python.editor.lexer.PythonLexerUtils.getPythonSequence(PythonLexerUtils.java:160)
+	at org.netbeans.modules.python.editor.lexer.PythonLexerUtils.getPythonSequence(PythonLexerUtils.java:155)
+	at org.netbeans.modules.python.editor.lexer.PythonLexerUtils.getPositionedSequence(PythonLexerUtils.java:196)
+	at org.netbeans.modules.python.editor.lexer.PythonLexerUtils.getPositionedSequence(PythonLexerUtils.java:192)
+	at org.netbeans.modules.python.editor.PythonOccurrencesMarker.run(PythonOccurrencesMarker.java:153)
+	at org.netbeans.modules.python.editor.PythonOccurrencesMarker.run(PythonOccurrencesMarker.java:75)
+	at org.netbeans.modules.csl.editor.semantic.MarkOccurrencesHighlighter.processImpl(MarkOccurrencesHighlighter.java:166)
+	at org.netbeans.modules.csl.editor.semantic.MarkOccurrencesHighlighter.run(MarkOccurrencesHighlighter.java:131)
+	at org.netbeans.modules.csl.editor.semantic.MarkOccurrencesHighlighter.run(MarkOccurrencesHighlighter.java:81)
+	at org.netbeans.modules.parsing.impl.TaskProcessor.callParserResultTask(TaskProcessor.java:573)
+	at org.netbeans.modules.parsing.impl.TaskProcessor$CompilationJob.run(TaskProcessor.java:744)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1423)
+	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2033)
+INFO [org.netbeans.ui.metrics.editor]: USG_EDITOR_MIME_TYPE
+INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 7,943 ms.
 INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 0 ms
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 binary roots took: 0 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 binary roots took: 1 ms
 INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 source roots took: 0 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 0 ms]
-INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 105 ms.
-INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 0 ms.
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 0 ms
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 binary roots took: 0 ms
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 source roots took: 0 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 0 ms]
-INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 85 ms.
-INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 0 ms.
+INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 78 ms.
+INFO [org.netbeans.ui.indexing]: Indexing started, time from last indexing 66 ms.
 INFO [org.netbeans.ui.indexing]: Indexing finished, indexing took 2 ms.
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 256
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 stopped

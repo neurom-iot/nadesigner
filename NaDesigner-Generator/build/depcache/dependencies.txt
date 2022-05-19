@@ -283,6 +283,7 @@ org.embedded.hnu.generator.ai.HANNGenerator
 org.embedded.hnu.generator.HAIGenerator
 org.embedded.hnu.ioconfig.ai.HANNIOConfig
 java.lang.StringBuilder
+org.embedded.hnu.ioconfig.ai.HANNLayerConfig
 ||:org.embedded.hnu.generator.n3ml.HN3MLStbpGenerator
 java.lang.StringBuilder
 org.embedded.hnu.ioconfig.ai.HN3MLIOConfig

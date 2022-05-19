@@ -34,9 +34,9 @@ public final class InstallToNAIDEAction implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ev) {
         String projDir = FileUtil.getFileDisplayName(context.getProjectDirectory());
-        String noderedDir = userDir + File.separatorChar + ".node-red";
+        String noderedDir = userDir + File.separatorChar + ".naide";
         String noderedStartDir = userDir + File.separatorChar + "node-red";
-        String[] cmd = new String[]{"cmd", "/c", "c:&cd/&cd "+noderedDir+"&npm install "+projDir+" --no-fund --no-audit"};
+        String[] cmd = new String[]{"cmd", "/c", "c:&cd/&cd "+noderedDir+"&npm install "+projDir};//+" --no-fund --no-audit"};
         
         String str = null;
         

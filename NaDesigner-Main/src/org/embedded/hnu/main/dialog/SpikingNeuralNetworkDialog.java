@@ -39,6 +39,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     public static final int H_N3ML_A_STDP = 2;
     public static final int H_N3ML_A_BP_STDP = 3;
     public static final int H_N3ML_A_STBP = 4;
+    public static final int H_N3ML_A_SpikeNorm = 5;
     
     private static final int Linear = 1;
     private static final int Logistic = 2;
@@ -209,12 +210,25 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         runtimeBoardComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         SelectExampleComboBox2 = new javax.swing.JComboBox();
+        naalNeuronModelPanel = new javax.swing.JPanel();
+        simulationTimeLabel3 = new javax.swing.JLabel();
+        simulationTimeTextField3 = new javax.swing.JTextField();
+        dtLabel3 = new javax.swing.JLabel();
+        dtTextField3 = new javax.swing.JTextField();
+        inputSizeLabel3 = new javax.swing.JLabel();
+        inputSizeTextField3 = new javax.swing.JTextField();
+        outputSizeLabel3 = new javax.swing.JLabel();
+        outputSizeTextField3 = new javax.swing.JTextField();
+        dataTypeLabel3 = new javax.swing.JLabel();
+        dataTypeComboBox3 = new javax.swing.JComboBox();
+        deviceLabel3 = new javax.swing.JLabel();
+        deviceComboBox3 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.title")); // NOI18N
         setIconImages(null);
-        setMinimumSize(new java.awt.Dimension(625, 690));
-        setPreferredSize(new java.awt.Dimension(612, 710));
+        setMinimumSize(new java.awt.Dimension(625, 650));
+        setPreferredSize(new java.awt.Dimension(625, 710));
 
         RuntimePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.RuntimePanel.border.title"))); // NOI18N
 
@@ -292,13 +306,13 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(runtimeTrainingRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(runtimeTestRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(72, 72, 72)
                 .addComponent(cnnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(runtimeLabel)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(runtimeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addContainerGap())
         );
         RuntimePanelLayout.setVerticalGroup(
             RuntimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,8 +377,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addGap(18, 18, 18)
             .addComponent(modelTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(10, 10, 10)
-            .addComponent(modelTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(modelTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
     );
     nengoDLModelPanelLayout.setVerticalGroup(
         nengoDLModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,12 +400,12 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(modelNameLabel)
                 .addComponent(modelDirLabel))
             .addGap(10, 10, 10)
-            .addGroup(modelDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modelDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                 .addComponent(modelNameTextField)
-                .addComponent(modelDirTextField))
-            .addGap(10, 10, 10)
+                .addComponent(modelDirTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(modelDirBrowseButton)
-            .addGap(18, 18, 18))
+            .addContainerGap())
         .addComponent(nengoDLModelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
 
@@ -403,9 +417,9 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addContainerGap()
             .addComponent(nengoDLModelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(modelDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(modelNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(modelNameLabel))
+            .addGroup(modelDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(modelNameLabel)
+                .addComponent(modelNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(modelDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(modelDirBrowseButton)
@@ -483,7 +497,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(epochsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(optimizerComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(inputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(40, 40, 40)
             .addGroup(trainingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                 .addComponent(outputsLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(learningRateLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
@@ -493,7 +507,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(outputsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(learningRateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(costFunctionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18))
+            .addContainerGap())
     );
 
     trainingPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {costFunctionComboBox, epochsTextField, learningRateTextField, optimizerComboBox, outputsTextField});
@@ -596,13 +610,12 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     neuronModelPanelLayout.setHorizontalGroup(
         neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(neuronModelPanelLayout.createSequentialGroup()
-            .addGap(18, 18, 18)
-            .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(maxRateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(neuronModelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(tauRcLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(synapseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap()
+            .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addComponent(maxRateLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tauRcLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(synapseLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(neuronModelLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -610,17 +623,21 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                     .addComponent(neuronModelComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(synapseTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addComponent(tauRcTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(52, 52, 52)
-            .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                .addComponent(amplitudeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(interceptsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(minibatchSizeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(neuronModelPanelLayout.createSequentialGroup()
+                    .addGap(39, 39, 39)
+                    .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(interceptsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(minibatchSizeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, neuronModelPanelLayout.createSequentialGroup()
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(amplitudeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(neuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(interceptsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(minibatchSizeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(amplitudeTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(amplitudeTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(minibatchSizeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap())
     );
 
     neuronModelPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {interceptsTextField, minibatchSizeTextField});
@@ -722,14 +739,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     loadDataPanelLayout.setHorizontalGroup(
         loadDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(loadDataPanelLayout.createSequentialGroup()
-            .addGap(18, 18, 18)
+            .addContainerGap()
             .addGroup(loadDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(loadDataPanelLayout.createSequentialGroup()
-                    .addComponent(loadDataFromFileCheckBox)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DelimiterLabel)
-                    .addGap(10, 10, 10)
-                    .addComponent(delimiterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(loadDataPanelLayout.createSequentialGroup()
                     .addComponent(IncludeFirstLineCheckBox)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -740,21 +751,30 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                     .addComponent(toRabel1)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(xRangeField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(24, 24, 24)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(yRangeLabel)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(yRangeField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(toRabel2)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(yRangeField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(loadDataPanelLayout.createSequentialGroup()
-                    .addComponent(modelFileLabel)
-                    .addGap(18, 18, 18)
-                    .addComponent(modelFileTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(10, 10, 10)
-                    .addComponent(fileDirBrowseButton)))
-            .addGap(18, 18, 18))
+                    .addComponent(toRabel2)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(yRangeField2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15))
+                .addGroup(loadDataPanelLayout.createSequentialGroup()
+                    .addGroup(loadDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(loadDataPanelLayout.createSequentialGroup()
+                            .addComponent(modelFileLabel)
+                            .addGap(18, 18, 18)
+                            .addComponent(modelFileTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(fileDirBrowseButton))
+                        .addGroup(loadDataPanelLayout.createSequentialGroup()
+                            .addComponent(loadDataFromFileCheckBox)
+                            .addGap(246, 246, 246)
+                            .addComponent(DelimiterLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(delimiterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap())))
     );
     loadDataPanelLayout.setVerticalGroup(
         loadDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -818,7 +838,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(logPanelLayout.createSequentialGroup()
             .addContainerGap()
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
             .addContainerGap())
     );
 
@@ -911,7 +931,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(maxRateTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(neuronModelComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(neuronSizeSpinner))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(39, 39, 39)
             .addGroup(fpgaNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fpgaNeuronModelPanelLayout.createSequentialGroup()
                     .addComponent(synapseLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
@@ -925,7 +945,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(synapseTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                 .addComponent(interceptsTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(imageSizeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGap(18, 18, 18))
+            .addContainerGap())
     );
 
     fpgaNeuronModelPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {interceptsTextField2, synapseTextField2});
@@ -984,10 +1004,10 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addGap(18, 18, 18)
             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(libraryDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(10, 10, 10)
+            .addComponent(libraryDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(libraryDirBrowseButton)
-            .addGap(18, 18, 18))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     libraryDirPanelLayout.setVerticalGroup(
         libraryDirPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1039,11 +1059,11 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addGroup(fpgaTrainingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                 .addComponent(inputsTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(epochsTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(40, 40, 40)
             .addComponent(outputsLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(outputsTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18))
+            .addContainerGap())
     );
     fpgaTrainingPanelLayout.setVerticalGroup(
         fpgaTrainingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1083,13 +1103,13 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     n3mlLoadDataPanel1Layout.setHorizontalGroup(
         n3mlLoadDataPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(n3mlLoadDataPanel1Layout.createSequentialGroup()
-            .addGap(17, 17, 17)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(loadDirLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(n3mlLoadDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(12, 12, 12)
+            .addComponent(n3mlLoadDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18)
             .addComponent(n3mlLoadDirBrowseButton)
-            .addContainerGap())
+            .addGap(9, 9, 9))
     );
     n3mlLoadDataPanel1Layout.setVerticalGroup(
         n3mlLoadDataPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1224,7 +1244,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 .addComponent(connectionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(postComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18))
+            .addGap(27, 27, 27))
     );
     n3mlConnectionPanelLayout.setVerticalGroup(
         n3mlConnectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1251,7 +1271,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     n3mlLearningAlgorithmLabel.setMinimumSize(new java.awt.Dimension(126, 15));
     n3mlLearningAlgorithmLabel.setPreferredSize(new java.awt.Dimension(126, 15));
 
-    n3mlLearningAlgorithmComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SoftLIF", "SpikeProp", "STDP", "BP-STDP", "STBP" }));
+    n3mlLearningAlgorithmComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SoftLIF", "SpikeProp", "STDP", "BP-STDP", "STBP", "SpikeNorm" }));
     n3mlLearningAlgorithmComboBox.setToolTipText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.n3mlLearningAlgorithmComboBox.toolTipText")); // NOI18N
     n3mlLearningAlgorithmComboBox.setMaximumSize(new java.awt.Dimension(120, 21));
     n3mlLearningAlgorithmComboBox.setMinimumSize(new java.awt.Dimension(120, 21));
@@ -1302,13 +1322,13 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         NAALHardwarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(NAALHardwarePanelLayout.createSequentialGroup()
             .addContainerGap()
-            .addComponent(runtimeBoardLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(runtimeBoardLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(runtimeBoardComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(runtimeBoardComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(43, 43, 43)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(SelectExampleComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(SelectExampleComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addContainerGap())
     );
     NAALHardwarePanelLayout.setVerticalGroup(
@@ -1326,6 +1346,85 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     runtimeBoardComboBox.getAccessibleContext().setAccessibleName(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.runtimeBoardComboBox.AccessibleContext.accessibleName")); // NOI18N
     SelectExampleComboBox2.getAccessibleContext().setAccessibleName(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.SelectExampleComboBox2.AccessibleContext.accessibleName")); // NOI18N
 
+    naalNeuronModelPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.naalNeuronModelPanel.border.title"))); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(simulationTimeLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.simulationTimeLabel3.text")); // NOI18N
+
+    simulationTimeTextField3.setText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.simulationTimeTextField3.text")); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(dtLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.dtLabel3.text")); // NOI18N
+
+    dtTextField3.setText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.dtTextField3.text")); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(inputSizeLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.inputSizeLabel3.text")); // NOI18N
+
+    inputSizeTextField3.setText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.inputSizeTextField3.text")); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(outputSizeLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.outputSizeLabel3.text")); // NOI18N
+
+    outputSizeTextField3.setText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.outputSizeTextField3.text")); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(dataTypeLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.dataTypeLabel3.text")); // NOI18N
+
+    dataTypeComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Image", "Camera", "Voice" }));
+    dataTypeComboBox3.setToolTipText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.dataTypeComboBox3.toolTipText")); // NOI18N
+
+    org.openide.awt.Mnemonics.setLocalizedText(deviceLabel3, org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.deviceLabel3.text")); // NOI18N
+
+    deviceComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Raspberry PI", "Latte Panda", "Coral", "Tinker", "Jetson" }));
+    deviceComboBox3.setToolTipText(org.openide.util.NbBundle.getMessage(SpikingNeuralNetworkDialog.class, "SpikingNeuralNetworkDialog.deviceComboBox3.toolTipText")); // NOI18N
+
+    javax.swing.GroupLayout naalNeuronModelPanelLayout = new javax.swing.GroupLayout(naalNeuronModelPanel);
+    naalNeuronModelPanel.setLayout(naalNeuronModelPanelLayout);
+    naalNeuronModelPanelLayout.setHorizontalGroup(
+        naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(naalNeuronModelPanelLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(simulationTimeLabel3)
+                .addComponent(inputSizeLabel3)
+                .addComponent(dataTypeLabel3))
+            .addGap(41, 41, 41)
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(inputSizeTextField3)
+                .addComponent(simulationTimeTextField3)
+                .addComponent(dataTypeComboBox3, 0, 120, Short.MAX_VALUE))
+            .addGap(43, 43, 43)
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(dtLabel3)
+                .addComponent(outputSizeLabel3)
+                .addComponent(deviceLabel3))
+            .addGap(37, 37, 37)
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(dtTextField3)
+                .addComponent(outputSizeTextField3)
+                .addComponent(deviceComboBox3, 0, 118, Short.MAX_VALUE))
+            .addContainerGap())
+    );
+    naalNeuronModelPanelLayout.setVerticalGroup(
+        naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(naalNeuronModelPanelLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(inputSizeLabel3)
+                .addComponent(inputSizeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(outputSizeLabel3)
+                .addComponent(outputSizeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(simulationTimeLabel3)
+                .addComponent(simulationTimeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dtLabel3)
+                .addComponent(dtTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(naalNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(dataTypeLabel3)
+                .addComponent(dataTypeComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(deviceLabel3)
+                .addComponent(deviceComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap())
+    );
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
@@ -1333,34 +1432,29 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         .addGroup(layout.createSequentialGroup()
             .addGap(156, 156, 156)
             .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
             .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(152, 152, 152))
         .addGroup(layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
-                .addComponent(n3mlPopulationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(n3mlConnectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(n3mlPopulationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(n3mlAlogorithmOptionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(fpgaTrainingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(trainingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(naalNeuronModelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(fpgaNeuronModelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
                 .addComponent(RuntimePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(modelDirPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(NAALHardwarePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(n3mlLoadDataPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(loadDataPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(libraryDirPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(neuronModelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(fpgaNeuronModelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(trainingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(fpgaTrainingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(n3mlModelOptionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(n3mlConnectionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addContainerGap())
-        .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(n3mlAlogorithmOptionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addContainerGap())
-        .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(NAALHardwarePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addContainerGap())
+                .addComponent(n3mlModelOptionPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(libraryDirPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(loadDataPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cancelButton, nextButton});
@@ -1385,6 +1479,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(fpgaNeuronModelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(naalNeuronModelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(trainingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(fpgaTrainingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1397,7 +1493,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(n3mlConnectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+            .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1456,6 +1552,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 fpgaTrainingPanel.setVisible(false);
                 NAALHardwarePanel.setVisible(false);
                 logPanel.setVisible(false);
+                naalNeuronModelPanel.setVisible(false);
 //        neuronModelLinearPanel.setVisible(false); 
         }
 
@@ -1700,8 +1797,9 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private void n3mlLearningAlgorithmComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_n3mlLearningAlgorithmComboBoxItemStateChanged
         // TODO add your handling code here:
         if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_softLIF){
-            hDataSetOpt = H_DATA_SET_TEST;
+            //hDataSetOpt = H_DATA_SET_TEST;
             runtimeTrainingRadioButton.setEnabled(true); 
+            runtimeTrainingRadioButton.setSelected(true);  
             n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_Soft_LIF_MODEL);
         }
         else if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_SpikeProp){
@@ -1710,16 +1808,25 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_SRM_MODEL);
         }
         else if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_STDP){
-            runtimeTrainingRadioButton.setEnabled(false);  
-            runtimeTestRadioButton.setSelected(true);  
+            runtimeTrainingRadioButton.setEnabled(true);  
+            runtimeTrainingRadioButton.setSelected(true);  
             n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_Adaptive_LIF_MODEL);
         }
-        else{
-            runtimeTrainingRadioButton.setEnabled(false);  
-            runtimeTestRadioButton.setSelected(true);  
+        else if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_BP_STDP ){
+            runtimeTrainingRadioButton.setEnabled(true);  
+            runtimeTrainingRadioButton.setSelected(true);  
             n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_IF_MODEL);
         }
-            
+        else if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_STBP  ){
+            runtimeTrainingRadioButton.setEnabled(true);  
+            runtimeTrainingRadioButton.setSelected(true);  
+            n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_IF_MODEL);
+        }
+        else{
+            runtimeTrainingRadioButton.setEnabled(true);  
+            runtimeTrainingRadioButton.setSelected(true);  
+            n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_Soft_LIF_MODEL);
+        }
     }//GEN-LAST:event_n3mlLearningAlgorithmComboBoxItemStateChanged
 
     private void cnnCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnnCheckBoxActionPerformed
@@ -1977,7 +2084,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private void showN3MLAlgorithmAdialog(int neuronModel, int algorithm){
         N3MLAlgorithmDialog dialog = new N3MLAlgorithmDialog(null, true, hN3mlGen, hN3mlIOConf, neuronModel, algorithm, hDataSetOpt, hDirectory);
         dialog.setLocationRelativeTo(null);
-        //cancel();
+        cancel();
         dialog.setVisible(true);
         //String temp = dialog.get();
     }
@@ -2064,6 +2171,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 hN3mlAlgorithm = H_N3ML_A_softLIF; break;
             case H_N3ML_A_STBP:
                 hN3mlAlgorithm = H_N3ML_A_STBP; break;
+            case H_N3ML_A_SpikeNorm:
+                hN3mlAlgorithm = H_N3ML_A_SpikeNorm; break;
         }
     }
     
@@ -2082,8 +2191,14 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JLabel connectionLabel;
     private javax.swing.JComboBox costFunctionComboBox;
     private javax.swing.JLabel costFunctionLabel;
+    private javax.swing.JComboBox dataTypeComboBox3;
+    private javax.swing.JLabel dataTypeLabel3;
     private javax.swing.ButtonGroup datasetOptionButtonGroup;
     private javax.swing.JComboBox delimiterComboBox;
+    private javax.swing.JComboBox deviceComboBox3;
+    private javax.swing.JLabel deviceLabel3;
+    private javax.swing.JLabel dtLabel3;
+    private javax.swing.JTextField dtTextField3;
     private javax.swing.JLabel epochsLabel;
     private javax.swing.JLabel epochsLabel2;
     private javax.swing.JTextField epochsTextField;
@@ -2094,6 +2209,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private org.embedded.hnu.generator.ai.HSNNGenRun hSNNGenRun1;
     private javax.swing.JLabel imageSizeLabel;
     private javax.swing.JTextField imageSizeTextField;
+    private javax.swing.JLabel inputSizeLabel3;
+    private javax.swing.JTextField inputSizeTextField3;
     private javax.swing.JLabel inputsLabel;
     private javax.swing.JLabel inputsLabel2;
     private javax.swing.JTextField inputsTextField;
@@ -2142,6 +2259,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JComboBox n3mlNeuronModelComboBox;
     private javax.swing.JLabel n3mlNeuronModelLabel;
     private javax.swing.JPanel n3mlPopulationPanel;
+    private javax.swing.JPanel naalNeuronModelPanel;
     private javax.swing.JPanel nengoDLModelPanel;
     private javax.swing.JComboBox neuronModelComboBox;
     private javax.swing.JComboBox neuronModelComboBox2;
@@ -2153,6 +2271,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JButton nextButton;
     private javax.swing.JComboBox optimizerComboBox;
     private javax.swing.JLabel optimizerLabel;
+    private javax.swing.JLabel outputSizeLabel3;
+    private javax.swing.JTextField outputSizeTextField3;
     private javax.swing.JLabel outputsLabel;
     private javax.swing.JLabel outputsLabel2;
     private javax.swing.JTextField outputsTextField;
@@ -2169,6 +2289,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private javax.swing.JLabel runtimeOptionLabel;
     private javax.swing.JRadioButton runtimeTestRadioButton;
     private javax.swing.JRadioButton runtimeTrainingRadioButton;
+    private javax.swing.JLabel simulationTimeLabel3;
+    private javax.swing.JTextField simulationTimeTextField3;
     private javax.swing.JLabel synapseLabel;
     private javax.swing.JLabel synapseLabel2;
     private javax.swing.JTextField synapseTextField;
@@ -2285,6 +2407,9 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         //SNN폴더("프로젝트명\snn")안에 런타임 이름으로 파일을 생성한다.
         //1. 생성하기 전에 이미 다른 파일이 존재하는지 확인하여 전체 삭제
         //2. 현재 선택된 런타임 이름으로 파일 생성
+        //Todo
+        //3. N3ML -> 선택된 알고리즘 이름을 포함하여 생성(N3ML_STDP)
+        //4. NAAL -> 선택된 하드웨어 이름을 포함하여 생성(NAAL_DE1)
         
         String checkPath = hDirectory + File.separatorChar + "snn";
         File path = new File(checkPath);
@@ -2321,10 +2446,12 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         trainingPanel.setVisible(true);
         fpgaTrainingPanel.setVisible(false);
         NAALHardwarePanel.setVisible(false);
+        naalNeuronModelPanel.setVisible(false);
         logPanel.setVisible(false);
         //cnnCheckBox.setVisible(true);
         cnnPanel.setVisible(true);
         nengoDLModelPanel.setVisible(true);
+        runtimeTrainingRadioButton.setEnabled(true);
         modelTypeComboBox.setSelectedIndex(Linear);
 
 //        if (runtimeTestRadioButton.isSelected() && cnnCheckBox.isSelected()) {
@@ -2352,7 +2479,10 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         trainingPanel.setVisible(false);
         fpgaTrainingPanel.setVisible(false);
         NAALHardwarePanel.setVisible(true);
+        naalNeuronModelPanel.setVisible(true);
         logPanel.setVisible(true);
+        runtimeTestRadioButton.setSelected(true);
+        runtimeTrainingRadioButton.setEnabled(false);
         //cnnCheckBox.setVisible(false);
         cnnPanel.setVisible(false);
         nengoDLModelPanel.setVisible(false);
@@ -2376,6 +2506,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         trainingPanel.setVisible(false);
         fpgaTrainingPanel.setVisible(false);
         NAALHardwarePanel.setVisible(false);
+        naalNeuronModelPanel.setVisible(false);
+        runtimeTrainingRadioButton.setEnabled(true);
         logPanel.setVisible(true);
         //cnnCheckBox.setVisible(false);
         cnnPanel.setVisible(false);
@@ -2398,6 +2530,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         trainingPanel.setVisible(false);
         fpgaTrainingPanel.setVisible(true);
         NAALHardwarePanel.setVisible(false);
+        naalNeuronModelPanel.setVisible(false);
+        runtimeTrainingRadioButton.setEnabled(false);
         logPanel.setVisible(true);
         //cnnCheckBox.setVisible(false);
         cnnPanel.setVisible(false);
@@ -2419,6 +2553,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         trainingPanel.setVisible(true);
         fpgaTrainingPanel.setVisible(false);
         NAALHardwarePanel.setVisible(false);
+        naalNeuronModelPanel.setVisible(false);
         logPanel.setVisible(false);
         //cnnCheckBox.setVisible(false);
         cnnPanel.setVisible(false);

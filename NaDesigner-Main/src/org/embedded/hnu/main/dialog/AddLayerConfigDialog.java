@@ -589,13 +589,20 @@ public class AddLayerConfigDialog extends javax.swing.JDialog {
         System.out.println("flag = " + flag);
         if(flag && true){
             if(LOADDATA == true){ copyFile(srcFile, destDir); }   
-            logLabel.setText("false");
+            if(h_state == H_SNN)
+                logLabel.setText("false");
+            else
+                logLabel1.setText("false");
             configDataFromFile();
             generateSource();
             cancel();
         }else{
             System.out.println("** Layer"+num+" has not been saved.");
-            logLabel.setText("Layer"+num+" has not been saved.");
+            if(h_state == H_SNN)
+                logLabel.setText("Layer"+num+" has not been saved.");
+            else
+                logLabel1.setText("Layer"+num+" has not been saved.");
+            
         }
     }//GEN-LAST:event_generateButtonActionPerformed
   

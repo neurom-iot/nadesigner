@@ -16,10 +16,10 @@
       <ComponentRef name="null"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[625, 690]"/>
+      <Dimension value="[625, 650]"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[612, 710]"/>
+      <Dimension value="[625, 710]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -44,38 +44,31 @@
           <Group type="102" attributes="0">
               <EmptySpace min="156" pref="156" max="-2" attributes="0"/>
               <Component id="nextButton" linkSize="22" min="-2" pref="93" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="89" max="32767" attributes="0"/>
               <Component id="cancelButton" linkSize="22" min="-2" pref="99" max="-2" attributes="0"/>
               <EmptySpace min="152" pref="152" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="logPanel" alignment="0" pref="589" max="32767" attributes="0"/>
-                  <Component id="n3mlPopulationPanel" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="logPanel" pref="571" max="32767" attributes="0"/>
+                  <Component id="n3mlConnectionPanel" alignment="0" pref="571" max="32767" attributes="0"/>
+                  <Component id="n3mlPopulationPanel" alignment="0" pref="571" max="32767" attributes="0"/>
+                  <Component id="n3mlAlogorithmOptionPanel" alignment="0" pref="571" max="32767" attributes="0"/>
+                  <Component id="fpgaTrainingPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="trainingPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="naalNeuronModelPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fpgaNeuronModelPanel" alignment="0" pref="571" max="32767" attributes="0"/>
                   <Component id="RuntimePanel" alignment="0" max="32767" attributes="0"/>
                   <Component id="modelDirPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="NAALHardwarePanel" alignment="0" max="32767" attributes="0"/>
                   <Component id="n3mlLoadDataPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="loadDataPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="libraryDirPanel" alignment="0" max="32767" attributes="0"/>
                   <Component id="neuronModelPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fpgaNeuronModelPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="trainingPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fpgaTrainingPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="n3mlModelOptionPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="n3mlConnectionPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="n3mlModelOptionPanel" alignment="1" pref="571" max="32767" attributes="0"/>
+                  <Component id="libraryDirPanel" alignment="1" pref="571" max="32767" attributes="0"/>
+                  <Component id="loadDataPanel" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="n3mlAlogorithmOptionPanel" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="NAALHardwarePanel" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -98,7 +91,9 @@
               <Component id="neuronModelPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="fpgaNeuronModelPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="naalNeuronModelPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="trainingPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="fpgaTrainingPanel" min="-2" max="-2" attributes="0"/>
@@ -111,7 +106,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="n3mlConnectionPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="logPanel" pref="67" max="32767" attributes="0"/>
+              <Component id="logPanel" pref="72" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="nextButton" linkSize="23" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -149,13 +144,13 @@
                   <Component id="runtimeTrainingRadioButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Component id="runtimeTestRadioButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   <Component id="cnnPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="runtimeLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="runtimeComboBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -310,13 +305,13 @@
                       <Component id="modelDirLabel" linkSize="28" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="modelNameTextField" max="32767" attributes="0"/>
-                      <Component id="modelDirTextField" max="32767" attributes="0"/>
+                      <Component id="modelDirTextField" pref="323" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="modelDirBrowseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Component id="nengoDLModelPanel" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -327,9 +322,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nengoDLModelPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="2" attributes="0">
-                      <Component id="modelNameTextField" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="modelNameLabel" linkSize="29" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="modelNameLabel" linkSize="29" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="modelNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
@@ -397,8 +392,8 @@
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="modelTypeLabel" min="-2" pref="93" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="modelTypeComboBox" min="-2" pref="344" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="modelTypeComboBox" min="-2" pref="323" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -473,7 +468,7 @@
                       <Component id="optimizerComboBox" linkSize="24" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="inputsTextField" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="outputsLabel" alignment="1" max="32767" attributes="0"/>
                       <Component id="learningRateLabel" alignment="1" pref="110" max="32767" attributes="0"/>
@@ -485,7 +480,7 @@
                       <Component id="learningRateTextField" linkSize="24" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="costFunctionComboBox" linkSize="24" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -703,14 +698,12 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="maxRateLabel" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
-                          <Component id="neuronModelLabel" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="tauRcLabel" min="-2" pref="126" max="-2" attributes="0"/>
-                      <Component id="synapseLabel" min="-2" pref="126" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="maxRateLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tauRcLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="synapseLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="neuronModelLabel" alignment="0" pref="126" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -721,19 +714,26 @@
                       </Group>
                       <Component id="tauRcTextField" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="amplitudeLabel" alignment="1" max="32767" attributes="0"/>
-                      <Component id="interceptsLabel" alignment="1" max="32767" attributes="0"/>
-                      <Component id="minibatchSizeLabel" alignment="1" pref="110" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="interceptsLabel" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="minibatchSizeLabel" min="-2" pref="110" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="amplitudeLabel" min="-2" pref="110" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="interceptsTextField" linkSize="18" min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="amplitudeTextArea" min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="minibatchSizeTextField" linkSize="18" min="-2" pref="120" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="interceptsTextField" linkSize="18" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="minibatchSizeTextField" linkSize="18" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="amplitudeTextArea" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -997,16 +997,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="loadDataFromFileCheckBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="DelimiterLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="delimiterComboBox" min="-2" pref="83" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="IncludeFirstLineCheckBox" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="xRangeLabel" min="-2" max="-2" attributes="0"/>
@@ -1016,24 +1009,36 @@
                           <Component id="toRabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="xRangeField2" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="yRangeLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="yRangeField1" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Component id="toRabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="yRangeField2" min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="modelFileLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="modelFileTextField" min="-2" pref="346" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="fileDirBrowseButton" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="modelFileLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="modelFileTextField" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="fileDirBrowseButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="loadDataFromFileCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
+                                  <Component id="DelimiterLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="delimiterComboBox" min="-2" pref="83" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1248,7 +1253,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="23" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="28" max="32767" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1377,7 +1382,7 @@
                       <Component id="neuronModelComboBox2" alignment="0" max="32767" attributes="0"/>
                       <Component id="neuronSizeSpinner" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="synapseLabel2" linkSize="25" pref="95" max="32767" attributes="0"/>
@@ -1396,7 +1401,7 @@
                       <Component id="interceptsTextField2" linkSize="10" alignment="0" max="32767" attributes="0"/>
                       <Component id="imageSizeTextField" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1603,10 +1608,10 @@
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="98" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="libraryDirTextField" min="-2" pref="345" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="libraryDirTextField" min="-2" pref="337" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="libraryDirBrowseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1683,11 +1688,11 @@
                       <Component id="inputsTextField2" max="32767" attributes="0"/>
                       <Component id="epochsTextField2" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="outputsLabel2" min="-2" pref="110" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="outputsTextField2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1807,13 +1812,13 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="loadDirLabel1" min="-2" pref="98" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="n3mlLoadDirTextField" min="-2" pref="345" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="n3mlLoadDirTextField" min="-2" pref="330" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="n3mlLoadDirBrowseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2061,7 +2066,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="postComboBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2252,12 +2257,13 @@
         <Component class="javax.swing.JComboBox" name="n3mlLearningAlgorithmComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="6">
                 <StringItem index="0" value="SoftLIF"/>
                 <StringItem index="1" value="SpikeProp"/>
                 <StringItem index="2" value="STDP"/>
                 <StringItem index="3" value="BP-STDP"/>
                 <StringItem index="4" value="STBP"/>
+                <StringItem index="5" value="SpikeNorm"/>
               </StringArray>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -2298,13 +2304,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="runtimeBoardLabel" min="-2" pref="96" max="-2" attributes="0"/>
+                  <Component id="runtimeBoardLabel" min="-2" pref="116" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="runtimeBoardComboBox" min="-2" pref="161" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel3" min="-2" pref="96" max="-2" attributes="0"/>
+                  <Component id="runtimeBoardComboBox" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="jLabel3" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="SelectExampleComboBox2" min="-2" pref="161" max="-2" attributes="0"/>
+                  <Component id="SelectExampleComboBox2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -2376,6 +2382,181 @@
               <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.SelectExampleComboBox2.AccessibleContext.accessibleName" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </AccessibilityProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="naalNeuronModelPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Neuron Model Parameter">
+              <ResourceString PropertyName="titleX" bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.naalNeuronModelPanel.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="simulationTimeLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputSizeLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataTypeLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="inputSizeTextField3" max="32767" attributes="0"/>
+                      <Component id="simulationTimeTextField3" max="32767" attributes="0"/>
+                      <Component id="dataTypeComboBox3" pref="120" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="dtLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="outputSizeLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="deviceLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="dtTextField3" max="32767" attributes="0"/>
+                      <Component id="outputSizeTextField3" max="32767" attributes="0"/>
+                      <Component id="deviceComboBox3" pref="118" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="inputSizeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputSizeTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="outputSizeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="outputSizeTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="simulationTimeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="simulationTimeTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dtLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dtTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="dataTypeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataTypeComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="deviceLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="deviceComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="simulationTimeLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.simulationTimeLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="simulationTimeTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.simulationTimeTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dtLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.dtLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dtTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.dtTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="inputSizeLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.inputSizeLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="inputSizeTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.inputSizeTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="outputSizeLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.outputSizeLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="outputSizeTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.outputSizeTextField3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dataTypeLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.dataTypeLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="dataTypeComboBox3">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Image"/>
+                <StringItem index="1" value="Camera"/>
+                <StringItem index="2" value="Voice"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.dataTypeComboBox3.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="deviceLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.deviceLabel3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="deviceComboBox3">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="Raspberry PI"/>
+                <StringItem index="1" value="Latte Panda"/>
+                <StringItem index="2" value="Coral"/>
+                <StringItem index="3" value="Tinker"/>
+                <StringItem index="4" value="Jetson"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="SpikingNeuralNetworkDialog.deviceComboBox3.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

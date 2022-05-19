@@ -6,10 +6,10 @@
 		<Toolbar name="Clipboard" visible="false" draggable="true" align="left"/>
 		<Toolbar name="UndoRedo" visible="true" draggable="true" align="left"/>
 		<Toolbar name="Remote" visible="false" draggable="true" align="left"/>
+		<Toolbar name="NaDesigner" visible="true" draggable="true" align="left"/>
 		<Toolbar name="Build" visible="true" draggable="true" align="left"/>
 		<Toolbar name="Debug" visible="false" draggable="true" align="left"/>
 		<Toolbar name="Memory" visible="false" draggable="true" align="left"/>
-		<Toolbar name="NaDesigner" visible="true" draggable="true" align="left"/>
 		<Toolbar name="QuickSearch" visible="true" draggable="true" align="right"/>
 	</Row>
 </Configuration>

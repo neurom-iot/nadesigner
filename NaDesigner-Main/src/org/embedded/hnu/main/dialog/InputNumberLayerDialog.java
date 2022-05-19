@@ -52,6 +52,8 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
     private static final int Logistic = 2;
     private static final int MNIST = 3;   
     
+    private String titleDialog = "";
+    
     public InputNumberLayerDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -75,6 +77,7 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
         H_DL_Model = type;
         hDataSetOpt = dataSetOpt;
         state = H_SNN;
+        titleDialog = "Spiking Neural Network";
         initComponents();  
     }
     //ANN을 통해 왔을때
@@ -88,6 +91,7 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
         H_DL_Model = type;
         hDataSetOpt = dataSetOpt;
         state = H_ANN;
+        titleDialog = "Artificial Neural Network";
         initComponents(); 
     }
 
@@ -102,7 +106,7 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
         nextNumberLayerButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(org.openide.util.NbBundle.getMessage(InputNumberLayerDialog.class, "InputNumberLayerDialog.title")); // NOI18N
+        setTitle(titleDialog);
         setMinimumSize(new java.awt.Dimension(260, 168));
         setResizable(false);
 
@@ -110,8 +114,11 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
 
         org.openide.awt.Mnemonics.setLocalizedText(inputNumberLayerLabel, org.openide.util.NbBundle.getMessage(InputNumberLayerDialog.class, "InputNumberLayerDialog.inputNumberLayerLabel.text")); // NOI18N
 
-        if(selectedCNN || H_DL_Model == MNIST){
+        if(selectedCNN && state == H_ANN){
             inputNumberLayerTextField.setText(org.openide.util.NbBundle.getMessage(InputNumberLayerDialog.class, "InputNumberLayerDialog.inputNumberLayerTextField.text")); // NOI18N
+        }
+        else if(selectedCNN && state==H_SNN){ //H_DL_Model == MNIST){
+            inputNumberLayerTextField.setText("5");
         }
         else{
             inputNumberLayerTextField.setText("0");
@@ -194,30 +201,49 @@ public class InputNumberLayerDialog extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextNumberLayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextNumberLayerButtonActionPerformed
-        inputNum = Integer.parseInt(inputNumberLayerTextField.getText());
-        this.hSGen.setNumLayer(inputNum);
-        if(inputNum!=0 && selectedCNN){
-            showAddLayerConfigDialog(inputNum, state);
-        }else if(inputNum == 0){
-            if(LOADDATA == true){ 
-                copyFile();
-                //hSGen.setData(srcFile.getName(), delim);
-            }
-            //H_NengoDL_EX = Linear;
-            initGenerator();
-//            hSGen.writeSNNGenDL();
-            if (state == H_SNN) {
+        if(state == H_SNN){
+            inputNum = Integer.parseInt(inputNumberLayerTextField.getText());
+            this.hSGen.setNumLayer(inputNum);
+            if(inputNum!=0 && selectedCNN){
+                showAddLayerConfigDialog(inputNum, state);
+            }else if(inputNum == 0){
+                if(LOADDATA == true){ 
+                    copyFile();
+                    //hSGen.setData(srcFile.getName(), delim);
+                }
+                //H_NengoDL_EX = Linear;
+                initGenerator();
+    //            hSGen.writeSNNGenDL();            
                 hSGen.writeSNNGenDL(H_DL_Model, hDirectory, hDataSetOpt);
-            }
-            else{
-                hAGen.writeANNGen(H_DL_Model, hDataSetOpt);
-            }
-            hMfGen = new HManifestGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hDataSetOpt);
-            //2021.08.26 --SeoyeonKim NengoDL 이므로 html, js도 각각 3개씩 추가해야함. 그부분 추가 진행예정 //추가완료 09.12
-            hFGen = new HFunctionGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // js 파일3개 생성
-            hUGen = new HUIGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // html 파일3개 생성
-            cancel();
+                hMfGen = new HManifestGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hDataSetOpt);
+                //2021.08.26 --SeoyeonKim NengoDL 이므로 html, js도 각각 3개씩 추가해야함. 그부분 추가 진행예정 //추가완료 09.12
+                hFGen = new HFunctionGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // js 파일3개 생성
+                hUGen = new HUIGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // html 파일3개 생성
+                cancel();
+            }    
         }
+        else{
+            inputNum = Integer.parseInt(inputNumberLayerTextField.getText());
+            this.hAGen.setNumLayer(inputNum);
+            if(inputNum!=0 && selectedCNN){
+                showAddLayerConfigDialog(inputNum, state);
+            }else if(inputNum == 0){
+                if(LOADDATA == true){ 
+                    copyFile();
+                    //hSGen.setData(srcFile.getName(), delim);
+                }
+                //H_NengoDL_EX = Linear;
+                initGenerator();
+    //            hSGen.writeSNNGenDL();            
+                hAGen.writeANNGen(H_DL_Model, hDataSetOpt);
+                hMfGen = new HManifestGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hDataSetOpt);
+                //2021.08.26 --SeoyeonKim NengoDL 이므로 html, js도 각각 3개씩 추가해야함. 그부분 추가 진행예정 //추가완료 09.12
+                hFGen = new HFunctionGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // js 파일3개 생성
+                hUGen = new HUIGenerator(state, HNUM_DL, hDirectory, H_DL_Model, hSIOConf, hDataSetOpt); // html 파일3개 생성
+                cancel();
+            }
+        }
+
 //        else if(!selectedCNN){
 //            if(LOADDATA == true){ copyFile(); }
 //            cancel();

@@ -3,8 +3,8 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="title" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-      <ResourceString bundle="org/embedded/hnu/main/dialog/Bundle.properties" key="InputNumberLayerDialog.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+    <Property name="title" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+      <Connection code="titleDialog" type="code"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[260, 168]"/>
@@ -111,8 +111,8 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="}&#xa;else{&#xa;inputNumberLayerTextField.setText(&quot;0&quot;);&#xa;inputNumberLayerTextField.setEnabled(false);&#xa;}"/>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="if(selectedCNN || H_DL_Model == MNIST){"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="}&#xa;else if(selectedCNN &amp;&amp; state==H_SNN){ //H_DL_Model == MNIST){&#xa;inputNumberLayerTextField.setText(&quot;5&quot;);&#xa;}&#xa;else{&#xa;inputNumberLayerTextField.setText(&quot;0&quot;);&#xa;inputNumberLayerTextField.setEnabled(false);&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="if(selectedCNN &amp;&amp; state == H_ANN){"/>
           </AuxValues>
         </Component>
       </SubComponents>

@@ -1,5 +1,6 @@
 package org.embedded.hnu.main.dialog;
 
+import java.io.File;
 import javax.xml.ws.Action;
 
 public class IoTDialog extends javax.swing.JDialog {
@@ -283,6 +284,7 @@ public class IoTDialog extends javax.swing.JDialog {
             cancel();
             showUSBCameraDialog(hDirectory,board);
         }
+         createRuntimeFile();
     }//GEN-LAST:event_NextActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
@@ -389,4 +391,30 @@ public class IoTDialog extends javax.swing.JDialog {
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel typeLabel;
     // End of variables declaration//GEN-END:variables
+
+private void createRuntimeFile(){ //SeoyeonKim 
+        //iot폴더("프로젝트명\iot")안에 런타임 이름으로 파일을 생성한다.
+        //1. 생성하기 전에 이미 다른 파일이 존재하는지 확인하여 전체 삭제
+        //2. 현재 선택된 런타임 이름으로 파일 생성
+        
+        String checkPath = hDirectory + File.separatorChar + "iot";
+        File path = new File(checkPath);
+        File[] fileList = path.listFiles();
+        for(int i=0; i<fileList.length; i++){
+            if(fileList[i].delete())
+                System.out.println("modified");
+            else
+                System.out.println("first");
+        }
+        
+        File runtimeFile = new File(checkPath+ File.separatorChar + (String)hardwareComboBox.getSelectedItem());
+        try {
+            if (runtimeFile.createNewFile()) {
+                System.out.println("created");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    }
 }

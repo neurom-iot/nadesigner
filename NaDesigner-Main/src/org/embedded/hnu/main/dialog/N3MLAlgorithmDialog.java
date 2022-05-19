@@ -30,6 +30,7 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
     public static final int H_N3ML_A_STDP = 2;
     public static final int H_N3ML_A_BP_STDP = 3;
     public static final int H_N3ML_A_STBP = 4;
+    public static final int H_N3ML_A_SpikeNorm = 5;
     
     public static final int H_SNN = 1;
     
@@ -114,85 +115,107 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
         varificationLogTextArea1 = new javax.swing.JTextArea();
         softLIFAlgorithmPanel = new javax.swing.JPanel();
         batchSizeLabel1 = new javax.swing.JLabel();
-        momentumLabel = new javax.swing.JLabel();
+        momentumLabel1 = new javax.swing.JLabel();
         learningRateLabel1 = new javax.swing.JLabel();
         batchSizeTextField1 = new javax.swing.JTextField();
-        momentumTextField = new javax.swing.JTextField();
+        momentumTextField1 = new javax.swing.JTextField();
         learningRateTextField1 = new javax.swing.JTextField();
-        numOfEpochsLabel = new javax.swing.JLabel();
-        numOfEpochsTextField = new javax.swing.JTextField();
+        numOfEpochsLabel1 = new javax.swing.JLabel();
+        numOfEpochsTextField1 = new javax.swing.JTextField();
         spikePropAlgorithmPanel = new javax.swing.JPanel();
-        numOfClassesLabel3 = new javax.swing.JLabel();
+        numOfClassesLabel2 = new javax.swing.JLabel();
         batchSizeLabel2 = new javax.swing.JLabel();
         numOfEpochsLabel2 = new javax.swing.JLabel();
-        dtTimeLabel = new javax.swing.JLabel();
-        numOfStepsLabel = new javax.swing.JLabel();
-        maxFiringTimeLabel = new javax.swing.JLabel();
-        numOfClassesTextField3 = new javax.swing.JTextField();
+        timeIntervalLabel2 = new javax.swing.JLabel();
+        numOfStepsLabel2 = new javax.swing.JLabel();
+        maxFiringTimeLabel2 = new javax.swing.JLabel();
+        numOfClassesTextField2 = new javax.swing.JTextField();
         batchSizeTextField2 = new javax.swing.JTextField();
         numOfEpochsTextField2 = new javax.swing.JTextField();
-        dtTimeTextField = new javax.swing.JTextField();
-        numOfStepsTextField = new javax.swing.JTextField();
-        maxFiringTimeTextField = new javax.swing.JTextField();
-        notFiringLabel = new javax.swing.JLabel();
-        notFiringTextField = new javax.swing.JTextField();
+        timeIntervalTextField2 = new javax.swing.JTextField();
+        numOfStepsTextField2 = new javax.swing.JTextField();
+        maxFiringTimeTextField2 = new javax.swing.JTextField();
+        notFiringLabel2 = new javax.swing.JLabel();
+        notFiringTextField2 = new javax.swing.JTextField();
         softLIFNeuronModelPanel = new javax.swing.JPanel();
-        numOfClassesLabel1 = new javax.swing.JLabel();
-        numOfClassesTextField1 = new javax.swing.JTextField();
-        amplitudeLabel = new javax.swing.JLabel();
-        amplitudeTextField = new javax.swing.JTextField();
-        tauRefLabel = new javax.swing.JLabel();
-        tauRefTextField = new javax.swing.JTextField();
-        tauRCLabel = new javax.swing.JLabel();
-        tauRCTextField = new javax.swing.JTextField();
-        sigmaTextField = new javax.swing.JTextField();
-        sigmaLabel = new javax.swing.JLabel();
-        gainTextField = new javax.swing.JTextField();
-        gainLabel = new javax.swing.JLabel();
+        numOfClassesLabel7 = new javax.swing.JLabel();
+        numOfClassesTextField7 = new javax.swing.JTextField();
+        amplitudeLabel7 = new javax.swing.JLabel();
+        amplitudeTextField7 = new javax.swing.JTextField();
+        tauRefLabel7 = new javax.swing.JLabel();
+        tauRefTextField7 = new javax.swing.JTextField();
+        tauRCLabel7 = new javax.swing.JLabel();
+        tauRCTextField7 = new javax.swing.JTextField();
+        sigmaTextField7 = new javax.swing.JTextField();
+        sigmaLabel7 = new javax.swing.JLabel();
+        gainTextField7 = new javax.swing.JTextField();
+        gainLabel7 = new javax.swing.JLabel();
         stdpAlgorithmPanel = new javax.swing.JPanel();
-        numOfEpochsLabel3 = new javax.swing.JLabel();
-        stepsTimeLabel2 = new javax.swing.JLabel();
-        timeIntervalLabel = new javax.swing.JLabel();
-        numOfEpochsTextField3 = new javax.swing.JTextField();
-        stepsTimeTextField2 = new javax.swing.JTextField();
-        timeIntervalTextField = new javax.swing.JTextField();
+        numOfClassesLabel3 = new javax.swing.JLabel();
+        stepsTimeLabel3 = new javax.swing.JLabel();
+        timeIntervalLabel3 = new javax.swing.JLabel();
+        numOfClassesTextField3 = new javax.swing.JTextField();
+        stepsTimeTextField3 = new javax.swing.JTextField();
+        timeIntervalTextField3 = new javax.swing.JTextField();
         batchSizeLabel3 = new javax.swing.JLabel();
         batchSizeTextField3 = new javax.swing.JTextField();
+        neuronsLabel3 = new javax.swing.JLabel();
+        neuronsTextField3 = new javax.swing.JTextField();
         bpStdpAlgorithmPanel = new javax.swing.JPanel();
         numOfClassesLabel4 = new javax.swing.JLabel();
         batchSizeLabel4 = new javax.swing.JLabel();
         numOfEpochsLabel4 = new javax.swing.JLabel();
-        timeIntervalLabel2 = new javax.swing.JLabel();
-        hiddenNeuronLabel = new javax.swing.JLabel();
-        betaLabel = new javax.swing.JLabel();
+        timeIntervalLabel4 = new javax.swing.JLabel();
+        hiddenNeuronLabel4 = new javax.swing.JLabel();
+        betaLabel4 = new javax.swing.JLabel();
         numOfClassesTextField4 = new javax.swing.JTextField();
         batchSizeTextField4 = new javax.swing.JTextField();
         numOfEpochsTextField4 = new javax.swing.JTextField();
-        timeIntervalTextField2 = new javax.swing.JTextField();
-        hiddenNeuronTextField = new javax.swing.JTextField();
-        betaTextField = new javax.swing.JTextField();
-        epsilonLabel = new javax.swing.JLabel();
-        epsilonTextField = new javax.swing.JTextField();
-        learningRateLabel2 = new javax.swing.JLabel();
-        learningRateTextField2 = new javax.swing.JTextField();
+        timeIntervalTextField4 = new javax.swing.JTextField();
+        hiddenNeuronTextField4 = new javax.swing.JTextField();
+        betaTextField4 = new javax.swing.JTextField();
+        epsilonLabel4 = new javax.swing.JLabel();
+        epsilonTextField4 = new javax.swing.JTextField();
+        learningRateLabel4 = new javax.swing.JLabel();
+        learningRateTextField4 = new javax.swing.JTextField();
         stbpAlgorithmPanel = new javax.swing.JPanel();
-        numOfClassesLabel2 = new javax.swing.JLabel();
+        numOfClassesLabel5 = new javax.swing.JLabel();
         batchSizeLabel5 = new javax.swing.JLabel();
         numOfEpochsLabel5 = new javax.swing.JLabel();
-        timeIntervalLabel3 = new javax.swing.JLabel();
-        numOfWorkersLabel = new javax.swing.JLabel();
-        learningRateLabel3 = new javax.swing.JLabel();
-        numOfClassesTextField2 = new javax.swing.JTextField();
+        timeIntervalLabel5 = new javax.swing.JLabel();
+        stepsTimeLabel5 = new javax.swing.JLabel();
+        learningRateLabel5 = new javax.swing.JLabel();
+        numOfClassesTextField5 = new javax.swing.JTextField();
         batchSizeTextField5 = new javax.swing.JTextField();
         numOfEpochsTextField5 = new javax.swing.JTextField();
-        timeIntervalTextField3 = new javax.swing.JTextField();
-        numOfWorkersTextField = new javax.swing.JTextField();
-        learningRateTextField3 = new javax.swing.JTextField();
+        timeIntervalTextField5 = new javax.swing.JTextField();
+        stepsTimeTextField5 = new javax.swing.JTextField();
+        learningRateTextField5 = new javax.swing.JTextField();
+        storeDataPanel = new javax.swing.JPanel();
+        dataDirLabel1 = new javax.swing.JLabel();
+        dataDirTextField1 = new javax.swing.JTextField();
+        dataDirBrowseButton1 = new javax.swing.JButton();
+        spikeNormAlgorithmPanel = new javax.swing.JPanel();
+        numOfClassesLabel6 = new javax.swing.JLabel();
+        batchSizeLabel6 = new javax.swing.JLabel();
+        numOfStepsLabel6 = new javax.swing.JLabel();
+        scalingFactorLabel6 = new javax.swing.JLabel();
+        numOfClassesTextField6 = new javax.swing.JTextField();
+        batchSizeTextField6 = new javax.swing.JTextField();
+        numOfStepsTextField6 = new javax.swing.JTextField();
+        timeIntervalTextField6 = new javax.swing.JTextField();
+        conversionStoreDataPanel = new javax.swing.JPanel();
+        conversionDataLoadDirLabel = new javax.swing.JLabel();
+        conversionDataLoadDirTextField = new javax.swing.JTextField();
+        conversionDataLoadDirBrowseButton = new javax.swing.JButton();
+        conversionDataSaveDirLabel = new javax.swing.JLabel();
+        conversionDataSaveDirTextField = new javax.swing.JTextField();
+        conversionDataSaveDirBrowseButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.title")); // NOI18N
         setModal(true);
-        setPreferredSize(new java.awt.Dimension(495, 480));
+        setPreferredSize(new java.awt.Dimension(500, 520));
 
         resumeAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.resumeAlgorithmPanel.border.title"))); // NOI18N
 
@@ -298,7 +321,7 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 .addComponent(currentAlgorithmLabel)
                 .addGap(43, 43, 43)
                 .addComponent(printAlgorithmLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         algorithmInfoPanelLayout.setVerticalGroup(
             algorithmInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,7 +418,7 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             logPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(logPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
                 .addGap(10, 10, 10))
         );
 
@@ -403,19 +426,19 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
 
         org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeLabel1.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(momentumLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.momentumLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(momentumLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.momentumLabel1.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateLabel1.text")); // NOI18N
 
         batchSizeTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeTextField1.text")); // NOI18N
 
-        momentumTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.momentumTextField.text")); // NOI18N
+        momentumTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.momentumTextField1.text")); // NOI18N
 
         learningRateTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateTextField1.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel1.text")); // NOI18N
 
-        numOfEpochsTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField.text")); // NOI18N
+        numOfEpochsTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField1.text")); // NOI18N
 
         javax.swing.GroupLayout softLIFAlgorithmPanelLayout = new javax.swing.GroupLayout(softLIFAlgorithmPanel);
         softLIFAlgorithmPanel.setLayout(softLIFAlgorithmPanelLayout);
@@ -428,21 +451,21 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                         .addComponent(batchSizeLabel1)
                         .addGap(80, 80, 80))
                     .addGroup(softLIFAlgorithmPanelLayout.createSequentialGroup()
-                        .addComponent(numOfEpochsLabel)
+                        .addComponent(numOfEpochsLabel1)
                         .addGap(9, 9, 9)))
                 .addGroup(softLIFAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(numOfEpochsTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(numOfEpochsTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                     .addComponent(batchSizeTextField1, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(18, 18, 18)
                 .addGroup(softLIFAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(softLIFAlgorithmPanelLayout.createSequentialGroup()
+                        .addComponent(momentumLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(momentumTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(softLIFAlgorithmPanelLayout.createSequentialGroup()
                         .addComponent(learningRateLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(learningRateTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(softLIFAlgorithmPanelLayout.createSequentialGroup()
-                        .addComponent(momentumLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(momentumTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(learningRateTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         softLIFAlgorithmPanelLayout.setVerticalGroup(
@@ -450,53 +473,53 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(softLIFAlgorithmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(softLIFAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numOfEpochsLabel)
-                    .addComponent(numOfEpochsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(momentumLabel)
-                    .addComponent(momentumTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numOfEpochsLabel1)
+                    .addComponent(numOfEpochsTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(learningRateLabel1)
+                    .addComponent(learningRateTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(softLIFAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(batchSizeLabel1)
                     .addComponent(batchSizeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(learningRateLabel1)
-                    .addComponent(learningRateTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(momentumLabel1)
+                    .addComponent(momentumTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         spikePropAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.spikePropAlgorithmPanel.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel2.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeLabel2.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(dtTimeLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.dtTimeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfStepsLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfStepsLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsLabel2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(maxFiringTimeLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.maxFiringTimeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(maxFiringTimeLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.maxFiringTimeLabel2.text")); // NOI18N
 
-        numOfClassesTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField3.text")); // NOI18N
+        numOfClassesTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField2.text")); // NOI18N
 
         batchSizeTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeTextField2.text")); // NOI18N
 
         numOfEpochsTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField2.text")); // NOI18N
 
-        dtTimeTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.dtTimeTextField.text")); // NOI18N
-        dtTimeTextField.addActionListener(new java.awt.event.ActionListener() {
+        timeIntervalTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField2.text")); // NOI18N
+        timeIntervalTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dtTimeTextFieldActionPerformed(evt);
+                timeIntervalTextField2ActionPerformed(evt);
             }
         });
 
-        numOfStepsTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsTextField.text")); // NOI18N
+        numOfStepsTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsTextField2.text")); // NOI18N
 
-        maxFiringTimeTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.maxFiringTimeTextField.text")); // NOI18N
+        maxFiringTimeTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.maxFiringTimeTextField2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(notFiringLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.notFiringLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(notFiringLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.notFiringLabel2.text")); // NOI18N
 
-        notFiringTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.notFiringTextField.text")); // NOI18N
+        notFiringTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.notFiringTextField2.text")); // NOI18N
 
         javax.swing.GroupLayout spikePropAlgorithmPanelLayout = new javax.swing.GroupLayout(spikePropAlgorithmPanel);
         spikePropAlgorithmPanel.setLayout(spikePropAlgorithmPanelLayout);
@@ -507,26 +530,26 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numOfClassesLabel3)
+                            .addComponent(numOfClassesLabel2)
                             .addComponent(numOfEpochsLabel2))
-                        .addComponent(numOfStepsLabel))
-                    .addComponent(notFiringLabel))
+                        .addComponent(numOfStepsLabel2))
+                    .addComponent(notFiringLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(numOfStepsTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(numOfStepsTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                     .addComponent(numOfEpochsTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numOfClassesTextField3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(notFiringTextField))
+                    .addComponent(numOfClassesTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(notFiringTextField2))
                 .addGap(18, 18, 18)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dtTimeLabel)
+                    .addComponent(timeIntervalLabel2)
                     .addComponent(batchSizeLabel2)
-                    .addComponent(maxFiringTimeLabel))
+                    .addComponent(maxFiringTimeLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(batchSizeTextField2)
-                    .addComponent(dtTimeTextField)
-                    .addComponent(maxFiringTimeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))
+                    .addComponent(timeIntervalTextField2)
+                    .addComponent(maxFiringTimeTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))
                 .addContainerGap())
         );
         spikePropAlgorithmPanelLayout.setVerticalGroup(
@@ -534,56 +557,56 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(spikePropAlgorithmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numOfClassesLabel3)
-                    .addComponent(numOfClassesTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numOfClassesLabel2)
+                    .addComponent(numOfClassesTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(batchSizeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(batchSizeLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numOfEpochsLabel2)
                     .addComponent(numOfEpochsTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dtTimeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dtTimeLabel))
+                    .addComponent(timeIntervalTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeIntervalLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(maxFiringTimeLabel)
-                        .addComponent(maxFiringTimeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(maxFiringTimeLabel2)
+                        .addComponent(maxFiringTimeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(numOfStepsLabel)
-                        .addComponent(numOfStepsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(numOfStepsLabel2)
+                        .addComponent(numOfStepsTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(spikePropAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(notFiringLabel)
-                    .addComponent(notFiringTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(notFiringLabel2)
+                    .addComponent(notFiringTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         softLIFNeuronModelPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.softLIFNeuronModelPanel.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel7.text")); // NOI18N
 
-        numOfClassesTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField1.text")); // NOI18N
+        numOfClassesTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(amplitudeLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.amplitudeLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(amplitudeLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.amplitudeLabel7.text")); // NOI18N
 
-        amplitudeTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.amplitudeTextField.text")); // NOI18N
+        amplitudeTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.amplitudeTextField7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(tauRefLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRefLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(tauRefLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRefLabel7.text")); // NOI18N
 
-        tauRefTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRefTextField.text")); // NOI18N
+        tauRefTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRefTextField7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(tauRCLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRCLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(tauRCLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRCLabel7.text")); // NOI18N
 
-        tauRCTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRCTextField.text")); // NOI18N
+        tauRCTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.tauRCTextField7.text")); // NOI18N
 
-        sigmaTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.sigmaTextField.text")); // NOI18N
+        sigmaTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.sigmaTextField7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(sigmaLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.sigmaLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(sigmaLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.sigmaLabel7.text")); // NOI18N
 
-        gainTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.gainTextField.text")); // NOI18N
+        gainTextField7.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.gainTextField7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(gainLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.gainLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(gainLabel7, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.gainLabel7.text")); // NOI18N
 
         javax.swing.GroupLayout softLIFNeuronModelPanelLayout = new javax.swing.GroupLayout(softLIFNeuronModelPanel);
         softLIFNeuronModelPanel.setLayout(softLIFNeuronModelPanelLayout);
@@ -592,29 +615,29 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(softLIFNeuronModelPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numOfClassesLabel1)
-                    .addComponent(tauRefLabel)
-                    .addComponent(gainLabel))
+                    .addComponent(numOfClassesLabel7)
+                    .addComponent(tauRefLabel7)
+                    .addComponent(gainLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tauRefTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(gainTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(numOfClassesTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tauRefTextField7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(gainTextField7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numOfClassesTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(amplitudeLabel)
-                    .addComponent(tauRCLabel)
-                    .addComponent(sigmaLabel))
+                    .addComponent(amplitudeLabel7)
+                    .addComponent(tauRCLabel7)
+                    .addComponent(sigmaLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, softLIFNeuronModelPanelLayout.createSequentialGroup()
-                        .addComponent(amplitudeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(amplitudeTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, softLIFNeuronModelPanelLayout.createSequentialGroup()
                         .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(sigmaTextField)
-                            .addComponent(tauRCTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(sigmaTextField7)
+                            .addComponent(tauRCTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
         );
         softLIFNeuronModelPanelLayout.setVerticalGroup(
@@ -622,42 +645,46 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(softLIFNeuronModelPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numOfClassesLabel1)
-                    .addComponent(numOfClassesTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amplitudeLabel)
-                    .addComponent(amplitudeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numOfClassesLabel7)
+                    .addComponent(numOfClassesTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amplitudeLabel7)
+                    .addComponent(amplitudeTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tauRefLabel)
-                    .addComponent(tauRefTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tauRCLabel)
-                    .addComponent(tauRCTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tauRefLabel7)
+                    .addComponent(tauRefTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tauRCLabel7)
+                    .addComponent(tauRCTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(softLIFNeuronModelPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(gainLabel)
-                    .addComponent(gainTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sigmaLabel)
-                    .addComponent(sigmaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(gainLabel7)
+                    .addComponent(gainTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sigmaLabel7)
+                    .addComponent(sigmaTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         stdpAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stdpAlgorithmPanel.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel3.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(stepsTimeLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(stepsTimeLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeLabel3.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel3.text")); // NOI18N
 
-        numOfEpochsTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField3.text")); // NOI18N
+        numOfClassesTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField3.text")); // NOI18N
 
-        stepsTimeTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeTextField2.text")); // NOI18N
+        stepsTimeTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeTextField3.text")); // NOI18N
 
-        timeIntervalTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField.text")); // NOI18N
+        timeIntervalTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField3.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeLabel3.text")); // NOI18N
 
         batchSizeTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeTextField3.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(neuronsLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.neuronsLabel3.text")); // NOI18N
+
+        neuronsTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.neuronsTextField3.text")); // NOI18N
 
         javax.swing.GroupLayout stdpAlgorithmPanelLayout = new javax.swing.GroupLayout(stdpAlgorithmPanel);
         stdpAlgorithmPanel.setLayout(stdpAlgorithmPanelLayout);
@@ -665,23 +692,29 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(stdpAlgorithmPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(batchSizeLabel3)
-                    .addComponent(numOfEpochsLabel3))
-                .addGap(9, 9, 9)
-                .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(batchSizeTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                    .addComponent(numOfEpochsTextField3, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(18, 18, 18)
+                .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(stdpAlgorithmPanelLayout.createSequentialGroup()
+                        .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(neuronsLabel3)
+                            .addComponent(batchSizeLabel3))
+                        .addGap(83, 83, 83)
+                        .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(batchSizeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(neuronsTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(stdpAlgorithmPanelLayout.createSequentialGroup()
+                        .addComponent(numOfClassesLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(numOfClassesTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(stdpAlgorithmPanelLayout.createSequentialGroup()
-                        .addComponent(timeIntervalLabel)
+                        .addComponent(timeIntervalLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(timeIntervalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(timeIntervalTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(stdpAlgorithmPanelLayout.createSequentialGroup()
-                        .addComponent(stepsTimeLabel2)
+                        .addComponent(stepsTimeLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(stepsTimeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(stepsTimeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         stdpAlgorithmPanelLayout.setVerticalGroup(
@@ -691,15 +724,19 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(batchSizeLabel3)
                     .addComponent(batchSizeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(stepsTimeLabel2)
-                    .addComponent(stepsTimeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(stepsTimeLabel3)
+                    .addComponent(stepsTimeTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numOfEpochsLabel3)
-                    .addComponent(numOfEpochsTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeIntervalLabel)
-                    .addComponent(timeIntervalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(timeIntervalLabel3)
+                    .addComponent(timeIntervalTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(neuronsLabel3)
+                    .addComponent(neuronsTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(stdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numOfClassesLabel3)
+                    .addComponent(numOfClassesTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
         );
 
         bpStdpAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.bpStdpAlgorithmPanel.border.title"))); // NOI18N
@@ -710,11 +747,11 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
 
         org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(hiddenNeuronLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.hiddenNeuronLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(hiddenNeuronLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.hiddenNeuronLabel4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(betaLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.betaLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(betaLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.betaLabel4.text")); // NOI18N
 
         numOfClassesTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField4.text")); // NOI18N
 
@@ -722,24 +759,24 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
 
         numOfEpochsTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField4.text")); // NOI18N
 
-        timeIntervalTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField2.text")); // NOI18N
-        timeIntervalTextField2.addActionListener(new java.awt.event.ActionListener() {
+        timeIntervalTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField4.text")); // NOI18N
+        timeIntervalTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timeIntervalTextField2ActionPerformed(evt);
+                timeIntervalTextField4ActionPerformed(evt);
             }
         });
 
-        hiddenNeuronTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.hiddenNeuronTextField.text")); // NOI18N
+        hiddenNeuronTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.hiddenNeuronTextField4.text")); // NOI18N
 
-        betaTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.betaTextField.text")); // NOI18N
+        betaTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.betaTextField4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(epsilonLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.epsilonLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(epsilonLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.epsilonLabel4.text")); // NOI18N
 
-        epsilonTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.epsilonTextField.text")); // NOI18N
+        epsilonTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.epsilonTextField4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel4, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateLabel4.text")); // NOI18N
 
-        learningRateTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateTextField2.text")); // NOI18N
+        learningRateTextField4.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateTextField4.text")); // NOI18N
 
         javax.swing.GroupLayout bpStdpAlgorithmPanelLayout = new javax.swing.GroupLayout(bpStdpAlgorithmPanel);
         bpStdpAlgorithmPanel.setLayout(bpStdpAlgorithmPanelLayout);
@@ -752,30 +789,30 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numOfClassesLabel4)
                             .addComponent(numOfEpochsLabel4))
-                        .addComponent(hiddenNeuronLabel))
-                    .addComponent(epsilonLabel))
+                        .addComponent(hiddenNeuronLabel4))
+                    .addComponent(epsilonLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(hiddenNeuronTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(hiddenNeuronTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                     .addComponent(numOfEpochsTextField4, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(numOfClassesTextField4, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(epsilonTextField))
+                    .addComponent(epsilonTextField4))
                 .addGap(18, 18, 18)
                 .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(bpStdpAlgorithmPanelLayout.createSequentialGroup()
-                        .addComponent(learningRateLabel2)
+                        .addComponent(learningRateLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(learningRateTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(learningRateTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(bpStdpAlgorithmPanelLayout.createSequentialGroup()
                         .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(batchSizeLabel4)
-                            .addComponent(timeIntervalLabel2)
-                            .addComponent(betaLabel))
+                            .addComponent(timeIntervalLabel4)
+                            .addComponent(betaLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(batchSizeTextField4)
-                            .addComponent(timeIntervalTextField2)
-                            .addComponent(betaTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))))
+                            .addComponent(timeIntervalTextField4)
+                            .addComponent(betaTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         bpStdpAlgorithmPanelLayout.setVerticalGroup(
@@ -791,56 +828,56 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numOfEpochsLabel4)
                     .addComponent(numOfEpochsTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeIntervalTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeIntervalLabel2))
+                    .addComponent(timeIntervalTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeIntervalLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(betaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(betaTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hiddenNeuronLabel)
-                        .addComponent(hiddenNeuronTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(betaLabel)))
+                        .addComponent(hiddenNeuronLabel4)
+                        .addComponent(hiddenNeuronTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(betaLabel4)))
                 .addGap(18, 18, 18)
                 .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(learningRateTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(learningRateTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(bpStdpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(epsilonLabel)
-                        .addComponent(epsilonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(learningRateLabel2)))
+                        .addComponent(epsilonLabel4)
+                        .addComponent(epsilonTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(learningRateLabel4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         stbpAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stbpAlgorithmPanel.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel2, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel5.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeLabel5.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(numOfEpochsLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel5.text")); // NOI18N
         numOfEpochsLabel5.setToolTipText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsLabel5.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(timeIntervalLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalLabel5.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(numOfWorkersLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfWorkersLabel.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(stepsTimeLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeLabel5.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel3, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(learningRateLabel5, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateLabel5.text")); // NOI18N
 
-        numOfClassesTextField2.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField2.text")); // NOI18N
+        numOfClassesTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField5.text")); // NOI18N
 
         batchSizeTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeTextField5.text")); // NOI18N
 
         numOfEpochsTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfEpochsTextField5.text")); // NOI18N
 
-        timeIntervalTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField3.text")); // NOI18N
-        timeIntervalTextField3.addActionListener(new java.awt.event.ActionListener() {
+        timeIntervalTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField5.text")); // NOI18N
+        timeIntervalTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timeIntervalTextField3ActionPerformed(evt);
+                timeIntervalTextField5ActionPerformed(evt);
             }
         });
 
-        numOfWorkersTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfWorkersTextField.text")); // NOI18N
+        stepsTimeTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.stepsTimeTextField5.text")); // NOI18N
 
-        learningRateTextField3.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateTextField3.text")); // NOI18N
+        learningRateTextField5.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.learningRateTextField5.text")); // NOI18N
 
         javax.swing.GroupLayout stbpAlgorithmPanelLayout = new javax.swing.GroupLayout(stbpAlgorithmPanel);
         stbpAlgorithmPanel.setLayout(stbpAlgorithmPanelLayout);
@@ -849,24 +886,24 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(stbpAlgorithmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numOfWorkersLabel)
-                    .addComponent(numOfClassesLabel2)
+                    .addComponent(stepsTimeLabel5)
+                    .addComponent(numOfClassesLabel5)
                     .addComponent(numOfEpochsLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(numOfWorkersTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(stepsTimeTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                     .addComponent(numOfEpochsTextField5, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numOfClassesTextField2, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(numOfClassesTextField5, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(18, 18, 18)
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(timeIntervalLabel3)
+                    .addComponent(timeIntervalLabel5)
                     .addComponent(batchSizeLabel5)
-                    .addComponent(learningRateLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(learningRateLabel5))
+                .addGap(66, 66, 66)
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(batchSizeTextField5)
-                    .addComponent(timeIntervalTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                    .addComponent(learningRateTextField3))
+                    .addComponent(timeIntervalTextField5)
+                    .addComponent(learningRateTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(batchSizeTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         stbpAlgorithmPanelLayout.setVerticalGroup(
@@ -874,24 +911,186 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             .addGroup(stbpAlgorithmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numOfClassesLabel2)
-                    .addComponent(numOfClassesTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numOfClassesLabel5)
+                    .addComponent(numOfClassesTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(batchSizeTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(batchSizeLabel5))
                 .addGap(24, 24, 24)
                 .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numOfEpochsLabel5)
                     .addComponent(numOfEpochsTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeIntervalTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeIntervalLabel3))
+                    .addComponent(learningRateLabel5)
+                    .addComponent(learningRateTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
-                .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(learningRateLabel3)
-                        .addComponent(learningRateTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(numOfWorkersLabel)
-                        .addComponent(numOfWorkersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(stbpAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stepsTimeLabel5)
+                    .addComponent(stepsTimeTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeIntervalLabel5)
+                    .addComponent(timeIntervalTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        storeDataPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.storeDataPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(dataDirLabel1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.dataDirLabel1.text")); // NOI18N
+
+        dataDirTextField1.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.dataDirTextField1.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(dataDirBrowseButton1, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.dataDirBrowseButton1.text")); // NOI18N
+        dataDirBrowseButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataDirBrowseButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout storeDataPanelLayout = new javax.swing.GroupLayout(storeDataPanel);
+        storeDataPanel.setLayout(storeDataPanelLayout);
+        storeDataPanelLayout.setHorizontalGroup(
+            storeDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(storeDataPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(dataDirLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dataDirTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dataDirBrowseButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        storeDataPanelLayout.setVerticalGroup(
+            storeDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(storeDataPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(storeDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dataDirLabel1)
+                    .addComponent(dataDirTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dataDirBrowseButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        spikeNormAlgorithmPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.spikeNormAlgorithmPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(numOfClassesLabel6, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesLabel6.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(batchSizeLabel6, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeLabel6.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(numOfStepsLabel6, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsLabel6.text")); // NOI18N
+        numOfStepsLabel6.setToolTipText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsLabel6.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(scalingFactorLabel6, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.scalingFactorLabel6.text")); // NOI18N
+
+        numOfClassesTextField6.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfClassesTextField6.text")); // NOI18N
+
+        batchSizeTextField6.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.batchSizeTextField6.text")); // NOI18N
+
+        numOfStepsTextField6.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.numOfStepsTextField6.text")); // NOI18N
+
+        timeIntervalTextField6.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.timeIntervalTextField6.text")); // NOI18N
+        timeIntervalTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timeIntervalTextField6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout spikeNormAlgorithmPanelLayout = new javax.swing.GroupLayout(spikeNormAlgorithmPanel);
+        spikeNormAlgorithmPanel.setLayout(spikeNormAlgorithmPanelLayout);
+        spikeNormAlgorithmPanelLayout.setHorizontalGroup(
+            spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(spikeNormAlgorithmPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numOfClassesLabel6)
+                    .addComponent(numOfStepsLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(numOfStepsTextField6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(numOfClassesTextField6, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(18, 18, 18)
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scalingFactorLabel6)
+                    .addComponent(batchSizeLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(batchSizeTextField6)
+                    .addComponent(timeIntervalTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        spikeNormAlgorithmPanelLayout.setVerticalGroup(
+            spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(spikeNormAlgorithmPanelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numOfClassesLabel6)
+                    .addComponent(numOfClassesTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(batchSizeTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(batchSizeLabel6))
+                .addGap(24, 24, 24)
+                .addGroup(spikeNormAlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numOfStepsLabel6)
+                    .addComponent(numOfStepsTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeIntervalTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scalingFactorLabel6))
+                .addGap(19, 19, 19))
+        );
+
+        conversionStoreDataPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionStoreDataPanel.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionDataLoadDirLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataLoadDirLabel.text")); // NOI18N
+
+        conversionDataLoadDirTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataLoadDirTextField.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionDataLoadDirBrowseButton, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataLoadDirBrowseButton.text")); // NOI18N
+        conversionDataLoadDirBrowseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conversionDataLoadDirBrowseButtonActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionDataSaveDirLabel, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataSaveDirLabel.text")); // NOI18N
+
+        conversionDataSaveDirTextField.setText(org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataSaveDirTextField.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(conversionDataSaveDirBrowseButton, org.openide.util.NbBundle.getMessage(N3MLAlgorithmDialog.class, "N3MLAlgorithmDialog.conversionDataSaveDirBrowseButton.text")); // NOI18N
+        conversionDataSaveDirBrowseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conversionDataSaveDirBrowseButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout conversionStoreDataPanelLayout = new javax.swing.GroupLayout(conversionStoreDataPanel);
+        conversionStoreDataPanel.setLayout(conversionStoreDataPanelLayout);
+        conversionStoreDataPanelLayout.setHorizontalGroup(
+            conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionStoreDataPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conversionStoreDataPanelLayout.createSequentialGroup()
+                        .addComponent(conversionDataLoadDirLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(conversionDataLoadDirTextField)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(conversionDataLoadDirBrowseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(conversionStoreDataPanelLayout.createSequentialGroup()
+                        .addComponent(conversionDataSaveDirLabel)
+                        .addGap(12, 12, 12)
+                        .addComponent(conversionDataSaveDirTextField)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(conversionDataSaveDirBrowseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        conversionStoreDataPanelLayout.setVerticalGroup(
+            conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversionStoreDataPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(conversionDataLoadDirLabel)
+                    .addComponent(conversionDataLoadDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(conversionDataLoadDirBrowseButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(conversionDataSaveDirLabel)
+                    .addGroup(conversionStoreDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(conversionDataSaveDirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(conversionDataSaveDirBrowseButton)))
                 .addContainerGap())
         );
 
@@ -904,10 +1103,11 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(104, 104, 104)
                         .addComponent(generateButton)
-                        .addGap(57, 57, 57)
-                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(66, 66, 66)
+                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -929,7 +1129,16 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                         .addComponent(bpStdpAlgorithmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(stbpAlgorithmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(stbpAlgorithmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(storeDataPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(spikeNormAlgorithmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(conversionStoreDataPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -952,9 +1161,15 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(stbpAlgorithmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spikeNormAlgorithmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(softLIFNeuronModelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                .addComponent(storeDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(conversionStoreDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(logPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(generateButton)
@@ -991,17 +1206,33 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
         System.exit(0);
     }//GEN-LAST:event_generateButtonActionPerformed
 
-    private void dtTimeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtTimeTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dtTimeTextFieldActionPerformed
-
     private void timeIntervalTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeIntervalTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_timeIntervalTextField2ActionPerformed
 
-    private void timeIntervalTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeIntervalTextField3ActionPerformed
+    private void timeIntervalTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeIntervalTextField4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_timeIntervalTextField3ActionPerformed
+    }//GEN-LAST:event_timeIntervalTextField4ActionPerformed
+
+    private void timeIntervalTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeIntervalTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeIntervalTextField5ActionPerformed
+
+    private void dataDirBrowseButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataDirBrowseButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dataDirBrowseButton1ActionPerformed
+
+    private void timeIntervalTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeIntervalTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timeIntervalTextField6ActionPerformed
+
+    private void conversionDataLoadDirBrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionDataLoadDirBrowseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_conversionDataLoadDirBrowseButtonActionPerformed
+
+    private void conversionDataSaveDirBrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conversionDataSaveDirBrowseButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_conversionDataSaveDirBrowseButtonActionPerformed
 
     
     private void myInitComponents() {
@@ -1011,6 +1242,12 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
 
         hN3mlGen.setModelAlgorithm(hN3mlNeuronModel, hN3mlAlgorithm);
         String printAlgorithm = "";
+        if(hDataSetOpt == H_DATA_SET_TRAINING) {
+            storeDataPanel.setVisible(true);
+        }
+        else{
+            loadDataPanel.setVisible(true);
+        }
 
         switch (hN3mlAlgorithm) {
             case H_N3ML_A_softLIF:
@@ -1018,6 +1255,8 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
                 if (hDataSetOpt == H_DATA_SET_TRAINING) {
                     softLIFAlgorithmPanel.setVisible(true);
                     logPanel1.setVisible(false);
+                    momentumTextField1.setVisible(false);
+                    momentumLabel1.setVisible(false);
                 } else {
                     softLIFAlgorithmPanel.setVisible(false);
                     logPanel1.setVisible(true);
@@ -1040,8 +1279,14 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
             case H_N3ML_A_STBP:
                 printAlgorithm = "STBP";
                 stbpAlgorithmPanel.setVisible(true);
-                
+                timeIntervalLabel5.setVisible(false);
+                timeIntervalTextField5.setVisible(false);
                 break;
+            case H_N3ML_A_SpikeNorm:
+                printAlgorithm = "Spike Norm";
+                spikeNormAlgorithmPanel.setVisible(true);
+                storeDataPanel.setVisible(false);
+                conversionStoreDataPanel.setVisible(true);
         }
 
         printAlgorithmLabel.setText(printAlgorithm);
@@ -1058,55 +1303,58 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
         stdpAlgorithmPanel.setVisible(false);
         bpStdpAlgorithmPanel.setVisible(false);
         stbpAlgorithmPanel.setVisible(false);
+        spikeNormAlgorithmPanel.setVisible(false);
+        storeDataPanel.setVisible(false);
+        conversionStoreDataPanel.setVisible(false);
     }
     
     private void initIOConf(){
         hN3mlIOConf.setData_opt(hDataSetOpt);
         switch(hN3mlAlgorithm){
             case H_N3ML_A_softLIF:
-                hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField.getText()));
-                hN3mlIOConf.setMomentum(Double.parseDouble(momentumTextField.getText()));
+                hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField1.getText()));
+                hN3mlIOConf.setMomentum(Double.parseDouble(momentumTextField1.getText()));
                 hN3mlIOConf.setBatch_size(Integer.parseInt(batchSizeTextField1.getText()));
                 hN3mlIOConf.setLearning_rate(learningRateTextField1.getText());
-                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField1.getText()));
-                hN3mlIOConf.setAmplitude(Double.parseDouble(amplitudeTextField.getText()));
-                hN3mlIOConf.setTauRef(Double.parseDouble(tauRefTextField.getText()));
-                hN3mlIOConf.setTau_rc(Double.parseDouble(tauRCTextField.getText()));
-                hN3mlIOConf.setGain(Double.parseDouble(gainTextField.getText()));
-                hN3mlIOConf.setSigma(Double.parseDouble(sigmaTextField.getText())); 
+                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField7.getText()));
+                hN3mlIOConf.setAmplitude(Double.parseDouble(amplitudeTextField7.getText()));
+                hN3mlIOConf.setTauRef(Double.parseDouble(tauRefTextField7.getText()));
+                hN3mlIOConf.setTau_rc(Double.parseDouble(tauRCTextField7.getText()));
+                hN3mlIOConf.setGain(Double.parseDouble(gainTextField7.getText()));
+                hN3mlIOConf.setSigma(Double.parseDouble(sigmaTextField7.getText())); 
                 break;
             case H_N3ML_A_SpikeProp:
-                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField3.getText()));
+                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField2.getText()));
                 hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField2.getText()));
-                hN3mlIOConf.setNumofSteps(Integer.parseInt(numOfStepsTextField.getText()));
+                hN3mlIOConf.setNumofSteps(Integer.parseInt(numOfStepsTextField2.getText()));
                 hN3mlIOConf.setBatch_size(Integer.parseInt(batchSizeTextField2.getText()));
-                hN3mlIOConf.setDtTime(Integer.parseInt(dtTimeTextField.getText()));
-                hN3mlIOConf.setMaxFiringTime(Integer.parseInt(maxFiringTimeTextField.getText()));
-                hN3mlIOConf.setNotToFire(Integer.parseInt(notFiringTextField.getText()));
+                hN3mlIOConf.setDtTime(Integer.parseInt(timeIntervalTextField2.getText()));
+                hN3mlIOConf.setMaxFiringTime(Integer.parseInt(maxFiringTimeTextField2.getText()));
+                hN3mlIOConf.setNotToFire(Integer.parseInt(notFiringTextField2.getText()));
                 break;
             case H_N3ML_A_STDP:
                 hN3mlIOConf.setBatch_size(Integer.parseInt(batchSizeTextField3.getText()));
-                hN3mlIOConf.setTimeStepsMs(Integer.parseInt(stepsTimeTextField2.getText()));
-                hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField3.getText()));
-                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField.getText()));
+                hN3mlIOConf.setTimeStepsMs(Integer.parseInt(stepsTimeTextField3.getText()));
+                hN3mlIOConf.setEpoch(Integer.parseInt(numOfClassesTextField3.getText()));
+                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField3.getText()));
                 break;
             case H_N3ML_A_BP_STDP:
                 hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField4.getText()));
                 hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField4.getText()));
                 hN3mlIOConf.setBatch_size(Integer.parseInt(batchSizeTextField4.getText()));
-                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField2.getText()));
-                hN3mlIOConf.setHiddenNeuron(Integer.parseInt(hiddenNeuronTextField.getText()));
-                hN3mlIOConf.setBeta(Integer.parseInt(betaTextField.getText()));
-                hN3mlIOConf.setEpsilon(Integer.parseInt(epsilonTextField.getText()));
-                hN3mlIOConf.setLearning_rate(learningRateTextField2.getText());
+                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField4.getText()));
+                hN3mlIOConf.setHiddenNeuron(Integer.parseInt(hiddenNeuronTextField4.getText()));
+                hN3mlIOConf.setBeta(Integer.parseInt(betaTextField4.getText()));
+                hN3mlIOConf.setEpsilon(Integer.parseInt(epsilonTextField4.getText()));
+                hN3mlIOConf.setLearning_rate(learningRateTextField4.getText());
                 break;
             case H_N3ML_A_STBP:
-                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField2.getText()));
+                hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField5.getText()));
                 hN3mlIOConf.setEpoch(Integer.parseInt(numOfEpochsTextField5.getText()));
                 hN3mlIOConf.setBatch_size(Integer.parseInt(batchSizeTextField5.getText()));
-                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField3.getText()));
-                hN3mlIOConf.setWorkers(Integer.parseInt(numOfWorkersTextField.getText()));
-                hN3mlIOConf.setLearning_rate(learningRateTextField3.getText());
+                hN3mlIOConf.setIntervalTime(Integer.parseInt(timeIntervalTextField5.getText()));
+                hN3mlIOConf.setWorkers(Integer.parseInt(stepsTimeTextField5.getText()));
+                hN3mlIOConf.setLearning_rate(learningRateTextField5.getText());
                 break; 
         }
 //        hN3mlIOConf.setNumofClasses(Integer.parseInt(numOfClassesTextField.getText())); /*-----ReSuMe 삭제----------*/
@@ -1176,105 +1424,127 @@ public class N3MLAlgorithmDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel algorithmInfoPanel;
-    private javax.swing.JLabel amplitudeLabel;
-    private javax.swing.JTextField amplitudeTextField;
+    private javax.swing.JLabel amplitudeLabel7;
+    private javax.swing.JTextField amplitudeTextField7;
     private javax.swing.JLabel batchSizeLabel;
     private javax.swing.JLabel batchSizeLabel1;
     private javax.swing.JLabel batchSizeLabel2;
     private javax.swing.JLabel batchSizeLabel3;
     private javax.swing.JLabel batchSizeLabel4;
     private javax.swing.JLabel batchSizeLabel5;
+    private javax.swing.JLabel batchSizeLabel6;
     private javax.swing.JTextField batchSizeTextField;
     private javax.swing.JTextField batchSizeTextField1;
     private javax.swing.JTextField batchSizeTextField2;
     private javax.swing.JTextField batchSizeTextField3;
     private javax.swing.JTextField batchSizeTextField4;
     private javax.swing.JTextField batchSizeTextField5;
-    private javax.swing.JLabel betaLabel;
-    private javax.swing.JTextField betaTextField;
+    private javax.swing.JTextField batchSizeTextField6;
+    private javax.swing.JLabel betaLabel4;
+    private javax.swing.JTextField betaTextField4;
     private javax.swing.JPanel bpStdpAlgorithmPanel;
     private javax.swing.JButton cancelButton;
+    private javax.swing.JButton conversionDataLoadDirBrowseButton;
+    private javax.swing.JLabel conversionDataLoadDirLabel;
+    private javax.swing.JTextField conversionDataLoadDirTextField;
+    private javax.swing.JButton conversionDataSaveDirBrowseButton;
+    private javax.swing.JLabel conversionDataSaveDirLabel;
+    private javax.swing.JTextField conversionDataSaveDirTextField;
+    private javax.swing.JPanel conversionStoreDataPanel;
     private javax.swing.JLabel currentAlgorithmLabel;
     private javax.swing.JButton dataDirBrowseButton;
+    private javax.swing.JButton dataDirBrowseButton1;
     private javax.swing.JLabel dataDirLabel;
+    private javax.swing.JLabel dataDirLabel1;
     private javax.swing.JTextField dataDirTextField;
-    private javax.swing.JLabel dtTimeLabel;
-    private javax.swing.JTextField dtTimeTextField;
-    private javax.swing.JLabel epsilonLabel;
-    private javax.swing.JTextField epsilonTextField;
+    private javax.swing.JTextField dataDirTextField1;
+    private javax.swing.JLabel epsilonLabel4;
+    private javax.swing.JTextField epsilonTextField4;
     private javax.swing.JLabel frameTimeLabel;
     private javax.swing.JTextField frameTimeTextField;
-    private javax.swing.JLabel gainLabel;
-    private javax.swing.JTextField gainTextField;
+    private javax.swing.JLabel gainLabel7;
+    private javax.swing.JTextField gainTextField7;
     private javax.swing.JButton generateButton;
-    private javax.swing.JLabel hiddenNeuronLabel;
-    private javax.swing.JTextField hiddenNeuronTextField;
+    private javax.swing.JLabel hiddenNeuronLabel4;
+    private javax.swing.JTextField hiddenNeuronTextField4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel learningRateLabel;
     private javax.swing.JLabel learningRateLabel1;
-    private javax.swing.JLabel learningRateLabel2;
-    private javax.swing.JLabel learningRateLabel3;
+    private javax.swing.JLabel learningRateLabel4;
+    private javax.swing.JLabel learningRateLabel5;
     private javax.swing.JTextField learningRateTextField;
     private javax.swing.JTextField learningRateTextField1;
-    private javax.swing.JTextField learningRateTextField2;
-    private javax.swing.JTextField learningRateTextField3;
+    private javax.swing.JTextField learningRateTextField4;
+    private javax.swing.JTextField learningRateTextField5;
     private javax.swing.JPanel loadDataPanel;
     private javax.swing.JPanel logPanel1;
-    private javax.swing.JLabel maxFiringTimeLabel;
-    private javax.swing.JTextField maxFiringTimeTextField;
-    private javax.swing.JLabel momentumLabel;
-    private javax.swing.JTextField momentumTextField;
-    private javax.swing.JLabel notFiringLabel;
-    private javax.swing.JTextField notFiringTextField;
+    private javax.swing.JLabel maxFiringTimeLabel2;
+    private javax.swing.JTextField maxFiringTimeTextField2;
+    private javax.swing.JLabel momentumLabel1;
+    private javax.swing.JTextField momentumTextField1;
+    private javax.swing.JLabel neuronsLabel3;
+    private javax.swing.JTextField neuronsTextField3;
+    private javax.swing.JLabel notFiringLabel2;
+    private javax.swing.JTextField notFiringTextField2;
     private javax.swing.JLabel numOfClassesLabel;
-    private javax.swing.JLabel numOfClassesLabel1;
     private javax.swing.JLabel numOfClassesLabel2;
     private javax.swing.JLabel numOfClassesLabel3;
     private javax.swing.JLabel numOfClassesLabel4;
+    private javax.swing.JLabel numOfClassesLabel5;
+    private javax.swing.JLabel numOfClassesLabel6;
+    private javax.swing.JLabel numOfClassesLabel7;
     private javax.swing.JTextField numOfClassesTextField;
-    private javax.swing.JTextField numOfClassesTextField1;
     private javax.swing.JTextField numOfClassesTextField2;
     private javax.swing.JTextField numOfClassesTextField3;
     private javax.swing.JTextField numOfClassesTextField4;
-    private javax.swing.JLabel numOfEpochsLabel;
+    private javax.swing.JTextField numOfClassesTextField5;
+    private javax.swing.JTextField numOfClassesTextField6;
+    private javax.swing.JTextField numOfClassesTextField7;
+    private javax.swing.JLabel numOfEpochsLabel1;
     private javax.swing.JLabel numOfEpochsLabel2;
-    private javax.swing.JLabel numOfEpochsLabel3;
     private javax.swing.JLabel numOfEpochsLabel4;
     private javax.swing.JLabel numOfEpochsLabel5;
-    private javax.swing.JTextField numOfEpochsTextField;
+    private javax.swing.JTextField numOfEpochsTextField1;
     private javax.swing.JTextField numOfEpochsTextField2;
-    private javax.swing.JTextField numOfEpochsTextField3;
     private javax.swing.JTextField numOfEpochsTextField4;
     private javax.swing.JTextField numOfEpochsTextField5;
-    private javax.swing.JLabel numOfStepsLabel;
-    private javax.swing.JTextField numOfStepsTextField;
-    private javax.swing.JLabel numOfWorkersLabel;
-    private javax.swing.JTextField numOfWorkersTextField;
+    private javax.swing.JLabel numOfStepsLabel2;
+    private javax.swing.JLabel numOfStepsLabel6;
+    private javax.swing.JTextField numOfStepsTextField2;
+    private javax.swing.JTextField numOfStepsTextField6;
     private javax.swing.JLabel printAlgorithmLabel;
     private javax.swing.JPanel resumeAlgorithmPanel;
-    private javax.swing.JLabel sigmaLabel;
-    private javax.swing.JTextField sigmaTextField;
+    private javax.swing.JLabel scalingFactorLabel6;
+    private javax.swing.JLabel sigmaLabel7;
+    private javax.swing.JTextField sigmaTextField7;
     private javax.swing.JLabel simTimesLabel;
     private javax.swing.JTextField simTimesTextField;
     private javax.swing.JPanel softLIFAlgorithmPanel;
     private javax.swing.JPanel softLIFNeuronModelPanel;
+    private javax.swing.JPanel spikeNormAlgorithmPanel;
     private javax.swing.JPanel spikePropAlgorithmPanel;
     private javax.swing.JPanel stbpAlgorithmPanel;
     private javax.swing.JPanel stdpAlgorithmPanel;
     private javax.swing.JLabel stepsTimeLabel;
-    private javax.swing.JLabel stepsTimeLabel2;
+    private javax.swing.JLabel stepsTimeLabel3;
+    private javax.swing.JLabel stepsTimeLabel5;
     private javax.swing.JTextField stepsTimeTextField;
-    private javax.swing.JTextField stepsTimeTextField2;
-    private javax.swing.JLabel tauRCLabel;
-    private javax.swing.JTextField tauRCTextField;
-    private javax.swing.JLabel tauRefLabel;
-    private javax.swing.JTextField tauRefTextField;
-    private javax.swing.JLabel timeIntervalLabel;
+    private javax.swing.JTextField stepsTimeTextField3;
+    private javax.swing.JTextField stepsTimeTextField5;
+    private javax.swing.JPanel storeDataPanel;
+    private javax.swing.JLabel tauRCLabel7;
+    private javax.swing.JTextField tauRCTextField7;
+    private javax.swing.JLabel tauRefLabel7;
+    private javax.swing.JTextField tauRefTextField7;
     private javax.swing.JLabel timeIntervalLabel2;
     private javax.swing.JLabel timeIntervalLabel3;
-    private javax.swing.JTextField timeIntervalTextField;
+    private javax.swing.JLabel timeIntervalLabel4;
+    private javax.swing.JLabel timeIntervalLabel5;
     private javax.swing.JTextField timeIntervalTextField2;
     private javax.swing.JTextField timeIntervalTextField3;
+    private javax.swing.JTextField timeIntervalTextField4;
+    private javax.swing.JTextField timeIntervalTextField5;
+    private javax.swing.JTextField timeIntervalTextField6;
     private javax.swing.JTextArea varificationLogTextArea1;
     // End of variables declaration//GEN-END:variables
 
