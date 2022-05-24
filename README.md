@@ -101,6 +101,47 @@ Java 1.8
 ![nadesigner-iot7](https://user-images.githubusercontent.com/45158796/170095463-58b4055d-48a8-4d8f-b7fb-ee58d100f7a6.png)
 
 
+### AI Component
+  The following execercize explains how to use NaDesigner to create the IoT Component.
+
+#### Multi-Class Classification (MNIST)
+
+![nadesigner-ai1](https://user-images.githubusercontent.com/45158796/170121560-1e660212-347d-44e9-9952-4a9675021250.png)
+
+![nadesigner-ai2](https://user-images.githubusercontent.com/45158796/170121524-5152594f-9bbd-4876-a8c0-34ee94d53507.png)
+
+![nadesigner-ai3](https://user-images.githubusercontent.com/45158796/170121531-76ddf581-b03c-45eb-b0f7-5c211441ad2f.png)
+
+![nadesigner-ai4](https://user-images.githubusercontent.com/45158796/170121535-4c6a97df-b4a3-4dd1-af3f-2da1e544f23a.png)
+
+![nadesigner-ai5](https://user-images.githubusercontent.com/45158796/170121540-ac67bee3-c021-44ad-beae-375e2d0828de.png)
+
+![nadesigner-ai6](https://user-images.githubusercontent.com/45158796/170121544-2699da23-6aab-4d76-81a2-d30bbaa561fd.png)
+
+![nadesigner-ai7](https://user-images.githubusercontent.com/45158796/170121546-908a7fef-c4c1-445c-b62b-b89cb0ce9a71.png)
+
+
+### N3ML-BP-STDP (MNIST)
+
+![nadesigner-ai1](https://user-images.githubusercontent.com/45158796/170121560-1e660212-347d-44e9-9952-4a9675021250.png)
+
+![nadesigner-ai2](https://user-images.githubusercontent.com/45158796/170121524-5152594f-9bbd-4876-a8c0-34ee94d53507.png)
+
+![nadesigner-ai3](https://user-images.githubusercontent.com/45158796/170121531-76ddf581-b03c-45eb-b0f7-5c211441ad2f.png)
+
+![nadesigner-ai4](https://user-images.githubusercontent.com/45158796/170121535-4c6a97df-b4a3-4dd1-af3f-2da1e544f23a.png)
+
+
+![nadesigner-ai8-1](https://user-images.githubusercontent.com/45158796/170122520-f320a8c4-65d3-4084-9859-e3ee4a055e16.png)
+
+
+![nadesigner-ai9](https://user-images.githubusercontent.com/45158796/170121552-93419458-e565-43e1-ae92-a585d1a10d6d.png)
+
+![nadesigner-ai10](https://user-images.githubusercontent.com/45158796/170121553-241de57a-c358-47bc-bc44-62f957a54048.png)
+
+![nadesigner-ai11](https://user-images.githubusercontent.com/45158796/170121555-7e52cd6a-0405-48cd-9592-fc332456862e.png)
+
+
 ## Authors
 
   Contributors names and contact info
