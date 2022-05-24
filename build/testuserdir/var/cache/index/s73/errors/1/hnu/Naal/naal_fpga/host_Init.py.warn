@@ -1,0 +1,13 @@
+ERROR_NO_BADGE:38:mismatched input ',' expecting COLON
+ERROR_NO_BADGE:38:mismatched input ''SpikingRectifiedLinear'' expecting RCURLY
+ERROR_NO_BADGE:300:no viable alternative at input '='
+ERROR_NO_BADGE:300:mismatched input 'True' expecting RPAREN
+ERROR_NO_BADGE:1:Internal Parser Error
+ERROR_NO_BADGE:333:no viable alternative at input '='
+ERROR_NO_BADGE:333:mismatched input 'True' expecting RPAREN
+ERROR_NO_BADGE:337:no viable alternative at input '='
+ERROR_NO_BADGE:337:mismatched input 'True' expecting RPAREN
+ERROR_NO_BADGE:346:no viable alternative at input '='
+ERROR_NO_BADGE:346:mismatched input 'True' expecting RPAREN
+ERROR_NO_BADGE:357:no viable alternative at input '='
+ERROR_NO_BADGE:357:mismatched input 'True' expecting RPAREN

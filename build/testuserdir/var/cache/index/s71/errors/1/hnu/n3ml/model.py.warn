@@ -1,0 +1,8 @@
+ERROR_NO_BADGE:21:mismatched input '\d' expecting RPAREN
+ERROR_NO_BADGE:22:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:23:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:24:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:25:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:25:mismatched input ')' expecting NEWLINE
+ERROR_NO_BADGE:25:mismatched input '\\n' expecting DEDENT
+ERROR_NO_BADGE:26:mismatched input '' expecting EOF

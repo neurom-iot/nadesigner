@@ -1,0 +1,8 @@
+ERROR_NO_BADGE:37:mismatched input 'activation' expecting DOUBLESTAR
+ERROR_NO_BADGE:37:mismatched input '=' expecting RPAREN
+ERROR_NO_BADGE:37:mismatched input 'True' expecting COLON
+ERROR_NO_BADGE:37:no viable alternative at input '**'
+ERROR_NO_BADGE:37:mismatched input 'kwargs' expecting NEWLINE
+ERROR_NO_BADGE:37:mismatched input ')' expecting NEWLINE
+ERROR_NO_BADGE:37:mismatched input '\\n' expecting DEDENT
+ERROR_NO_BADGE:39:mismatched input '' expecting EOF

@@ -1,0 +1,6 @@
+ERROR_NO_BADGE:20:mismatched input '-' expecting COLON
+ERROR_NO_BADGE:20:no viable alternative at input '>'
+ERROR_NO_BADGE:20:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:24:mismatched input '' expecting DEDENT
+ERROR_NO_BADGE:24:mismatched input '' expecting DEDENT
+ERROR_NO_BADGE:47:mismatched input '' expecting EOF

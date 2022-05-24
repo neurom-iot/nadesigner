@@ -1,0 +1,7 @@
+ERROR_NO_BADGE:49:mismatched input '\d' expecting RPAREN
+ERROR_NO_BADGE:49:mismatched input ')' expecting NEWLINE
+ERROR_NO_BADGE:49:no viable alternative at input '>'
+ERROR_NO_BADGE:49:mismatched input '\d' expecting NEWLINE
+ERROR_NO_BADGE:50:mismatched input '' expecting DEDENT
+ERROR_NO_BADGE:50:mismatched input '' expecting DEDENT
+ERROR_NO_BADGE:57:mismatched input '' expecting EOF
