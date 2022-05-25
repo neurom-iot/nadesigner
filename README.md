@@ -9,9 +9,14 @@ Java 1.8
 ## Installaion
 
 ### Download 
- 1. Download "NaDesigner IoT" installer from here. 
- 2. Download "NaDesigner AI" installer from here. 
- 3. Download python nbm files from here.
+ 
+ Download the following files [here](https://github.com/neurom-iot/nadesigner/blob/main/doc/Installation.md).
+ 
+ 1. "NaDesigner IoT" installer  
+ 2. "NaDesigner AI" installer  
+ 3. python plugin
+
+
 
 ### Run the Installer
  Run the downloaded installer.
@@ -44,7 +49,7 @@ Java 1.8
  ```
 
 ### Install the plugin
-  Download "Python plugin for nadesigner" installer from here. 
+  Download "Python plugin for nadesigner" installer. 
   Run nadesigner and install the plugin as follows. 
 
 ![plugin1](https://user-images.githubusercontent.com/45158796/170095413-5bbeee99-ce09-442f-abec-4685b929263f.png)
