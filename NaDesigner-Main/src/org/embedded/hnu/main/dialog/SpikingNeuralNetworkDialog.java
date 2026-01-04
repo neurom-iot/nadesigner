@@ -28,7 +28,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     
     public static final int H_SNN = 1;
     
-    public static final int H_N3ML_NM_LIF_MODEL = 0; //*------- SeoyeonKim 2021.06.01 -------*
+    public static final int H_N3ML_NM_LIF_MODEL = 0; 
     public static final int H_N3ML_NM_Soft_LIF_MODEL = 1;
     public static final int H_N3ML_NM_IF_MODEL = 2;
     public static final int H_N3ML_NM_SRM_MODEL = 3;
@@ -62,7 +62,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     
     private JFileChooser fileChooser = new JFileChooser();
     private HSNNIOConfig hSIOConf = new HSNNIOConfig();
-    //private HN3MLoldIOConfig hN3mlIOConf;
     private HN3MLIOConfig hN3mlIOConf = new HN3MLIOConfig();
     private HSNNGeneratorJS hSNNGenJ = new HSNNGeneratorJS();
     private HSNNGenerator hSNNGen = new HSNNGenerator();
@@ -73,7 +72,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private int hDataSetOpt = H_DATA_SET_TRAINING;
     private String hDirectory="";
     private int flagType = 0;
-    private int hN3mlNeuronModel = 0;  //*------- SeoyeonKim 2021.06.01 -------*
+    private int hN3mlNeuronModel = 0; 
     private int hN3mlAlgorithm = 0;
     
     public SpikingNeuralNetworkDialog(java.awt.Frame parent, boolean modal) {
@@ -84,7 +83,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     public SpikingNeuralNetworkDialog(java.awt.Frame parent, boolean modal, String hDir) {
         super(parent, modal);
         hDirectory = hDir;
-        System.out.println("SpikingNeuralNetworkDialog.java hDirectory : " + hDirectory);
         initComponents();
         myInitComponents();
     }
@@ -838,7 +836,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(logPanelLayout.createSequentialGroup()
             .addContainerGap()
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
             .addContainerGap())
     );
 
@@ -1432,7 +1430,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         .addGroup(layout.createSequentialGroup()
             .addGap(156, 156, 156)
             .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
             .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(152, 152, 152))
         .addGroup(layout.createSequentialGroup()
@@ -1493,7 +1491,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(n3mlConnectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+            .addComponent(logPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1553,7 +1551,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 NAALHardwarePanel.setVisible(false);
                 logPanel.setVisible(false);
                 naalNeuronModelPanel.setVisible(false);
-//        neuronModelLinearPanel.setVisible(false); 
         }
 
     }
@@ -1584,13 +1581,11 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private void runtimeTrainingRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runtimeTrainingRadioButtonActionPerformed
         runtimeTrainingRadioButton.setActionCommand("Training");
         hDataSetOpt = H_DATA_SET_TRAINING;
-        System.out.println("training");
     }//GEN-LAST:event_runtimeTrainingRadioButtonActionPerformed
 
     private void runtimeTestRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runtimeTestRadioButtonActionPerformed
         runtimeTestRadioButton.setActionCommand("Test");
         hDataSetOpt = H_DATA_SET_TEST;
-        System.out.println("test");
     }//GEN-LAST:event_runtimeTestRadioButtonActionPerformed
 
     private void modelDirBrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelDirBrowseButtonActionPerformed
@@ -1616,11 +1611,8 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             yRangeLabel.setEnabled(true);
             
         } else {
-            //modelFileTextField.setEnabled(false);
             DelimiterLabel.setEnabled(false);
             delimiterComboBox.setEnabled(false);
-            //fileDirBrowseButton.setEnabled(false);
-            //modelFileLabel.setEnabled(false);
             IncludeFirstLineCheckBox.setEnabled(false);
             toRabel1.setEnabled(false);
             toRabel2.setEnabled(false);
@@ -1651,13 +1643,9 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             loadData(loadDir);
         } else if (!loadDataFromFileCheckBox.isSelected() && !modelFileTextField.getText().equals("")) {
             loadLib(H_NengoDL);
-            //loadDir = modelFileTextField.getText();
             copyLib(libDir, destLib);
         }
-//        else if(runtimeComboBox.getSelectedIndex() == H_N3ML && !loadDirTextField1.getText().equals("")){ //dont use Data Load
-//            loadDir = loadDirTextField1.getText();
-//            loadData(loadDir);
-//        }
+
 
         int runtime = runtimeComboBox.getSelectedIndex();
         switch (runtime) {
@@ -1678,7 +1666,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                     copyFile(srcFile, destDir);
                 }
                 if (!libraryDirTextField.getText().equals("This is your NAAL library directory.")) {
-                    loadLib(H_DE1_SOC);
+                    loadLib(H_NAAL);
                     if (LOADLIB == true) {
                         copyLib(libDir, destLib);
                     }
@@ -1688,7 +1676,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             case H_N3ML:
                 if (!n3mlLoadDirTextField.getText().equals("This is your data directory.")) {
                     loadLib(H_N3ML);
-                    //loadDir = modelFileTextField.getText();
                     copyLib(libDir, destLib);
                 }
                 showN3MLAlgorithmAdialog(hN3mlNeuronModel, hN3mlAlgorithm);
@@ -1699,48 +1686,10 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             default:
                 break;
         }
-        /*
-         if(runtimeComboBox.getSelectedIndex() == H_DE1_SOC){
-         if(LOADDATA == true){ 
-         copyFile(srcFile, destDir); 
-         }     
-         if(!libraryDirTextField.getText().equals("This is your Nengo FPGA library directory.")){ 
-         loadLib(H_DE1_SOC); 
-         if(LOADLIB == true){ copyLib(libDir, destLib); }
-         }
-         cancel();
-         }else if(runtimeComboBox.getSelectedIndex() == H_N3ML){
-         //            if(LOADDATA == true){         //dont use Data Load
-         //                copyLib(srcFile, destDir); 
-         //            }     
-         //            if(!libraryDirTextField.getText().equals("This is your N3ML library directory.")){ 
-         //                loadLib(H_N3ML); 
-         //                if(LOADLIB == true){ copyLib(libDir, destLib); }
-         //            }
-         if(!n3mlLoadDirTextField.getText().equals("This is your data directory.")){
-         loadLib(H_N3ML); 
-         //loadDir = modelFileTextField.getText();
-         copyLib(libDir, destLib);
-         }
-         showN3MLAlgorithmAdialog(hN3mlNeuronModel, hN3mlAlgorithm);
-         }else if(runtimeComboBox.getSelectedIndex() != H_DE1_SOC && runtimeComboBox.getSelectedIndex() != H_N3ML){
-         //            if(runtimeTestRadioButton.isSelected())
-         showInputNumberLayerDialog(hSIOConf, cnnCheckBox.isSelected());
-                
-         //            else{
-         //                hSNNGen.hSTATE = H_SNN;
-         //                hSNNGen.createFile(hSNNGen.modelDir);
-         //                hSNNGen.writeSNNGen_Temp();
-         //            }
-                
-         //cancel();
-         }
-        
-         */
+
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        System.out.println("----- cancel -----");
         cancel();
     }//GEN-LAST:event_cancelButtonActionPerformed
 
@@ -1762,8 +1711,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     private void runtimeTestRadioButtonItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_runtimeTestRadioButtonItemStateChanged
 
         if(runtimeComboBox.getSelectedIndex() == H_NengoDL && cnnCheckBox.isSelected()){
-//            minibatchSizeTextField.setVisible(false);
-//            minibatchSizeLabel.setVisible(false);
+
         }else if (runtimeComboBox.getSelectedIndex() == H_NengoDL && !(cnnCheckBox.isSelected())){
             minibatchSizeTextField.setVisible(true);
             minibatchSizeLabel.setVisible(true);
@@ -1791,13 +1739,10 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_n3mlLoadDirBrowseButtonActionPerformed
 
     private void imageSizeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageSizeTextFieldActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_imageSizeTextFieldActionPerformed
 
     private void n3mlLearningAlgorithmComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_n3mlLearningAlgorithmComboBoxItemStateChanged
-        // TODO add your handling code here:
         if(n3mlLearningAlgorithmComboBox.getSelectedIndex()==H_N3ML_A_softLIF){
-            //hDataSetOpt = H_DATA_SET_TEST;
             runtimeTrainingRadioButton.setEnabled(true); 
             runtimeTrainingRadioButton.setSelected(true);  
             n3mlNeuronModelComboBox.setSelectedIndex(H_N3ML_NM_Soft_LIF_MODEL);
@@ -1844,17 +1789,14 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 synapseTextField.setText("None");
                 minibatchSizeTextField.setVisible(true);
                 minibatchSizeLabel.setVisible(true);
-                minibatchSizeTextField.setText("2");
+                minibatchSizeTextField.setText("20");
                 costFunctionComboBox.setSelectedIndex(0);
                 runtimeTrainingRadioButton.setEnabled(true);
                 runtimeTestRadioButton.setEnabled(true);
             }
             else{
-//                minibatchSizeTextField.setVisible(false);
-//                minibatchSizeLabel.setVisible(false);
             }
         } else {
-            //if (runtimeTestRadioButton.isSelected()) {
                 amplitudeTextArea.setText("1");
                 maxRateTextField.setText("200");
                 synapseTextField.setText("0.01");
@@ -1865,11 +1807,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 inputsTextField.setText("1");
                 outputsTextField.setText("1");
                 modelTypeComboBox.setSelectedIndex(Linear);
-//                runtimeTrainingRadioButton.setEnabled(false);
-//                runtimeTrainingRadioButton.setSelected(false);
-//                runtimeTestRadioButton.setEnabled(true);
-//                runtimeTestRadioButton.setSelected(true);
-            //}
+
         }
     }//GEN-LAST:event_cnnCheckBoxActionPerformed
 
@@ -1881,6 +1819,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 minibatchSizeLabel.setVisible(true);
                 minibatchSizeTextField.setVisible(true);
                 minibatchSizeTextField.setText("1");
+                optimizerComboBox.setSelectedIndex(1);
                 costFunctionComboBox.setSelectedIndex(1);
                 inputsTextField.setText("1");
                 outputsTextField.setText("1");
@@ -1893,21 +1832,15 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 minibatchSizeTextField.setVisible(true);
                 minibatchSizeLabel.setVisible(true);
                 minibatchSizeTextField.setText("1");
+                optimizerComboBox.setSelectedIndex(0);
                 
             if (runtimeTrainingRadioButton.isSelected()) {
                 amplitudeTextArea.setText("0.01");
                 maxRateTextField.setText("100");
                 synapseTextField.setText("None");
-//                minibatchSizeTextField.setVisible(true);
-//                minibatchSizeLabel.setVisible(true);
-//                minibatchSizeTextField.setText("1");
                 costFunctionComboBox.setSelectedIndex(0);
-//                runtimeTrainingRadioButton.setEnabled(true);
-//                runtimeTestRadioButton.setEnabled(true);
             }
             else{
-//                minibatchSizeTextField.setVisible(false);
-//                minibatchSizeLabel.setVisible(false);
             }
         }
     }//GEN-LAST:event_modelTypeComboBoxItemStateChanged
@@ -1999,7 +1932,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         }
         if (JFileChooser.APPROVE_OPTION == fileChooser.showOpenDialog(this)) {
             File projectDir = fileChooser.getSelectedFile();
-            System.out.println("projectDir : "+projectDir+evtDir);
             if(evtDir ==0){
                 modelDirTextField.setText(FileUtil.normalizeFile(projectDir).getAbsolutePath());
             }
@@ -2027,7 +1959,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         }
         if (JFileChooser.APPROVE_OPTION == fileChooser.showOpenDialog(this)) {
             File fileDir = fileChooser.getSelectedFile();
-            System.out.println("fileDir : "+fileDir);
             modelFileTextField.setText(FileUtil.normalizeFile(fileDir).getAbsolutePath());
         }
     }
@@ -2050,7 +1981,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         }
         else if(runtimeComboBox.getSelectedIndex()==H_N3ML){ 
             initN3ML(modelName,modelDir, n3mlNeuronModelComboBox.getSelectedIndex(), n3mlLearningAlgorithmComboBox.getSelectedIndex());
-            //generateSNNN3MLSource();
         }
         
     }
@@ -2059,19 +1989,16 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         hSNNHWGen.hSTATE = H_SNN;
         hSNNHWGen.createFile(hSNNHWGen.modelDir);
         hSNNHWGen.writeSNNGen();
-        //cancel();
     }
     private void generateNAAL_Model_Prediction(){ 
         hNAALGen.hSTATE = H_SNN;
         hNAALGen.createFile(hNAALGen.modelDir);
         hNAALGen.writeSNN_NAALGen();
-        //cancel();
     }    
     private void generateSNNN3MLSource(){
         hN3mlGen.hSTATE = H_SNN;
         hN3mlGen.createFile(hN3mlGen.modelDir);
         hN3mlGen.writeN3MLGen();
-        //cancel();
     }
     
     private void showInputNumberLayerDialog(HSNNIOConfig hSIOConf, boolean selectedCNN, int type){
@@ -2086,7 +2013,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         dialog.setLocationRelativeTo(null);
         cancel();
         dialog.setVisible(true);
-        //String temp = dialog.get();
     }
     
     private void initNengoDL(String modelName, String modelDir){
@@ -2107,9 +2033,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         hSIOConf.setXY_range(xRangeField1.getText(), xRangeField2.getText(), yRangeField1.getText(), yRangeField2.getText());
         delim = (String)delimiterComboBox.getSelectedItem();
         
-//        if(!cnnCheckBox.isSelected()){
         hSIOConf.setTau_rc(Double.parseDouble(tauRcTextField.getText()));
-//        }
 
         hSNNGen.initConfig(hSIOConf, modelName, modelDir);
         hSNNGen.setInputData(hSIOConf.getInput()); 
@@ -2127,24 +2051,21 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
 
         hSIOConf.setNeuronSize((Object)neuronSizeSpinner.getModel().getValue());
         hSIOConf.setImageSize(Double.parseDouble(imageSizeTextField.getText()));
-        //*------- SeoyeonKim 2020.10.11 -------*
         hSNNHWGen.initConfig(hSIOConf, modelName, modelDir);        
         hSNNGenJ.set_configDe1(3);
         hSNNGenJ.initGenerator(hDirectory);
-        generateSNNHardwareSource(); ////뉴로모픽 하드웨어 수행 코드 생성
+        generateSNNHardwareSource(); 
     }
         private void initNAAL_model_prediction(String modelDir){
         hSIOConf.setBoards((String)runtimeBoardComboBox.getSelectedItem());
         hSIOConf.setModelPrediction((String)SelectExampleComboBox2.getSelectedItem());
-        //*------- SeoyeonKim 2020.10.11 -------*
         hNAALGen.initConfig(hSIOConf, modelDir);        
         hSNNGenJ.set_configDe1(3);
         hSNNGenJ.initGenerator(hDirectory);
-        generateNAAL_Model_Prediction(); ////뉴로모픽 하드웨어 수행 코드 생성
+        generateNAAL_Model_Prediction(); 
     }
     
     private void initN3ML(String modelName, String modelDir, int neuronmodel, int algorithm){
-//        hN3mlIOConf = new HN3MLoldIOConfig(1, 1, 2, 2);
         hN3mlGen = new HSNNN3MLGenerator(modelName, modelDir);
         switch(neuronmodel){
             case H_N3ML_NM_LIF_MODEL :
@@ -2159,8 +2080,6 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                 hN3mlNeuronModel = H_N3ML_NM_Adaptive_LIF_MODEL ; break;
         }
         switch(algorithm){
-//            case H_N3ML_A_ReSuMe:
-//                hN3mlAlgorithm = H_N3ML_A_ReSuMe; break;
             case H_N3ML_A_SpikeProp:
                 hN3mlAlgorithm = H_N3ML_A_SpikeProp; break;
             case H_N3ML_A_STDP:
@@ -2322,20 +2241,19 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + libDir.getName());
         }else if(state == H_N3ML){
             libDir = new File(n3mlLoadDirTextField.getText());
-            destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + "src" +File.separatorChar + "DataSets" + File.separatorChar + libDir.getName());
+            destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + "src" +File.separatorChar +"DataSets" + File.separatorChar + libDir.getName());
         }else if(state == H_NengoDL){
             libDir = new File(modelFileTextField.getText());
-            destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + "src" +File.separatorChar + "DataSets" + File.separatorChar + libDir.getName());
+            destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + "src" +File.separatorChar + "hnu" + File.separatorChar + libDir.getName());
         }
-        
+        else if(state == H_NAAL ){
+            libDir = new File(libraryDirTextField.getText());
+            destLib = new File(srcDir.getAbsolutePath() + File.separatorChar + "src"+ File.separatorChar + "hnu"+ File.separatorChar + libDir.getName());
+        }
         destLib.mkdirs();
     }
     
     public void copyFile(File srcFile, File destDir){         
-        System.out.println("--------------- LoadData ---------------");
-        System.out.println("------------ copyFile() ------------");
-        System.out.println("AddLayerConfigDialog srcFile.getAbsolutePath() : "+srcFile.getAbsolutePath());
-        System.out.println("AddLayerConfigDialog destDir.getAbsolutePath() : "+destDir.getAbsolutePath());
 
         destDir.mkdirs();
         
@@ -2353,21 +2271,14 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             e.printStackTrace();
         }
         
-        System.out.println("------------ copyFile() Finish------------");
     }
     
     public void copyLib(File libDir, File destLib){
-        System.out.println("--------------- LoadLib ---------------");
-        System.out.println("------------ copyLib() ------------");
-        System.out.println("AddLayerConfigDialog libDir.getAbsolutePath() : "+libDir.getAbsolutePath());
-        System.out.println("AddLayerConfigDialog destLib.getAbsolutePath() : "+destLib.getAbsolutePath());
         
         File[] childrenList = libDir.listFiles();
         
         for(File file : childrenList){
             File temp = new File(destLib.getAbsolutePath() + File.separatorChar + file.getName());
-            System.out.println("AddLayerConfigDialog file.getAbsolutePath() : "+file.getAbsolutePath());
-            System.out.println("AddLayerConfigDialog temp.getAbsolutePath() : "+temp.getAbsolutePath());
             
             FileInputStream fis = null ;
             FileOutputStream fos = null;
@@ -2387,9 +2298,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
                         fos.write(b , 0 , count);
                     }
                     
-                    System.out.println("copyLib() O");
                 }catch(Exception e) {
-                    System.out.println("copyLib() X");
                     e.printStackTrace();
                 }finally {
                     try {
@@ -2400,31 +2309,18 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
             }
         }
         
-        System.out.println("------------ copyLib() Finish------------");
     }
     
     private void createRuntimeFile(){ //SeoyeonKim 2021.08.25
-        //SNN폴더("프로젝트명\snn")안에 런타임 이름으로 파일을 생성한다.
-        //1. 생성하기 전에 이미 다른 파일이 존재하는지 확인하여 전체 삭제
-        //2. 현재 선택된 런타임 이름으로 파일 생성
-        //Todo
-        //3. N3ML -> 선택된 알고리즘 이름을 포함하여 생성(N3ML_STDP)
-        //4. NAAL -> 선택된 하드웨어 이름을 포함하여 생성(NAAL_DE1)
         
         String checkPath = hDirectory + File.separatorChar + "snn";
         File path = new File(checkPath);
         File[] fileList = path.listFiles();
-        for(int i=0; i<fileList.length; i++){
-            if(fileList[i].delete())
-                System.out.println("modified");
-            else
-                System.out.println("first");
-        }
+
         
         File runtimeFile = new File(checkPath+ File.separatorChar + (String)runtimeComboBox.getSelectedItem());
         try {
             if (runtimeFile.createNewFile()) {
-                System.out.println("created");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -2469,7 +2365,7 @@ public class SpikingNeuralNetworkDialog extends javax.swing.JDialog {
         libraryDirPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("NAAL Library"));
         libraryDirTextField.setText("This is your NAAL library directory.");
         loadDataPanel.setVisible(false);
-        n3mlLoadDataPanel1.setVisible(true);
+        n3mlLoadDataPanel1.setVisible(false);
         neuronModelPanel.setVisible(false);
         fpgaNeuronModelPanel.setVisible(false);
         n3mlModelOptionPanel.setVisible(false);
